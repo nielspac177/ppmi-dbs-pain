@@ -1,0 +1,44 @@
+project:
+  type: book
+  output-dir: _site
+
+book:
+  title: "Stimulation reshapes the pain–symptom architecture in PD"
+  subtitle: "A reproducible longitudinal PPMI analysis"
+  author:
+    - name: "Niels Pacheco-Barrios"
+      affiliation: "UCSF Neurological Surgery"
+    - name: "John D. Rolston"
+      affiliation: "UCSF Neurological Surgery"
+  date: today
+  repo-url: "https://github.com/nielspac177/ppmi-dbs-pain"
+  repo-actions: [edit, issue]
+  search: true
+  page-navigation: true
+  back-to-top-navigation: true
+  chapters:
+    - index.qmd
+    - methods.qmd
+    - results.qmd
+    - sensitivity/index.qmd
+    - causal-dag.qmd
+    - strobe.qmd
+    - tripod.qmd
+    - robins-i.qmd
+    - extending.qmd
+    - paper.Rmd
+
+format:
+  html:
+    theme: cosmo
+    code-copy: true
+    code-tools: true
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    fig-cap-location: bottom
+
+execute:
+  echo: false
+  warning: false
+  freeze: auto

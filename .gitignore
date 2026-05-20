@@ -1,0 +1,54 @@
+# --- PPMI / private data — NEVER COMMIT ---
+config.yml
+*.docx
+data/
+*.xlsx
+PPMI_*.csv
+ppmi_*.csv
+*.parquet
+*.dta
+
+# Real outputs (rebuilt by `make all` and CI)
+outputs/objects/
+outputs/figures/*.tiff
+# Keep PPMI-DUA-safe summary tables + figures already committed under outputs/
+!outputs/aggregated/
+!outputs/aggregated/**
+
+# --- R artefacts ---
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+*.Rcheck/
+*.tar.gz
+.Renviron
+
+# renv — keep lock, ignore the local cache
+renv/library/
+renv/local/
+renv/cellar/
+renv/lock-base/
+renv/staging/
+
+# --- Python artefacts ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+.cache/
+
+# --- Quarto / IDE ---
+_freeze/
+_site/
+.quarto/
+*.html
+docs/_book/
+.vscode/
+.idea/
+
+# --- OS ---
+.DS_Store
+Thumbs.db

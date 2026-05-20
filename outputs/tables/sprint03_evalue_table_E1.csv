@@ -1,0 +1,3 @@
+contrast,estimate,estimate_lo,estimate_hi,evalue,evalue_lower_ci,interpretation
+LMM Δ slope (Post-DBS vs Never-DBS),0.898694257723292,0.8429713954315341,0.9581005633665254,1.466890011469376,1.2573769026438957,An unmeasured confounder would need to be associated with both DBS receipt and Δ Pain slope by an OR/RR of 1.47 (lower CI 1.26) to explain the (null) point estimate.
+"Worsener risk (NP1PAIN ≥ 2 in [+6, +18] mo)",0.35416666666666663,0.13865529125415235,0.9046465276818012,5.092623708468931,1.4467458123470256,An unmeasured confounder would need to be associated with both DBS receipt and 12-month worsening (NP1PAIN ≥ 2) by an RR of 5.09 (lower CI 1.45) to fully explain the observed association.

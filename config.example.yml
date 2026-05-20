@@ -1,0 +1,16 @@
+# config.example.yml — copy to config.yml and fill in your local paths.
+# Never commit config.yml with real PPMI paths.
+default:
+  data:
+    # Set use_synth to true to run the pipeline on the bundled synthetic
+    # fixture (no PPMI access required). Set to false and fill in
+    # ppmi_data_root once you have PPMI data access.
+    use_synth: true
+    ppmi_data_root: "/path/to/your/local/PPMI/Curated_Cut_Nov_2024"
+    matched_long_csv: "ppmi_rel_matched_long_z.csv"
+    matched_six_csv:  "ppmi_rel_matched_long_six.csv"
+    full_xlsx:        "PPMI_basic1.xlsx"
+  paths:
+    figures: "outputs/figures"
+    tables:  "outputs/tables"
+    objects: "outputs/objects"

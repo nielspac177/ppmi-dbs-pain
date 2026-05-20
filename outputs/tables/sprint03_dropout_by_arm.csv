@@ -1,0 +1,3 @@
+arm,n,n_observed,n_dropout,dropout_rate
+Never-DBS,1379,575,804,0.5830311820159536
+DBS,105,67,38,0.3619047619047619

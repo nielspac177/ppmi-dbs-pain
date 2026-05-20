@@ -1,0 +1,24 @@
+{
+  "name": "ppmi-dbs-pain",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "context": ".."
+  },
+  "workspaceFolder": "/work",
+  "remoteUser": "vscode",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "REditorSupport.r",
+        "quarto.quarto",
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ]
+    }
+  },
+  "postCreateCommand": "Rscript -e 'renv::restore(prompt = FALSE)' && pip install -r requirements.txt"
+}

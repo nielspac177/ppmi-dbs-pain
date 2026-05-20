@@ -1,0 +1,43 @@
+dag {
+bb="0,0,1,1"
+Age [pos="0.050,0.100"]
+BMI [pos="0.100,0.550"]
+Baseline_Pain [pos="0.100,0.920"]
+DBS [exposure,pos="0.500,0.500"]
+Delta_LEDD [pos="0.650,0.780"]
+Dropout [pos="0.800,0.250"]
+Duration_PD [pos="0.050,0.320"]
+GDS_STAI [pos="0.180,0.780"]
+LEDD_pre [pos="0.350,0.250"]
+NHY_stage [pos="0.300,0.100"]
+Pain_traj [outcome,pos="0.900,0.500"]
+Sex [pos="0.100,0.200"]
+Stim_circuit [pos="0.650,0.500"]
+UPDRS_III [pos="0.200,0.050"]
+Age -> DBS
+Age -> Pain_traj
+BMI -> DBS
+BMI -> Pain_traj
+Baseline_Pain -> DBS
+Baseline_Pain -> Dropout
+Baseline_Pain -> Pain_traj
+DBS -> Delta_LEDD
+DBS -> Dropout
+DBS -> Stim_circuit
+Delta_LEDD -> Pain_traj
+Dropout -> Pain_traj
+Duration_PD -> DBS
+Duration_PD -> Pain_traj
+GDS_STAI -> DBS
+GDS_STAI -> Pain_traj
+LEDD_pre -> DBS
+LEDD_pre -> Pain_traj
+NHY_stage -> DBS
+NHY_stage -> Pain_traj
+Sex -> DBS
+Sex -> Pain_traj
+Stim_circuit -> Pain_traj
+UPDRS_III -> DBS
+UPDRS_III -> Pain_traj
+}
+

@@ -1,0 +1,51 @@
+name: Replication issue
+description: Report a problem reproducing the manuscript results
+title: "[Repro] "
+labels: [replication, bug]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the failure and the expected behaviour.
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment
+      description: |
+        Output of `sessionInfo()` (R) or `python -V` + `pip list`.
+        OS version, Docker version if applicable.
+      render: text
+    validations:
+      required: true
+  - type: input
+    id: script
+    attributes:
+      label: Which script failed?
+      placeholder: "e.g. sprints/sprint04_nct_bootnet.R"
+  - type: textarea
+    id: error
+    attributes:
+      label: Error message
+      render: text
+  - type: dropdown
+    id: data
+    attributes:
+      label: Data
+      options:
+        - "Synthetic fixture (default)"
+        - "Real PPMI data"
+        - "Other"
+    validations:
+      required: true
+  - type: checkboxes
+    id: checked
+    attributes:
+      label: Before filing
+      options:
+        - label: I read REPRODUCE.md
+          required: true
+        - label: I ran `make env` successfully
+          required: true

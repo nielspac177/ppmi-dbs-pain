@@ -1,0 +1,14 @@
+---
+title: "Results"
+---
+
+See [MANUSCRIPT_DRAFT.md](MANUSCRIPT_DRAFT.md) for the formal Results section.
+
+This book chapter will host:
+
+- Embedded primary TOST figure
+- Embedded GLASSO networks per arm × window with NCT P annotations
+- Embedded pain–motor coupling figure (`Figure26b_pain_motor_coupling_matched`)
+- Embedded genetics × DBS forest (`Figure25_genetics_forest`)
+
+(Stub — to be filled in.)

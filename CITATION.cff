@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+title: "ppmi-dbs-pain — STN-DBS effect on longitudinal pain in Parkinson disease"
+message: "If you use this code, please cite both the manuscript and the software."
+type: software
+authors:
+  - given-names: Kevin
+    family-names: Pacheco-Barrios
+    email: nielspacheco1997@gmail.com
+    affiliation: University of California, San Francisco
+  - given-names: John D.
+    family-names: Rolston
+    affiliation: University of California, San Francisco
+repository-code: "https://github.com/nielspac177/ppmi-dbs-pain"
+url: "https://github.com/nielspac177/ppmi-dbs-pain"
+license: MIT
+version: "1.0.0"
+date-released: "2026-05-19"
+keywords:
+  - parkinsons-disease
+  - deep-brain-stimulation
+  - PPMI
+  - target-trial-emulation
+  - longitudinal-analysis
+  - causal-inference
+  - non-motor-symptoms
+  - pain
+preferred-citation:
+  type: article
+  title: "Stimulation reshapes the pain–symptom architecture in Parkinson disease: a matched longitudinal PPMI cohort"
+  authors:
+    - given-names: Kevin
+      family-names: Pacheco-Barrios
+    - given-names: John D.
+      family-names: Rolston
+  journal: "in preparation"
+  year: 2026

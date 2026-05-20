@@ -1,0 +1,43 @@
+Package: ppmiTTE
+Title: Target-trial-emulation utilities for non-motor DBS observational studies in Parkinson disease
+Version: 0.1.0
+Authors@R: c(
+    person("Niels", "Pacheco-Barrios", email = "nielspacheco1997@gmail.com",
+           role = c("aut", "cre")),
+    person("John D.", "Rolston", role = "aut"))
+Description: Reusable utilities supporting target-trial-emulation
+    analyses of Parkinson-disease deep brain stimulation (DBS) cohorts,
+    including symmetric-midpoint anchor construction, landmark Δ contrast
+    with two-one-sided-tests for non-inferiority, propensity-score
+    matching + inverse-probability weighting helpers, GLASSO partial-
+    correlation network builders with bootnet stability, and Network
+    Comparison Test wrappers. Extracted from the ppmi-dbs-pain repository
+    (https://github.com/nielspac177/ppmi-dbs-pain).
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 4.1.0)
+Imports:
+    dplyr,
+    tidyr,
+    purrr,
+    tibble,
+    ggplot2,
+    MASS,
+    geepack,
+    lme4,
+    MatchIt,
+    bootnet,
+    NetworkComparisonTest,
+    cmprsk,
+    mediation,
+    here
+Suggests:
+    testthat (>= 3.0.0),
+    knitr,
+    rmarkdown
+RoxygenNote: 7.3.2
+Roxygen: list(markdown = TRUE)
+Config/testthat/edition: 3
+URL: https://github.com/nielspac177/ppmi-dbs-pain
+BugReports: https://github.com/nielspac177/ppmi-dbs-pain/issues

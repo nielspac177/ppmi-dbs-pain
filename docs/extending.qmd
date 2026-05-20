@@ -1,0 +1,32 @@
+---
+title: "Extending the framework to other PD cohorts"
+---
+
+The target-trial-emulation + propensity-matching + landmark-TOST +
+GLASSO-network framework is generalisable beyond PPMI. To port to
+another longitudinal PD cohort:
+
+## Required variables
+
+| Concept | PPMI variable | Tracking-PD equivalent | ICICLE-PD equivalent |
+|---|---|---|---|
+| Pain | `NP1PAIN` | UPDRS Part I item 9 | UPDRS Part I item 9 |
+| Motor | `updrs3_score` | UPDRS Part III total | UPDRS Part III total |
+| LEDD | `LEDD` | LEDD (computed) | LEDD (computed) |
+| H&Y | `NHY` | Hoehn & Yahr | Hoehn & Yahr |
+| DBS exposure | `will_receive_dbs` + `dbs_date` | DBS surgery record | DBS surgery record |
+| Disease duration | `duration` | symptom onset → visit | symptom onset → visit |
+
+## Code changes required
+
+1. Write a `load_<cohort>_long.R` analog of `load_full_ppmi_rel_patient_anchor` in `R/helpers/pain_helpers.R`.
+2. Update `config.yml` to point to the new cohort's data path.
+3. Re-run `make all`.
+
+## Sensitivity analyses to add per cohort
+
+- Cohort-specific anchor sensitivity sweep (Sprint 2).
+- Cohort-specific MNAR tipping-point.
+- Stratified by recruitment site if multicentre.
+
+(Stub — to be expanded as collaborators replicate.)

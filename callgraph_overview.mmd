@@ -1,0 +1,72 @@
+```mermaid
+flowchart TD
+    classDef data     fill:#F0E442,stroke:#000,color:#000
+    classDef helper   fill:#56B4E9,stroke:#000,color:#000
+    classDef tier1    fill:#009E73,stroke:#000,color:#fff
+    classDef tier2    fill:#0072B2,stroke:#000,color:#fff
+    classDef tier3    fill:#CC79A7,stroke:#000,color:#000
+    classDef tier4    fill:#D55E00,stroke:#000,color:#fff
+    classDef out      fill:#bbbbbb,stroke:#666,color:#000
+
+    subgraph DATA[Data Sources]
+        D1[(PPMI Curated<br/>Data Cut Nov 2024)]:::data
+        D2[(PPMI_basic1.xlsx)]:::data
+        D3[(matched_long.csv)]:::data
+        D4[(ppmi_database.db<br/>genetics)]:::data
+    end
+
+    subgraph HELP[Shared Utilities]
+        H1[helpers/pain_helpers.R<br/>loaders + Okabe-Ito palette<br/>+ symmetric-midpoint anchor]:::helper
+    end
+
+    subgraph T1[Primary Analyses]
+        S08[08_tost_evalue.ipynb<br/>TOST primary + E-value]:::tier1
+        S13[13_landmark_reconciliation.ipynb<br/>Δ Pain landmark]:::tier1
+        S14[14_positive_control_motor.ipynb<br/>UPDRS-III positive control]:::tier1
+        BF5[build_fig5_and_tables.R<br/>LMM Pre/Post-DBS slopes]:::tier1
+        BG3[build_gee_table3.R<br/>GEE Table 3]:::tier1
+    end
+
+    subgraph T2[Secondary Analyses]
+        S09[09b_longitudinal_glasso.ipynb<br/>GLASSO network]:::tier2
+        S12[12_kaplan_meier_pain_worsening.ipynb<br/>KM time-to-pain]:::tier2
+        S23[23_psm_validation.ipynb<br/>PSM 1:2 matching]:::tier2
+        BD[build_delta_*.R<br/>Δ Pain stratified figures]:::tier2
+    end
+
+    subgraph T3[Exploratory]
+        S25[25_genetics_arm_pain.R<br/>PRS/APOE/SAA/GBA × DBS]:::tier3
+        S26[26/26b/26c<br/>Pain-motor coupling]:::tier3
+    end
+
+    subgraph T4[Robustness Sprints — added 2026-05-19]
+        SP1[sprint01_negative_controls<br/>NP1HALL/URIN/COG]:::tier4
+        SP2[sprint02_anchor_sensitivity<br/>3 anchor schemes]:::tier4
+        SP3[sprint03_evalue_mnar<br/>E-value table + MNAR tipping]:::tier4
+        SP4[sprint04_nct_bootnet<br/>Network Comparison Test]:::tier4
+        SP5[sprint05_bootstrap_brant_firth<br/>Bootstrap Δρ / Brant / Firth]:::tier4
+        SP6[sprint06_robust_ses<br/>Cluster-robust SE + GEE AR1]:::tier4
+        SP7[sprint07_psm_diagnostics<br/>PS overlap + caliper sweep]:::tier4
+        SP8[sprint08_competing_risk<br/>Fine-Gray subdistribution]:::tier4
+        SP9[sprint09_ledd_mediation<br/>Δ LEDD mediation]:::tier4
+        DAG[build_causal_dag.R<br/>Causal DAG]:::tier4
+    end
+
+    subgraph DOCX[Manuscript Assembly]
+        BM[_build_methods_figure.py<br/>Methods schematic]:::out
+        BD9[_build_docx_v9*.py<br/>Word doc assembly]:::out
+    end
+
+    D1 --> D2
+    D2 --> H1
+    D3 --> H1
+    D4 --> S25
+    H1 --> T1
+    H1 --> T2
+    H1 --> T3
+    H1 --> T4
+    T1 --> DOCX
+    T2 --> DOCX
+    T3 --> DOCX
+    T4 --> DOCX
+```
