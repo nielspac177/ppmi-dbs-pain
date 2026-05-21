@@ -71,6 +71,7 @@ make_visits <- function(p) {
   tibble::tibble(
     PATNO = p$PATNO,
     will_receive_dbs = has_dbs,
+    dbs_date = if (has_dbs) as.Date(p$dbs_date) else as.Date(NA),
     INFODT_orig = dates,
     NP1PAIN  = pain_walk,
     NP1SLPN  = pmax(0, pmin(4, round(pain_walk + rnorm(n_visits, 0, 0.5)))),
@@ -104,19 +105,19 @@ long_rows <- patients %>% dplyr::rowwise() %>%
   dplyr::ungroup()
 cat("  Synthetic long rows:", nrow(long_rows), "\n")
 
-# Anchor + time fields (mimicking what helpers expect)
-anchors <- long_rows %>%
-  dplyr::group_by(PATNO, will_receive_dbs) %>%
-  dplyr::summarise(
-    anchor_date = dplyr::if_else(any(will_receive_dbs),
-                                 as.Date(min(INFODT_orig[!is.na(INFODT_orig)])),
-                                 as.Date(min(INFODT_orig))),
-    .groups = "drop"
-  )
+# Time fields (anchor will be recomputed by load_full_ppmi_rel_*).
+# We don't store an `anchor_date` column here to avoid name collisions
+# when the load_*() helpers join their own anchor table back in.
 long_rows <- long_rows %>%
-  dplyr::left_join(anchors, by = c("PATNO", "will_receive_dbs")) %>%
+  dplyr::group_by(PATNO, will_receive_dbs) %>%
   dplyr::mutate(
-    time_days   = as.numeric(difftime(INFODT_orig, anchor_date, units = "days")),
+    .anchor = dplyr::if_else(any(will_receive_dbs),
+                             as.Date(min(INFODT_orig[!is.na(INFODT_orig)])),
+                             as.Date(min(INFODT_orig)))
+  ) %>%
+  dplyr::ungroup() %>%
+  dplyr::mutate(
+    time_days   = as.numeric(difftime(INFODT_orig, .anchor, units = "days")),
     time_pos    = abs(time_days),
     time_months = time_days / (365.25 / 12),
     time_pos_months = time_pos / (365.25 / 12),
@@ -128,7 +129,7 @@ long_rows <- long_rows %>%
       will_receive_dbs & time_days >= 0 ~ "Post-DBS",
       TRUE                              ~ "Never-DBS"
     )
-  )
+  ) %>% dplyr::select(-.anchor)
 
 # Save outputs --------------------------------------------------
 cat("Writing data-synth/ppmi_synth_matched_long.csv …\n")

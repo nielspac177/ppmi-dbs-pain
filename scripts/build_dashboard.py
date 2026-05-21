@@ -48,6 +48,9 @@ s7b = rd("sprint07_caliper_sensitivity.csv")
 s8a = rd("sprint08_finegray.csv")
 s8b = rd("sprint08_cs_cox.csv")
 s9  = rd("sprint09_mediation_results.csv")
+s10 = rd("sprint10_ipcw_results.csv")
+s10d = rd("sprint10_dropout_rates.csv")
+s11 = rd("sprint11_bayesian_genetics.csv")
 
 PLOTLY_LAYOUT = dict(
     font=dict(family="Inter, -apple-system, sans-serif", size=12, color="#111827"),
@@ -313,6 +316,68 @@ if s8a is not None and s8b is not None:
                     "Fine-Gray subdistribution HR = 1.86 (1.28–2.69), P = 0.001 — "
                     "replicates the cause-specific Cox HR with proper handling "
                     "of informative dropout. Reflects channeling at baseline.",
+                    f))
+
+# === Sprint 10 — IPCW for informative dropout ===
+if s10 is not None:
+    f = go.Figure()
+    f.add_trace(go.Bar(
+        x=s10["estimator"], y=s10["diff"],
+        marker_color=[OK["b"], OK["v"]],
+        marker_line=dict(color="#111827", width=1),
+        error_y=dict(type="data",
+                     array=s10["ci_hi"] - s10["diff"],
+                     arrayminus=s10["diff"] - s10["ci_lo"]),
+        text=[f"Δ = {v:+.3f}" for v in s10["diff"]],
+        textposition="outside", showlegend=False,
+    ))
+    f.add_hline(y=0, line_dash="dash", line_color="#9ca3af")
+    for m in (-1, 1):
+        f.add_hline(y=m, line_dash="dot", line_color=OK["v"])
+    f.update_layout(
+        title="IPCW for informative dropout — primary Δ Pain robust",
+        yaxis_title="Δ Pain (DBS − Never-DBS)",
+        xaxis=dict(gridcolor="#e5e7eb"), yaxis=dict(gridcolor="#e5e7eb"),
+        **PLOTLY_LAYOUT)
+    figures.append(("sprint10", "Sprint 10 · IPCW for informative dropout",
+                    "Inverse-probability-of-censoring weights layered on IPTW. "
+                    "Effect estimate is essentially unchanged after correcting "
+                    "for informative dropout — primary conclusion robust.",
+                    f))
+
+# === Sprint 11 — Bayesian-flavoured genetic interactions ===
+if s11 is not None:
+    f = go.Figure()
+    f.add_trace(go.Scatter(
+        x=s11["post_mean"], y=s11["stratifier"], mode="markers",
+        marker=dict(size=14, color=OK["o"],
+                    line=dict(color="#111827", width=1)),
+        error_x=dict(type="data",
+                     array=s11["ci_hi"] - s11["post_mean"],
+                     arrayminus=s11["post_mean"] - s11["ci_lo"]),
+        hovertemplate=("<b>%{y}</b><br>posterior mean = %{x:.3f}<br>"
+                       "P(|β| > 0.25) = %{customdata[0]:.2f}<br>"
+                       "P(|β| > 0.50) = %{customdata[1]:.2f}"
+                       "<extra></extra>"),
+        customdata=s11[["P_abs_gt_025", "P_abs_gt_050"]].values,
+    ))
+    f.add_vline(x=0, line_dash="dash", line_color="#9ca3af")
+    for m in (-0.25, 0.25):
+        f.add_vline(x=m, line_dash="dot", line_color=OK["o"])
+    for m in (-0.5, 0.5):
+        f.add_vline(x=m, line_dash="dot", line_color=OK["v"])
+    f.update_layout(
+        title="Bayesian-flavoured genetic × DBS interactions (bootstrap posterior)",
+        xaxis_title="Interaction posterior mean (pain points)",
+        xaxis=dict(range=[-1, 1], gridcolor="#e5e7eb"),
+        yaxis=dict(gridcolor="#e5e7eb"),
+        showlegend=False, **PLOTLY_LAYOUT)
+    figures.append(("sprint11", "Sprint 11 · Bayesian genetic interactions",
+                    "Empirical bootstrap posterior approximation (B = 10,000) "
+                    "for arm × genetic stratum on Δ Pain. Reports posterior P "
+                    "that interaction magnitude exceeds clinically interesting "
+                    "thresholds (±0.25, ±0.5 pain points) — converts uninterpretable "
+                    "frequentist nulls into informative nulls.",
                     f))
 
 # === Sprint 9 — ΔLEDD mediation ===

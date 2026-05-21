@@ -20,13 +20,18 @@ cfg_path <- here::here("config.yml")
 if (!file.exists(cfg_path)) {
   cfg_path <- here::here("config.example.yml")
 }
-.cfg <- yaml::read_yaml(cfg_path)
+# Null-coalescing operator (base R lacks it)
+`%||%` <- function(a, b) if (is.null(a) || length(a) == 0) b else a
+
+.cfg_raw <- yaml::read_yaml(cfg_path)
+# config.yml uses `default:` top-level key (R-style config conventions)
+.cfg <- if (!is.null(.cfg_raw$default)) .cfg_raw$default else .cfg_raw
 
 DATA_ROOT <- Sys.getenv("PPMI_DATA_ROOT",
-                        unset = .cfg$data$ppmi_data_root)
-OUT_FIG   <- here::here(.cfg$paths$figures)
-OUT_TAB   <- here::here(.cfg$paths$tables)
-OUT_OBJ   <- here::here(.cfg$paths$objects)
+                        unset = .cfg$data$ppmi_data_root %||% "")
+OUT_FIG   <- here::here(.cfg$paths$figures %||% "outputs/figures")
+OUT_TAB   <- here::here(.cfg$paths$tables  %||% "outputs/tables")
+OUT_OBJ   <- here::here(.cfg$paths$objects %||% "outputs/objects")
 
 # Real-data files (resolved from DATA_ROOT or synthetic data)
 USE_SYNTH <- isTRUE(.cfg$data$use_synth) ||

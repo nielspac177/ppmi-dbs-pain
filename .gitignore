@@ -49,6 +49,8 @@ _freeze/
 _site/
 .quarto/
 *.html
+!docs/dashboard.html
+!outputs/figures/Figure_sankey.html
 docs/_book/
 .vscode/
 .idea/
