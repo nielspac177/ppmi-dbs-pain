@@ -1,6 +1,6 @@
 # Manuscript draft — formal prose, journal-tailored
 
-**Working title.** Stimulation reshapes the pain–symptom architecture in Parkinson disease: a target-trial-emulation matched longitudinal cohort in the Parkinson's Progression Markers Initiative.
+**Working title.** Deep brain stimulation reshapes the pain–symptom architecture in Parkinson disease: a target-trial-emulation matched longitudinal cohort in the Parkinson's Progression Markers Initiative.
 
 **Authors.** Niels Pacheco-Barrios, MD¹; … ; John D. Rolston, MD, PhD¹\*.
 ¹ Department of Neurological Surgery, University of California, San Francisco.
@@ -13,19 +13,19 @@
 
 ## Abstract (structured, 296 words)
 
-**Importance.** Subthalamic deep brain stimulation (STN-DBS) is the most widely used surgical therapy for Parkinson disease (PD), yet its long-term effects on non-motor symptoms—particularly pain—remain incompletely characterized. Whether stimulation changes the *structure* of how pain relates to other non-motor domains, distinct from whether it changes pain levels, has not previously been examined in a matched longitudinal cohort.
+**Importance.** Deep brain stimulation (DBS) is a widely used surgical therapy for Parkinson disease (PD), yet its long-term effects on non-motor symptoms—particularly pain—remain incompletely characterized. Whether stimulation changes the *structure* of how pain relates to other non-motor domains, distinct from whether it changes pain levels, has not previously been examined in a matched longitudinal cohort.
 
-**Objective.** To test (1) non-inferiority of STN-DBS on the 4-year trajectory of self-reported pain, (2) whether the non-motor symptom network reorganizes after stimulation, (3) whether within-patient pain–motor coupling is preserved, and (4) whether genetic and biomarker status modifies the pain response.
+**Objective.** To test (1) non-inferiority of DBS on the 4-year trajectory of self-reported pain, (2) whether the non-motor symptom network reorganizes after stimulation, (3) whether within-patient pain–motor coupling is preserved, and (4) whether genetic and biomarker status modifies the pain response.
 
-**Design, Setting, and Participants.** Observational target-trial-emulation analysis of the Parkinson's Progression Markers Initiative (PPMI) Curated Data Cut, November 2024. Idiopathic PD patients with at least one Movement Disorder Society Unified Parkinson's Disease Rating Scale Part I item 9 (NP1PAIN) observation were included (n = 1,484; 105 STN-DBS recipients, 1,379 Never-DBS).
+**Design, Setting, and Participants.** Observational target-trial-emulation analysis of the Parkinson's Progression Markers Initiative (PPMI) Curated Data Cut, November 2024. Idiopathic PD patients with at least one Movement Disorder Society Unified Parkinson's Disease Rating Scale Part I item 9 (NP1PAIN) observation were included (n = 1,484; 105 DBS recipients, 1,379 Never-DBS). PPMI does not record stimulation target (subthalamic vs pallidal vs other); analyses are therefore target-agnostic.
 
-**Exposure.** Subthalamic deep brain stimulation, anchored at first surgery date.
+**Exposure.** Deep brain stimulation, anchored at first surgery date.
 
 **Main Outcomes and Measures.** Primary: landmark change in NP1PAIN at +6 to +18 months relative to a −24 to 0 month baseline, evaluated by two one-sided tests for non-inferiority at a ±1-point margin. Secondary outcomes included graphical LASSO partial-correlation networks over 15 non-motor symptoms, Fine-Gray competing-risk subdistribution hazards, and within-patient ΔPain–ΔUPDRS-III Spearman correlations.
 
 **Results.** Pain trajectories were non-inferior at the ±1-point margin in the matched primary cohort and across three alternative anchor schemes (TOST P < 10⁻¹² in all). The non-motor partial-correlation network differed structurally between arms at late follow-up (Network Comparison Test P = 0.050). Within-patient pain–motor coupling was attenuated after DBS (bootstrap Δρ = −0.16; 95% CI −0.60 to +0.29). ΔLEDD did not mediate the pain effect (matched ACME P = .69). All genetic-by-DBS interactions were null.
 
-**Conclusions and Relevance.** STN-DBS did not worsen the long-term pain trajectory in PD; however, it reorganized the non-motor symptom architecture surrounding pain. These findings support a conceptual shift from regarding DBS as a "motor-only" therapy to a "symptom-architecture-modulating" therapy, with mechanistic implications for prospective connectomic studies.
+**Conclusions and Relevance.** DBS did not worsen the long-term pain trajectory in PD; however, it reorganized the non-motor symptom architecture surrounding pain. These findings support a conceptual shift from regarding DBS as a "motor-only" therapy to a "symptom-architecture-modulating" therapy, with mechanistic implications for prospective connectomic studies.
 
 ---
 
@@ -40,18 +40,22 @@ mesolimbic) and peripheral (small-fibre neuropathy, ectopic activity)
 pathways.¹ Across multiple instruments and cohorts, pain severity scales
 with motor severity at baseline.²,⁴
 
-Subthalamic deep brain stimulation (STN-DBS) is the most widely used
-surgical therapy for advanced PD and has accumulated evidence of pain
-reduction at 6 to 24 months post-implantation. Cury and colleagues
-reported a fall in pain prevalence from 70% to 21% in 41 patients at
-12 months,⁵ a result extended to 8-year follow-up in 24 patients by
-Jung and colleagues.⁶ Multicentre evidence from EuroInf-2 placed STN-DBS
-ahead of levodopa-carbidopa intestinal gel and apomorphine on the pain
-domain of the Non-Motor Symptoms Scale at 6 months,⁷ with the NILS
-36-month follow-up sustaining the gain.⁸ A 2021 meta-analysis pooled
-nine studies and identified a delayed pooled effect on PD-related
-pain.⁹ Stimulation of the dorsal subthalamic sensorimotor zone
-specifically appears to drive pain response.¹⁰,¹¹
+Deep brain stimulation (DBS) is a widely used surgical therapy for
+advanced PD and has accumulated evidence of pain reduction at 6 to 24
+months post-implantation. Cury and colleagues, studying subthalamic
+DBS specifically, reported a fall in pain prevalence from 70% to 21%
+in 41 patients at 12 months,⁵ a result extended to 8-year follow-up in
+24 subthalamic DBS patients by Jung and colleagues.⁶ Multicentre evidence
+from EuroInf-2 placed subthalamic DBS ahead of levodopa-carbidopa
+intestinal gel and apomorphine on the pain domain of the Non-Motor
+Symptoms Scale at 6 months,⁷ with the NILS 36-month follow-up sustaining
+the gain.⁸ A 2021 meta-analysis pooled nine studies and identified a
+delayed pooled effect on PD-related pain.⁹ Stimulation of the dorsal
+subthalamic sensorimotor zone specifically appears to drive pain
+response.¹⁰,¹¹ The Follett trial demonstrated that pallidal and
+subthalamic DBS have broadly comparable motor efficacy but distinct
+non-motor symptom profiles,³⁸ underscoring the importance of target
+when interpreting pain response.
 
 These prior studies, however, share three limitations. First, all but
 two used single-arm pre/post designs without matched non-DBS comparators.
@@ -66,8 +70,8 @@ has compared the multivariate symptom topology between DBS and
 Never-DBS PD patients.
 
 We tested four pre-specified questions in the Parkinson's Progression
-Markers Initiative (PPMI)¹⁴: (1) is STN-DBS non-inferior to medical
-therapy on the 4-year trajectory of pain at a ±1-point clinical margin?
+Markers Initiative (PPMI)¹⁴: (1) is DBS non-inferior to medical therapy
+on the 4-year trajectory of pain at a ±1-point clinical margin?
 (2) does the multivariate non-motor symptom network reorganize after
 stimulation? (3) is the within-patient pain–motor coupling—established
 cross-sectionally by Pacheco-Barrios and colleagues⁴—preserved
@@ -89,16 +93,18 @@ NCT01141023).¹⁴ Eligibility for inclusion in the analytic cohort
 required (a) physician-confirmed idiopathic PD, (b) absence of a known
 monogenic cause (440 monogenic carriers excluded a priori), and (c) at
 least one observation of MDS-UPDRS Part I item 9 (NP1PAIN). The
-resulting analytic cohort contained 1,484 patients (105 STN-DBS
-recipients, 1,379 Never-DBS controls). Detailed inclusion-exclusion
-flow is presented in Figure 2 (STROBE).¹⁶
+resulting analytic cohort contained 1,484 patients (105 DBS
+recipients, 1,379 Never-DBS controls). PPMI does not record the
+stimulation target; the cohort is therefore treated as DBS-agnostic
+throughout (see Limitations). Detailed inclusion-exclusion flow is
+presented in Figure 2 (STROBE).¹⁶
 
 ### Target trial emulation
 
 We adopted the framework of Hernán and Robins¹⁵ to make the implicit
 causal contrast explicit. The hypothetical target trial we emulated had
 the following protocol elements: *eligibility*, idiopathic PD with at
-least one NP1PAIN observation; *treatment strategies*, "receive STN-DBS
+least one NP1PAIN observation; *treatment strategies*, "receive DBS
 within the follow-up window" versus "no DBS during the follow-up window";
 *assignment*, by physician decision in observational data; *follow-up*
 beginning at an anchor visit and continuing for up to 48 months;
@@ -116,7 +122,7 @@ The primary outcome was the change in NP1PAIN between a pre-anchor
 baseline window of −24 to 0 months and a post-anchor primary window of
 +6 to +18 months. The negative-control outcomes were NP1HALL
 (hallucinations), NP1URN (urinary), and NP1COG (cognition)—MDS-UPDRS Part
-I items with no a priori reason to respond to STN-DBS over a 12-month
+I items with no a priori reason to respond to DBS over a 12-month
 horizon.¹⁷ The pre-specified positive control was the analogous
 change in MDS-UPDRS Part III (motor) score.
 
@@ -221,7 +227,7 @@ redistributed; access instructions are at
 
 Of 1,924 idiopathic PD patients in the PPMI cohort, 440 were excluded
 for known monogenic variants, yielding an analytic cohort of 1,484 with
-at least one NP1PAIN observation (105 STN-DBS recipients; 1,379
+at least one NP1PAIN observation (105 DBS recipients; 1,379
 Never-DBS) (Figure 2). Mean follow-up was 4.04 years among DBS
 recipients and 2.28 years among Never-DBS controls. Channeling bias was
 evident: pre-match standardized mean differences exceeded 0.4 on
@@ -238,7 +244,7 @@ In the matched cohort, the mean change in NP1PAIN at the +6 to +18-month
 landmark was +0.06 in the DBS arm and +0.08 in the Never-DBS arm; the
 between-arm difference was −0.016 (95% CI −0.249 to +0.217). Two
 one-sided non-inferiority tests at a ±1-point margin both rejected (P < 10⁻¹²),
-supporting non-inferiority of STN-DBS on the 4-year pain trajectory.
+supporting non-inferiority of DBS on the 4-year pain trajectory.
 The pre-specified positive control—change in MDS-UPDRS Part III—favoured
 DBS (mean −4.95 points, P < 0.001), confirming that the analytic
 pipeline can detect clinically meaningful effects when they exist. The
@@ -319,7 +325,7 @@ to be a pharmacological washout artifact.
 
 ## Discussion
 
-In a propensity-score-matched longitudinal cohort drawn from PPMI, STN-DBS
+In a propensity-score-matched longitudinal cohort drawn from PPMI, DBS
 was non-inferior to medical therapy on the 4-year course of self-reported
 pain at a clinically meaningful ±1-point margin, with the conclusion
 robust to anchor specification, missing-not-at-random sensitivity, and
@@ -348,15 +354,15 @@ pharmacological. ΔLEDD did not significantly mediate the pain effect in
 either the matched or the full cohort, arguing against the simplest
 explanation that lower post-DBS dopaminergic-medication exposure drove
 both motor improvement and pain decoupling. We propose instead that
-chronic STN stimulation interacts directly with shared subthalamic-pallidal
-projections to mesencephalic locomotor and parabrachial circuits that
-encode aversive/pain salience,³⁵ consistent with the symptom-specific
+chronic stimulation interacts with basal-ganglia–brainstem projections to
+mesencephalic locomotor and parabrachial circuits that encode
+aversive/pain salience,³⁵ consistent with the symptom-specific
 connectomic targets identified by Hollunder and colleagues at the
 imaging level.¹² The strengthening of pain–autonomic and pain–sleep edges
 in the late-post DBS network is compatible with a noradrenergic
 endophenotype hypothesis, in which a locus coeruleus–pontine axis
-becomes a more prominent driver of pain perception once
-subthalamic-motor coupling is dampened by stimulation.³⁶
+becomes a more prominent driver of pain perception once basal-ganglia
+output is reorganised by stimulation.³⁶
 
 This study has several strengths: a pre-specified target-trial-emulation
 framework with both propensity matching and inverse-probability weighting,
@@ -371,10 +377,12 @@ Limitations are notable. First, with 105 DBS recipients, the cohort is
 biased toward early-PD patients (mean disease duration at DBS = 2.3
 years), and our findings should be interpreted within an EARLYSTIM-era
 population³⁷ rather than as generalizing to late-PD DBS recipients.
-Second, PPMI does not record the DBS target; our cohort is presumed to
-be STN-predominant, but we cannot exclude that a minority of patients
-received globus pallidus internus stimulation, which has a different
-pain-response profile.³⁸ Third, NP1PAIN is a single 0–4 ordinal item
+Second, PPMI does not record the DBS target. The cohort is therefore
+target-agnostic and is expected to be a mixture of subthalamic and
+pallidal recipients, which are known to have broadly comparable motor
+efficacy but distinct non-motor profiles.³⁸ Pain effects may therefore
+be heterogeneous by target — a hypothesis our cohort cannot test.
+Third, NP1PAIN is a single 0–4 ordinal item
 and may be insensitive to pain phenotype heterogeneity captured by the
 King's PD Pain Scale or the Brief Pain Inventory. Fourth, the
 Network Comparison Test P-value of 0.050 is borderline; bootstrap
@@ -383,7 +391,7 @@ independent cohort. Fifth, the genetic and biomarker × DBS interaction
 nulls are uninformative below approximately ±0.5 pain points of effect
 size given the cohort sample.
 
-Clinically, these results support the position that STN-DBS does not
+Clinically, these results support the position that DBS does not
 harm long-term pain outcomes and may decouple pain from motor severity—a
 mechanism that could explain the heterogeneous responder pattern
 observed in clinical practice.⁹ Conceptually, the findings motivate a
@@ -400,8 +408,8 @@ longitudinal non-motor symptom in any PD cohort with a DBS comparator.
 
 ## Conclusion
 
-In a matched longitudinal cohort drawn from PPMI, subthalamic deep brain
-stimulation did not worsen the 4-year course of pain in Parkinson disease.
+In a matched longitudinal cohort drawn from PPMI, deep brain stimulation
+did not worsen the 4-year course of pain in Parkinson disease.
 However, the multivariate non-motor symptom network surrounding pain
 reorganized after stimulation, with pain becoming uncoupled from motor
 severity and more tightly linked to autonomic and sleep domains. These

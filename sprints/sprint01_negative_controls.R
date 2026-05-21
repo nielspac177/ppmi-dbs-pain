@@ -5,7 +5,7 @@
 #
 # Rationale: the primary TOST framework concludes non-inferiority on Δ
 # NP1PAIN. We rerun the SAME pipeline on three MDS-UPDRS Part I items
-# with no a priori reason to respond to STN-DBS on a 12-month horizon:
+# with no a priori reason to respond to DBS on a 12-month horizon:
 #   NP1HALL (hallucinations)  — DBS should not affect on a 0–4 scale
 #   NP1URIN (urinary)         — autonomic, not stimulation-modulable short-term
 #   NP1COG  (cognition)       — known to remain stable / slowly decline

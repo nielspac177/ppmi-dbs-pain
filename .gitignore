@@ -8,6 +8,10 @@ ppmi_*.csv
 *.parquet
 *.dta
 
+# But DO commit the synthetic fixture (clearly labelled FAKE DATA)
+!data-synth/
+!data-synth/**
+
 # Real outputs (rebuilt by `make all` and CI)
 outputs/objects/
 outputs/figures/*.tiff

@@ -390,7 +390,7 @@ html = f"""<!DOCTYPE html>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ppmi-dbs-pain — Results dashboard</title>
-  <meta name="description" content="Interactive dashboard of post-hoc robustness analyses for the STN-DBS pain-trajectory study in PPMI (Pacheco-Barrios &amp; Rolston, 2026).">
+  <meta name="description" content="Interactive dashboard of post-hoc robustness analyses for the DBS pain-trajectory study in PPMI (Pacheco-Barrios &amp; Rolston, 2026).">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -408,7 +408,7 @@ html = f"""<!DOCTYPE html>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <h1 class="text-3xl sm:text-4xl font-bold leading-tight">ppmi-dbs-pain · Results dashboard</h1>
       <p class="mt-2 text-sky-100 text-base sm:text-lg max-w-3xl">
-        STN-DBS does not change <em>how much</em> pain PD patients report —
+        DBS does not change <em>how much</em> pain PD patients report —
         it changes <em>what their pain is linked to</em>.
       </p>
       <p class="mt-3 text-sky-200 text-sm">
@@ -438,7 +438,7 @@ html = f"""<!DOCTYPE html>
     <section aria-labelledby="story-heading" class="bg-yellow-50 border-l-4 border-yellow-400 rounded-r-lg p-5">
       <h2 id="story-heading" class="text-lg font-semibold text-yellow-900 mb-2">Story in one sentence</h2>
       <p class="text-yellow-900 text-base leading-relaxed">
-        STN-DBS does <strong>not</strong> change <em>how much</em> pain PD
+        DBS does <strong>not</strong> change <em>how much</em> pain PD
         patients report over four years (TOST P &lt; 10⁻¹²) — but it
         reshapes <em>what their pain is linked to</em>, uncoupling pain
         from motor severity (Δρ &asymp; −0.16) and routing it toward
@@ -450,7 +450,7 @@ html = f"""<!DOCTYPE html>
       <h2 id="sprint-heading" class="text-2xl font-bold text-gray-900">Sprint-by-sprint results</h2>
       <p class="text-sm text-gray-700 max-w-3xl">
         Each panel below is a post-hoc robustness analysis. None changes
-        the pre-specified primary conclusion (non-inferiority of STN-DBS
+        the pre-specified primary conclusion (non-inferiority of DBS
         on the 4-year pain trajectory at ±1 MDS-UPDRS Part I point).
         See <a href="https://github.com/nielspac177/ppmi-dbs-pain/blob/main/PRE_REGISTRATION.md" class="text-sky-700 underline">PRE_REGISTRATION.md</a>
         for the analysis audit trail.

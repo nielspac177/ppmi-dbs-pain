@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: "ppmi-dbs-pain — STN-DBS effect on longitudinal pain in Parkinson disease"
+title: "ppmi-dbs-pain — DBS effect on longitudinal pain in Parkinson disease"
 message: "If you use this code, please cite both the manuscript and the software."
 type: software
 authors:
@@ -26,7 +26,7 @@ keywords:
   - pain
 preferred-citation:
   type: article
-  title: "Stimulation reshapes the pain–symptom architecture in Parkinson disease: a matched longitudinal PPMI cohort"
+  title: "Deep brain stimulation reshapes the pain–symptom architecture in Parkinson disease: a matched longitudinal PPMI cohort"
   authors:
     - given-names: Kevin
       family-names: Pacheco-Barrios

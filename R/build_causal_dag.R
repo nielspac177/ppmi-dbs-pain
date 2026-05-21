@@ -99,7 +99,7 @@ tidy_dag <- ggdag::tidy_dagitty(dag)
 p <- ggdag::ggdag(tidy_dag, node_size = 16, text_size = 2.6) +
   ggdag::theme_dag_blank() +
   ggplot2::labs(
-    title    = "Causal DAG for STN-DBS effect on longitudinal pain",
+    title    = "Causal DAG for DBS effect on longitudinal pain",
     subtitle = "Solid arrows: causal directions. DBS = exposure; Pain_traj = outcome. Adjusted via PS/IPW on the parents-of-DBS set."
   )
 
@@ -131,7 +131,7 @@ p <- ggplot2::ggplot(tidy_dag$data,
     name = NULL) +
   ggdag::theme_dag_blank() +
   ggplot2::labs(
-    title    = "Causal DAG: STN-DBS → longitudinal pain in PD",
+    title    = "Causal DAG: DBS → longitudinal pain in PD",
     subtitle = paste(
       "Exposure = DBS, outcome = Pain trajectory.",
       "Backdoor confounders adjusted via PS-matching + IPW.",

@@ -5,15 +5,29 @@
 [![R](https://img.shields.io/badge/R-4.5.1-blue?logo=R)](https://www.r-project.org/)
 [![Reproduce](https://img.shields.io/badge/Reproduce-make%20all-brightgreen)](REPRODUCE.md)
 
-> **Subthalamic deep brain stimulation does not worsen the longitudinal course of pain in Parkinson disease — and reshapes the symptom network around it.**
+> **Deep brain stimulation does not worsen the longitudinal course of pain in Parkinson disease — and reshapes the symptom network around it.**
 > Pacheco-Barrios *et al.*, in preparation.
 
 A propensity-matched longitudinal observational analysis in the **Parkinson's
 Progression Markers Initiative (PPMI)** cohort (n = 1,484; 105 DBS, 1,379
-Never-DBS) testing non-inferiority of STN-DBS on MDS-UPDRS Part I item 9 pain
+Never-DBS) testing non-inferiority of DBS on MDS-UPDRS Part I item 9 pain
 trajectories, plus pre-specified and post-hoc robustness checks
 (target-trial framing, E-values, MNAR tipping-point, GLASSO network comparison,
 competing-risk Fine-Gray, ΔLEDD mediation, negative-control outcomes).
+
+> *PPMI does not record stimulation target; the cohort is therefore treated
+> as DBS-agnostic. All references to "DBS" below mean PPMI-recorded DBS
+> exposure, target unspecified.*
+
+## 🌐 Companion website
+
+- 📊 **[Interactive results dashboard](https://nielspac177.github.io/ppmi-dbs-pain/dashboard.html)**
+  — KPI cards + 9 sprint panels (Plotly + Tailwind, WCAG 2.2 AA accessible).
+- 🌊 **[Cohort / analysis Sankey (interactive)](https://nielspac177.github.io/ppmi-dbs-pain/Figure_sankey.html)**
+  *(local: `outputs/figures/Figure_sankey.html`)*.
+- 📘 **[Quarto book](https://nielspac177.github.io/ppmi-dbs-pain/)** —
+  Methods, Results, Sensitivity, DAG, STROBE / TRIPOD / ROBINS-I checklists
+  *(builds after `quarto render` — chapter skeletons under `docs/`)*.
 
 ---
 
@@ -112,7 +126,7 @@ flowchart LR
     P1[Primary:<br/>landmark TOST<br/>LMM Pre/Post<br/>GEE Table 3]:::primary
     P2[Secondary:<br/>GLASSO network<br/>KM/Cox time-to-pain<br/>PSM sensitivity]:::primary
     P3[Exploratory:<br/>Genetics × DBS<br/>Pain–motor coupling]:::primary
-    S[Sprints sprint01–09:<br/>negative controls, anchor sweep,<br/>E-value, MNAR, NCT, bootstrap Δρ,<br/>Brant/Firth, robust SE, AR(1),<br/>PSM diagnostics, Fine-Gray, mediation]:::sprint
+    S["Sprints sprint01–09:<br/>negative controls, anchor sweep,<br/>E-value, MNAR, NCT, bootstrap Δρ,<br/>Brant/Firth, robust SE, AR1,<br/>PSM diagnostics, Fine-Gray, mediation"]:::sprint
     M[Manuscript outputs<br/>figures + tables]:::out
     PPMI --> H
     H --> P1 --> M

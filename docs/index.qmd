@@ -20,7 +20,7 @@ commit to `main`.
 
 ## Story in five bullets
 
-1. **Primary safety floor**: STN-DBS is non-inferior on the 4-year course of pain (TOST P < 10⁻¹², ±1-point margin).
+1. **Primary safety floor**: DBS is non-inferior on the 4-year course of pain (TOST P < 10⁻¹², ±1-point margin).
 2. **Network reorganization**: late-post NCT P = 0.050 — formal structural difference.
 3. **Pain–motor decoupling**: bootstrap Δρ matched = −0.16 (95 % CI −0.60, +0.29).
 4. **Not LEDD-mediated**: matched ACME P = 0.69 — stimulation-circuit mechanism.
