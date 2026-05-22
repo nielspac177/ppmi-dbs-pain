@@ -42,7 +42,7 @@ ppmi-dbs-pain/
 │   ├── build_*.R                    ← main analysis scripts
 │   ├── 25_genetics_arm_pain.R       ← exploratory genetic interactions
 │   └── 26[abc]_pain_motor_*.R       ← pain-motor coupling
-├── sprints/sprint01-09.R       ← 9 post-hoc robustness scripts
+├── analyses/01-09.R       ← 9 post-hoc robustness scripts
 ├── scripts/
 │   ├── _build_methods_figure.py
 │   ├── _build_docx_v9_*.py
@@ -77,7 +77,7 @@ this module.
 |---|---|---|
 | 8–11 | `library()` block | All shared dependencies live here. |
 | 13–17 | `here::i_am()` + `config.yml` | Replaces the old hardcoded `PROJECT_ROOT` path; reproducibility-critical. |
-| 25–35 | `OKABE_ITO` palette | Default for all sprint figures; never use raw hex elsewhere. |
+| 25–35 | `OKABE_ITO` palette | Default for all analysis figures; never use raw hex elsewhere. |
 | 47–80 | `load_full_ppmi_rel_patient_anchor()` | Builds the analytic long frame with each patient's first visit as the anchor for Never-DBS, first DBS date for DBS arm. |
 | 81–101 | `load_full_ppmi_rel()` | Same as above but with a *fixed* cohort-median Never-DBS anchor (legacy comparator). |
 | 270–290 | `compute_symmetric_midpoint_anchors()` | **Critical**: casts POSIXct to Date *before* arithmetic to avoid the "seconds-not-days" bug that previously collapsed midpoints to first_visit. |
@@ -87,7 +87,7 @@ this module.
 
 ## Why the symmetric-midpoint anchor matters
 
-For the pain–motor coupling analyses (Sprint 5; `R/26b_*` and `R/26c_*`),
+For the pain–motor coupling analyses (Analysis 5; `R/26b_*` and `R/26c_*`),
 Never-DBS patients have no real "anchor event." Without a symmetric
 window, you cannot compute matched Δ-Δ contrasts across arms. The fix
 is to define each Never-DBS patient's anchor as the midpoint of their
@@ -141,7 +141,7 @@ ct_A <- emmeans::emmeans(m_A, ~ time_m * traj) |>
 **Important note**: `weights = weight_sw_trim90` are interpreted by
 `lme4` as precision weights (variance multipliers), not survey weights.
 For proper IPW interpretation, refit without weights and apply
-cluster-robust SE via `clubSandwich::vcovCR()` (Sprint 6 does this).
+cluster-robust SE via `clubSandwich::vcovCR()` (Analysis 6 does this).
 
 ## `build_gee_table3.R`
 
@@ -161,7 +161,7 @@ m_base <- geepack::geeglm(
 **Output**: `outputs/tables/gee_table3_base_vs_adjusted.csv`,
 `outputs/objects/gee_table3_fits.rds`.
 
-**Note**: Sprint 6 re-fits with `corstr = "ar1"` as a sensitivity. The
+**Note**: Analysis 6 re-fits with `corstr = "ar1"` as a sensitivity. The
 Pre-DBS × time interaction is sensitive to this choice (P = 0.079 →
 P = 0.59); the Post-DBS × time interaction is robust.
 
@@ -228,30 +228,30 @@ longitudinal Δ-Δ Spearman coupling. `26b` uses the symmetric-midpoint
 anchor for Never-DBS controls (so visit grids are symmetric across
 arms); `26c` reframes pain as the outcome (rather than predictor).
 
-Sprint 5 wraps the ordinal logistic regression with a manual Brant test
-and provides bootstrap Δρ confidence intervals; Sprint 5 also adds
+Analysis 5 wraps the ordinal logistic regression with a manual Brant test
+and provides bootstrap Δρ confidence intervals; Analysis 5 also adds
 profile-likelihood and Firth-penalized CIs for small strata.
 
 ---
 
-# Sprint scripts — `sprints/sprint01-09.R`
+# Analysis scripts — `analyses/01-09.R`
 
 The nine post-hoc robustness analyses, added 2026-05-19. Each is
 self-contained, seeded with `set.seed(20260519)`, and outputs a CSV
 table + (where appropriate) a PNG/PDF figure. Run sequentially via
-`make sprints`.
+`make analyses`.
 
 | Script | What it tests | Headline number |
 |---|---|---|
-| `sprint01_negative_controls.R` | NP1HALL/URN/COG via same TOST framework | All 4 outcomes NI at ±1 |
-| `sprint02_anchor_sensitivity.R` | 3 Never-DBS anchor schemes | All 3 NI at ±1 |
-| `sprint03_evalue_mnar.R` | E-value table + MNAR tipping-point | Tipping at k = ±1 |
-| `sprint04_nct_bootnet.R` | Network Comparison Test + bootnet | Late-post P = 0.050 |
-| `sprint05_bootstrap_brant_firth.R` | Bootstrap Δρ + Brant + Firth | PO holds; Δρ = −0.16 |
-| `sprint06_robust_ses.R` | Cluster-robust SE + GEE AR(1) | Pre-DBS slope sensitive to corstr |
-| `sprint07_psm_diagnostics.R` | PS overlap + caliper sweep | c-stat = 0.885 |
-| `sprint08_competing_risk.R` | Fine-Gray competing risk | HR = 1.86 (1.28–2.69) |
-| `sprint09_ledd_mediation.R` | ΔLEDD as mediator | matched ACME P = 0.69 |
+| `Analysis 01_negative_controls.R` | NP1HALL/URN/COG via same TOST framework | All 4 outcomes NI at ±1 |
+| `Analysis 02_anchor_sensitivity.R` | 3 Never-DBS anchor schemes | All 3 NI at ±1 |
+| `Analysis 03_evalue_mnar.R` | E-value table + MNAR tipping-point | Tipping at k = ±1 |
+| `Analysis 04_nct_bootnet.R` | Network Comparison Test + bootnet | Late-post P = 0.050 |
+| `Analysis 05_bootstrap_brant_firth.R` | Bootstrap Δρ + Brant + Firth | PO holds; Δρ = −0.16 |
+| `Analysis 06_robust_ses.R` | Cluster-robust SE + GEE AR(1) | Pre-DBS slope sensitive to corstr |
+| `Analysis 07_psm_diagnostics.R` | PS overlap + caliper sweep | c-stat = 0.885 |
+| `Analysis 08_competing_risk.R` | Fine-Gray competing risk | HR = 1.86 (1.28–2.69) |
+| `Analysis 09_ledd_mediation.R` | ΔLEDD as mediator | matched ACME P = 0.69 |
 
 **Common structure** (read once, then skim the rest):
 
@@ -263,9 +263,9 @@ table + (where appropriate) a PNG/PDF figure. Run sequentially via
 6. Run the focal statistical test
 7. Save CSV + figure via `save_table()` / `save_fig_pub()`
 
-**Reading order**: start with `sprint02_anchor_sensitivity.R` — it's
-the simplest and demonstrates the pattern. Then `sprint01`, `sprint07`,
-`sprint08`, `sprint09`. `sprint04` (NCT + bootnet) is the most complex
+**Reading order**: start with `Analysis 02_anchor_sensitivity.R` — it's
+the simplest and demonstrates the pattern. Then `Analysis 01`, `Analysis 07`,
+`Analysis 08`, `Analysis 09`. `Analysis 04` (NCT + bootnet) is the most complex
 and the only one with substantial runtime.
 
 ---
@@ -313,8 +313,8 @@ conclusion). Static PNG/PDF for the manuscript; interactive
 ## `scripts/build_dashboard.py`
 
 Generates the interactive HTML results dashboard at
-`docs/dashboard.html`. Reads every `sprint*.csv` under `outputs/tables/`
-and renders one Plotly panel per sprint, with KPI cards at the top.
+`docs/dashboard.html`. Reads every `analysis*.csv` under `outputs/tables/`
+and renders one Plotly panel per analysis, with KPI cards at the top.
 Uses Tailwind CSS (CDN-loaded) and meets WCAG 2.2 AA accessibility.
 
 ---
@@ -343,7 +343,7 @@ Run all: `make tests`. CI runs them on every push.
 make env         restore renv + pip
 make synth-data  regenerate synthetic PPMI fixture
 make analysis    run primary/secondary/exploratory
-make sprints     run sprint01-09
+make analyses     run Analysis 01-09
 make figures     rebuild DAG, callgraph, Sankey, dashboard
 make dashboard   rebuild only the interactive dashboard
 make book        render the Quarto book

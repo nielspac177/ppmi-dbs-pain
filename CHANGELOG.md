@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial public release with full code, synthetic data fixture,
   Docker/Codespaces configuration, Quarto book skeleton, and
   interactive results dashboard.
-- 9 robustness "sprint" analyses (post-hoc, 2026-05-19): negative
+- 9 robustness "analysis" analyses (post-hoc, 2026-05-19): negative
   controls, anchor sweep, E-value + MNAR, NCT + bootnet, bootstrap
   Δρ + Brant + Firth, cluster-robust SE + GEE AR(1), PSM diagnostics,
   Fine-Gray competing-risk, ΔLEDD mediation.

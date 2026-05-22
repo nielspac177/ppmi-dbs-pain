@@ -33,19 +33,19 @@ transparency.
 In response to internal critical-review feedback, nine additional
 robustness analyses were performed. **None of these change the
 pre-specified primary, secondary, or exploratory conclusions.** All are
-clearly labeled `[sprint]` in `MANIFEST.md` and run as the
-`sprints/sprint*.R` scripts. They are reported in the manuscript as
+clearly labeled `[robustness]` in `MANIFEST.md` and run as the
+`analyses/*.R` scripts. They are reported in the manuscript as
 sensitivity analyses, not as primary findings.
 
-1. **sprint01** Negative-control outcomes (NP1HALL, NP1URN, NP1COG)
-2. **sprint02** Anchor sensitivity sweep across three Never-DBS anchor schemes
-3. **sprint03** E-value supplementary table and missing-not-at-random tipping-point
-4. **sprint04** Formal Network Comparison Test with bootnet stability
-5. **sprint05** Bootstrap Δρ confidence interval, Brant test, profile-likelihood + Firth CIs
-6. **sprint06** Cluster-robust (CR2) SEs on LMMs; GEE AR(1) sensitivity
-7. **sprint07** PSM overlap, weight distribution, c-statistic, caliper sensitivity
-8. **sprint08** Fine-Gray competing-risk subdistribution hazard
-9. **sprint09** ΔLEDD as candidate mediator of the pain effect
+1. **Analysis 01** Negative-control outcomes (NP1HALL, NP1URN, NP1COG)
+2. **Analysis 02** Anchor sensitivity sweep across three Never-DBS anchor schemes
+3. **Analysis 03** E-value supplementary table and missing-not-at-random tipping-point
+4. **Analysis 04** Formal Network Comparison Test with bootnet stability
+5. **Analysis 05** Bootstrap Δρ confidence interval, Brant test, profile-likelihood + Firth CIs
+6. **Analysis 06** Cluster-robust (CR2) SEs on LMMs; GEE AR(1) sensitivity
+7. **Analysis 07** PSM overlap, weight distribution, c-statistic, caliper sensitivity
+8. **Analysis 08** Fine-Gray competing-risk subdistribution hazard
+9. **Analysis 09** ΔLEDD as candidate mediator of the pain effect
 
 ## OSF link
 

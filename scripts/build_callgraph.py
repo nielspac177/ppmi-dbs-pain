@@ -30,7 +30,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SRC_FILES = sorted(
     [p for p in (ROOT / "R").glob("*.R")]
     + [p for p in (ROOT / "R" / "helpers").glob("*.R")]
-    + [p for p in (ROOT / "sprints").glob("*.R")]
+    + [p for p in (ROOT / "analyses").glob("*.R")]
     + [p for p in (ROOT / "scripts").glob("*.py")]
     + [p for p in (ROOT / "notebooks").glob("*.ipynb")]
 )
@@ -96,7 +96,7 @@ def category(name: str) -> str:
         return "docx_builder"
     if name.startswith("build_") or name == "build_causal_dag.R":
         return "build_script"
-    if name.startswith("sprint"):
+    if name.startswith("analyses"):
         return "sprint_script"
     if re.match(r"^\d+[a-z]?_", name):
         return "numbered_script"
@@ -130,7 +130,7 @@ script_class = {}
 for name, d in info.items():
     cat = category(name)
     cls = {
-        "helper": "helper", "build_script": "build", "sprint_script": "sprint",
+        "helper": "helper", "build_script": "build", "sprint_script": "analyses",
         "numbered_script": "numbered", "notebook": "notebook",
         "docx_builder": "docx", "other": "build"
     }[cat]

@@ -4,7 +4,7 @@ Labels:
 - `[primary]` — pre-specified analysis for the main paper
 - `[secondary]` — pre-specified secondary analysis
 - `[exploratory]` — pre-specified exploratory analysis
-- `[sprint]` — post-hoc robustness analysis added 2026-05-19
+- `[robustness]` — post-hoc robustness analysis added 2026-05-19
 - `[infra]`  — pipeline infrastructure (figure rebuilds, docx assembly)
 - `[deprecated]` — historical patch; kept only for audit trail
 
@@ -29,21 +29,21 @@ Labels:
 | `R/build_paper_docx.R` | [infra] | Word doc assembly (legacy) |
 | `R/build_paper_standalone.R` | [infra] | Standalone build of paper.docx |
 | `R/build_original_figures_hires.R` | [infra] | High-res rebuilds for submission |
-| `R/build_causal_dag.R` | [sprint] | Causal DAG (dagitty) — adjustment set |
+| `R/build_causal_dag.R` | [robustness] | Causal DAG (dagitty) — adjustment set |
 
-## Sprint scripts (`sprints/`)
+## Analysis scripts (`analyses/`)
 
 | Path | Label | What it does |
 |---|---|---|
-| `sprints/sprint01_negative_controls.R` | [sprint] | NP1HALL/URIN/COG as negative controls |
-| `sprints/sprint02_anchor_sensitivity.R` | [sprint] | 3 anchor schemes vs primary TOST |
-| `sprints/sprint03_evalue_mnar.R` | [sprint] | E-value supplementary table + MNAR tipping point |
-| `sprints/sprint04_nct_bootnet.R` | [sprint] | Network Comparison Test + bootnet stability |
-| `sprints/sprint05_bootstrap_brant_firth.R` | [sprint] | Bootstrap Δρ + Brant + profile/Firth CIs |
-| `sprints/sprint06_robust_ses.R` | [sprint] | Cluster-robust SE (CR2) + GEE AR(1) |
-| `sprints/sprint07_psm_diagnostics.R` | [sprint] | PSM overlap + weight dist + c-stat + caliper sweep |
-| `sprints/sprint08_competing_risk.R` | [sprint] | Fine-Gray subdistribution hazard |
-| `sprints/sprint09_ledd_mediation.R` | [sprint] | ΔLEDD mediation analysis |
+| `analyses/01_negative_controls.R` | [robustness] | NP1HALL/URIN/COG as negative controls |
+| `analyses/02_anchor_sensitivity.R` | [robustness] | 3 anchor schemes vs primary TOST |
+| `analyses/03_evalue_mnar.R` | [robustness] | E-value supplementary table + MNAR tipping point |
+| `analyses/04_nct_bootnet.R` | [robustness] | Network Comparison Test + bootnet stability |
+| `analyses/05_bootstrap_brant_firth.R` | [robustness] | Bootstrap Δρ + Brant + profile/Firth CIs |
+| `analyses/06_robust_ses.R` | [robustness] | Cluster-robust SE (CR2) + GEE AR(1) |
+| `analyses/07_psm_diagnostics.R` | [robustness] | PSM overlap + weight dist + c-stat + caliper sweep |
+| `analyses/08_competing_risk.R` | [robustness] | Fine-Gray subdistribution hazard |
+| `analyses/09_ledd_mediation.R` | [robustness] | ΔLEDD mediation analysis |
 
 ## Python build scripts (`scripts/`)
 
@@ -74,6 +74,6 @@ pipeline; the same logic is being progressively migrated to `R/` scripts.
 ## Outputs
 
 - `outputs/figures/` — rebuilt by `make figures` (gitignored except for `Figure_callgraph` and `Figure_causal_DAG`)
-- `outputs/tables/` — rebuilt by `make analysis` and `make sprints`
+- `outputs/tables/` — rebuilt by `make analysis` and `make analyses`
 - `outputs/objects/` — RDS checkpoints, rebuilt by `make analysis`
 - `outputs/aggregated/` — **committed, PPMI-DUA-safe** summary tables

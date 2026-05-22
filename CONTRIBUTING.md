@@ -50,5 +50,5 @@ Conventional Commits format:
 
 The original analysis plan is in `PRE_REGISTRATION.md`. Sprint analyses
 01–09 were added post-hoc on 2026-05-19 in response to internal critical
-review; all are explicitly labeled `[sprint]` in `MANIFEST.md` to
+review; all are explicitly labeled `[robustness]` in `MANIFEST.md` to
 preserve the audit trail.

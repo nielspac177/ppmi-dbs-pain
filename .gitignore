@@ -44,16 +44,17 @@ venv/
 .ipynb_checkpoints/
 .cache/
 
-# --- Quarto / IDE ---
+# --- Quarto / IDE / HTML output ---
 _freeze/
 _site/
 .quarto/
 *.html
-!docs/dashboard.html
-!outputs/figures/Figure_sankey.html
 docs/_book/
 .vscode/
 .idea/
+# The deployed website lives on the gh-pages branch, not in main.
+# Build it via `make site` which writes to a tmpdir then pushes gh-pages.
+site-build/
 
 # --- OS ---
 .DS_Store
