@@ -3,8 +3,8 @@ test_that("compute_symmetric_midpoint_anchors handles POSIXct correctly", {
   d <- tibble::tibble(
     PATNO = c(1, 1, 1, 2, 2, 2),
     will_receive_dbs = c(FALSE, FALSE, FALSE, TRUE, TRUE, TRUE),
-    anchor_date = c(NA, NA, NA, as.Date("2020-01-15"),
-                    as.Date("2020-01-15"), as.Date("2020-01-15")),
+    anchor_date = as.Date(c(NA, NA, NA,
+                            "2020-01-15", "2020-01-15", "2020-01-15")),
     INFODT_orig = as.POSIXct(c("2019-01-01", "2020-01-01", "2021-01-01",
                                 "2019-06-01", "2020-06-01", "2021-06-01"),
                               tz = "UTC")
@@ -26,8 +26,10 @@ test_that("POSIXct + numeric arithmetic bug is no longer present", {
   last  <- as.POSIXct("2022-01-01", tz = "UTC")
   diff_days <- as.numeric(difftime(last, first, units = "days"))
   # If we use POSIXct + diff_days/2, it WRONGLY adds seconds.
+  # The "bad" result advances first by only ~diff_days / 2 SECONDS
+  # (≈ 365 days × 0.5 ≈ 182 seconds ≈ 0.002 days, NOT 365 days).
   bad <- first + diff_days / 2
-  expect_lt(as.numeric(difftime(bad, first, units = "days")), 0.001)
+  expect_lt(as.numeric(difftime(bad, first, units = "days")), 0.01)
   # The fix: cast to Date first, then add days.
   good <- as.Date(first) + diff_days / 2
   expect_equal(as.Date(good), as.Date("2021-01-01"), tolerance = 1)

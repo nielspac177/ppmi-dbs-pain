@@ -7,594 +7,558 @@ flowchart LR
   classDef notebook    fill:#CC79A7,stroke:#333,color:#000
   classDef docx        fill:#D55E00,stroke:#333,color:#fff
   classDef output      fill:#bbbbbb,stroke:#666,color:#000
-  00_data_setup_ipynb["00_data_setup.ipynb"]:::notebook
-  01_lmm_predicted_and_waterfall_ipynb["01_lmm_predicted_and_waterfall.ipynb"]:::notebook
-  01b_time_scale_sensitivity_ipynb["01b_time_scale_sensitivity.ipynb"]:::notebook
-  02_latent_class_trajectories_ipynb["02_latent_class_trajectories.ipynb"]:::notebook
-  02b_latent_class_high_pain_ipynb["02b_latent_class_high_pain.ipynb"]:::notebook
-  03_baseline_predictors_ipynb["03_baseline_predictors.ipynb"]:::notebook
-  03b_baseline_predictors_firth_ipynb["03b_baseline_predictors_firth.ipynb"]:::notebook
-  04_ledd_mediation_ipynb["04_ledd_mediation.ipynb"]:::notebook
-  05_prediction_model_ipynb["05_prediction_model.ipynb"]:::notebook
-  05b_prediction_full_cohort_ipynb["05b_prediction_full_cohort.ipynb"]:::notebook
-  05c_prediction_patient_anchor_ipynb["05c_prediction_patient_anchor.ipynb"]:::notebook
-  06_analgesic_use_ipynb["06_analgesic_use.ipynb"]:::notebook
-  06b_analgesic_by_class_ipynb["06b_analgesic_by_class.ipynb"]:::notebook
-  07_pain_phenotypes_ipynb["07_pain_phenotypes.ipynb"]:::notebook
-  07b_phenotypes_full_cohort_ipynb["07b_phenotypes_full_cohort.ipynb"]:::notebook
-  08_tost_evalue_ipynb["08_tost_evalue.ipynb"]:::notebook
-  09_symptom_network_glasso_ipynb["09_symptom_network_glasso.ipynb"]:::notebook
-  09b_longitudinal_glasso_ipynb["09b_longitudinal_glasso.ipynb"]:::notebook
-  09c_longitudinal_glasso_full_ipynb["09c_longitudinal_glasso_full.ipynb"]:::notebook
-  10_nm_phenotypes_pca_kmeans_ipynb["10_nm_phenotypes_pca_kmeans.ipynb"]:::notebook
-  11_multistate_msm_ipynb["11_multistate_msm.ipynb"]:::notebook
-  12_kaplan_meier_pain_worsening_ipynb["12_kaplan_meier_pain_worsening.ipynb"]:::notebook
-  12b_km_threshold_2_ipynb["12b_km_threshold_2.ipynb"]:::notebook
-  13_landmark_reconciliation_ipynb["13_landmark_reconciliation.ipynb"]:::notebook
-  14_positive_control_motor_ipynb["14_positive_control_motor.ipynb"]:::notebook
-  15_table1_baseline_ipynb["15_table1_baseline.ipynb"]:::notebook
-  16_clinical_nomogram_ipynb["16_clinical_nomogram.ipynb"]:::notebook
-  17_sex_dbs_interaction_ipynb["17_sex_dbs_interaction.ipynb"]:::notebook
-  18_network_panel_grid_ipynb["18_network_panel_grid.ipynb"]:::notebook
-  19_biomarker_genetic_merge_ipynb["19_biomarker_genetic_merge.ipynb"]:::notebook
-  20_causal_uplift_who_benefits_ipynb["20_causal_uplift_who_benefits.ipynb"]:::notebook
-  21_analgesic_escalation_ipynb["21_analgesic_escalation.ipynb"]:::notebook
-  22_unsupervised_pain_phenotypes_ipynb["22_unsupervised_pain_phenotypes.ipynb"]:::notebook
-  23_psm_validation_ipynb["23_psm_validation.ipynb"]:::notebook
-  25_genetics_arm_pain_R["25_genetics_arm_pain.R"]:::numbered
-  26_pain_motor_coupling_R["26_pain_motor_coupling.R"]:::numbered
-  26b_pain_motor_coupling_matched_R["26b_pain_motor_coupling_matched.R"]:::numbered
-  26c_pain_as_outcome_R["26c_pain_as_outcome.R"]:::numbered
-  99_publication_figures_ipynb["99_publication_figures.ipynb"]:::notebook
-  99b_figures_final_ipynb["99b_figures_final.ipynb"]:::notebook
-  _build_docx_v7_py["_build_docx_v7.py"]:::docx
-  _build_docx_v9_py["_build_docx_v9.py"]:::docx
-  _build_docx_v9_add_methods_py["_build_docx_v9_add_methods.py"]:::docx
-  _build_methods_figure_py["_build_methods_figure.py"]:::docx
-  build_alluvial_pain_R["build_alluvial_pain.R"]:::build
-  build_alluvial_pain_matched_R["build_alluvial_pain_matched.R"]:::build
-  build_callgraph_py["build_callgraph.py"]:::build
-  build_causal_dag_R["build_causal_dag.R"]:::build
-  build_delta_24m_landmark_R["build_delta_24m_landmark.R"]:::build
-  build_delta_matched_6_12mo_R["build_delta_matched_6_12mo.R"]:::build
-  build_fig5_and_tables_R["build_fig5_and_tables.R"]:::build
-  build_gee_table3_R["build_gee_table3.R"]:::build
-  build_original_figures_hires_R["build_original_figures_hires.R"]:::build
-  build_paper_docx_R["build_paper_docx.R"]:::build
-  build_paper_standalone_R["build_paper_standalone.R"]:::build
-  build_replication_figs_R["build_replication_figs.R"]:::build
-  build_stratified_delta_by_window_R["build_stratified_delta_by_window.R"]:::build
-  final_fixes_R["final_fixes.R"]:::build
-  fix_labels_v3_R["fix_labels_v3.R"]:::build
-  fix_network_figure_R["fix_network_figure.R"]:::build
-  helpers_pain_helpers_R["pain_helpers.R"]:::helper
-  make_radar_figs_R["make_radar_figs.R"]:::build
-  polish_figs_R["polish_figs.R"]:::build
-  rebuild_figures_v2_R["rebuild_figures_v2.R"]:::build
-  sprint01_negative_controls_R["sprint01_negative_controls.R"]:::sprint
-  sprint02_anchor_sensitivity_R["sprint02_anchor_sensitivity.R"]:::sprint
-  sprint03_evalue_mnar_R["sprint03_evalue_mnar.R"]:::sprint
-  sprint04_nct_bootnet_R["sprint04_nct_bootnet.R"]:::sprint
-  sprint05_bootstrap_brant_firth_R["sprint05_bootstrap_brant_firth.R"]:::sprint
-  sprint06_robust_ses_R["sprint06_robust_ses.R"]:::sprint
-  sprint07_psm_diagnostics_R["sprint07_psm_diagnostics.R"]:::sprint
-  sprint08_competing_risk_R["sprint08_competing_risk.R"]:::sprint
-  sprint09_ledd_mediation_R["sprint09_ledd_mediation.R"]:::sprint
-  sweep_delta_high_stratum_R["sweep_delta_high_stratum.R"]:::build
-  helpers_pain_helpers_R --> 00_data_setup_ipynb
-  outputs_objects_pain_long_rds[("pain_long.rds")]:::output
-  00_data_setup_ipynb --> outputs_objects_pain_long_rds
-  outputs_objects_pain_dedup_rds[("pain_dedup.rds")]:::output
-  00_data_setup_ipynb --> outputs_objects_pain_dedup_rds
-  helpers_pain_helpers_R --> 01_lmm_predicted_and_waterfall_ipynb
-  outputs_objects_pain_delta_responder_rds[("pain_delta_responder.rds")]:::output
-  01_lmm_predicted_and_waterfall_ipynb --> outputs_objects_pain_delta_responder_rds
-  outputs_tables_lmm_slope_contrasts_csv[("lmm_slope_contrasts.csv")]:::output
-  01_lmm_predicted_and_waterfall_ipynb --> outputs_tables_lmm_slope_contrasts_csv
-  outputs_tables_delta_summary_csv[("delta_summary.csv")]:::output
-  01_lmm_predicted_and_waterfall_ipynb --> outputs_tables_delta_summary_csv
-  outputs_figures_Fig06_LMM_predicted_traj_png[("Fig06_LMM_predicted_traj.png")]:::output
-  01_lmm_predicted_and_waterfall_ipynb --> outputs_figures_Fig06_LMM_predicted_traj_png
-  outputs_figures_Fig07_waterfall_dbs_png[("Fig07_waterfall_dbs.png")]:::output
-  01_lmm_predicted_and_waterfall_ipynb --> outputs_figures_Fig07_waterfall_dbs_png
-  outputs_figures_Fig08_delta_violin_png[("Fig08_delta_violin.png")]:::output
-  01_lmm_predicted_and_waterfall_ipynb --> outputs_figures_Fig08_delta_violin_png
-  helpers_pain_helpers_R --> 01b_time_scale_sensitivity_ipynb
-  outputs_tables_lmm_slopes_per_year_csv[("lmm_slopes_per_year.csv")]:::output
-  01b_time_scale_sensitivity_ipynb --> outputs_tables_lmm_slopes_per_year_csv
-  outputs_tables_lmm_slope_contrasts_per_year_csv[("lmm_slope_contrasts_per_year.csv")]:::output
-  01b_time_scale_sensitivity_ipynb --> outputs_tables_lmm_slope_contrasts_per_year_csv
-  helpers_pain_helpers_R --> 02_latent_class_trajectories_ipynb
-  outputs_objects_lcmm_class_membership_rds[("lcmm_class_membership.rds")]:::output
-  02_latent_class_trajectories_ipynb --> outputs_objects_lcmm_class_membership_rds
-  outputs_objects_lcmm_best_model_rds[("lcmm_best_model.rds")]:::output
-  02_latent_class_trajectories_ipynb --> outputs_objects_lcmm_best_model_rds
-  outputs_tables_lcmm_model_selection_csv[("lcmm_model_selection.csv")]:::output
-  02_latent_class_trajectories_ipynb --> outputs_tables_lcmm_model_selection_csv
-  outputs_tables_lcmm_class_by_arm_csv[("lcmm_class_by_arm.csv")]:::output
-  02_latent_class_trajectories_ipynb --> outputs_tables_lcmm_class_by_arm_csv
-  outputs_figures_Fig09_latent_class_traj_png[("Fig09_latent_class_traj.png")]:::output
-  02_latent_class_trajectories_ipynb --> outputs_figures_Fig09_latent_class_traj_png
-  helpers_pain_helpers_R --> 02b_latent_class_high_pain_ipynb
-  outputs_objects_lcmm_hi_class_membership_rds[("lcmm_hi_class_membership.rds")]:::output
-  02b_latent_class_high_pain_ipynb --> outputs_objects_lcmm_hi_class_membership_rds
-  outputs_objects_lcmm_hi_best_model_rds[("lcmm_hi_best_model.rds")]:::output
-  02b_latent_class_high_pain_ipynb --> outputs_objects_lcmm_hi_best_model_rds
-  outputs_tables_lcmm_hi_model_selection_csv[("lcmm_hi_model_selection.csv")]:::output
-  02b_latent_class_high_pain_ipynb --> outputs_tables_lcmm_hi_model_selection_csv
-  outputs_tables_lcmm_hi_class_by_arm_csv[("lcmm_hi_class_by_arm.csv")]:::output
-  02b_latent_class_high_pain_ipynb --> outputs_tables_lcmm_hi_class_by_arm_csv
-  outputs_figures_Fig09b_latent_class_traj_hi_pain_png[("Fig09b_latent_class_traj_hi_pain.png")]:::output
-  02b_latent_class_high_pain_ipynb --> outputs_figures_Fig09b_latent_class_traj_hi_pain_png
-  helpers_pain_helpers_R --> 03_baseline_predictors_ipynb
-  outputs_objects_baseline_and_delta_rds[("baseline_and_delta.rds")]:::output
-  03_baseline_predictors_ipynb --> outputs_objects_baseline_and_delta_rds
-  outputs_tables_baseline_univariate_or_csv[("baseline_univariate_or.csv")]:::output
-  03_baseline_predictors_ipynb --> outputs_tables_baseline_univariate_or_csv
-  outputs_figures_Fig10_baseline_predictors_forest_DBS_png[("Fig10_baseline_predictors_forest_DBS.png")]:::output
-  03_baseline_predictors_ipynb --> outputs_figures_Fig10_baseline_predictors_forest_DBS_png
-  helpers_pain_helpers_R --> 03b_baseline_predictors_firth_ipynb
-  outputs_tables_baseline_univariate_or_firth_csv[("baseline_univariate_or_firth.csv")]:::output
-  03b_baseline_predictors_firth_ipynb --> outputs_tables_baseline_univariate_or_firth_csv
-  outputs_tables_mv_main_firth_csv[("mv_main_firth.csv")]:::output
-  03b_baseline_predictors_firth_ipynb --> outputs_tables_mv_main_firth_csv
-  outputs_tables_mv_interactions_firth_csv[("mv_interactions_firth.csv")]:::output
-  03b_baseline_predictors_firth_ipynb --> outputs_tables_mv_interactions_firth_csv
-  outputs_figures_Fig10b_baseline_predictors_forest_DBS_firth_png[("Fig10b_baseline_predictors_forest_DBS_firth.png")]:::output
-  03b_baseline_predictors_firth_ipynb --> outputs_figures_Fig10b_baseline_predictors_forest_DBS_firth_png
-  helpers_pain_helpers_R --> 04_ledd_mediation_ipynb
-  outputs_objects_mediation_fit_rds[("mediation_fit.rds")]:::output
-  04_ledd_mediation_ipynb --> outputs_objects_mediation_fit_rds
-  outputs_objects_mediation_sensitivity_rds[("mediation_sensitivity.rds")]:::output
-  04_ledd_mediation_ipynb --> outputs_objects_mediation_sensitivity_rds
-  outputs_tables_mediation_effects_csv[("mediation_effects.csv")]:::output
-  04_ledd_mediation_ipynb --> outputs_tables_mediation_effects_csv
-  outputs_figures_Fig13_mediation_effects_png[("Fig13_mediation_effects.png")]:::output
-  04_ledd_mediation_ipynb --> outputs_figures_Fig13_mediation_effects_png
-  helpers_pain_helpers_R --> 05_prediction_model_ipynb
-  outputs_tables_prediction_model_metrics_csv[("prediction_model_metrics.csv")]:::output
-  05_prediction_model_ipynb --> outputs_tables_prediction_model_metrics_csv
-  outputs_tables_rf_importance_csv[("rf_importance.csv")]:::output
-  05_prediction_model_ipynb --> outputs_tables_rf_importance_csv
-  outputs_figures_Fig11_prediction_roc_png[("Fig11_prediction_roc.png")]:::output
-  05_prediction_model_ipynb --> outputs_figures_Fig11_prediction_roc_png
-  outputs_figures_Fig12_rf_importance_png[("Fig12_rf_importance.png")]:::output
-  05_prediction_model_ipynb --> outputs_figures_Fig12_rf_importance_png
-  helpers_pain_helpers_R --> 05b_prediction_full_cohort_ipynb
-  outputs_objects_full_cohort_features_rds[("full_cohort_features.rds")]:::output
-  05b_prediction_full_cohort_ipynb --> outputs_objects_full_cohort_features_rds
-  outputs_tables_prediction_full_cohort_metrics_csv[("prediction_full_cohort_metrics.csv")]:::output
-  05b_prediction_full_cohort_ipynb --> outputs_tables_prediction_full_cohort_metrics_csv
-  outputs_tables_prediction_full_cohort_subgroup_csv[("prediction_full_cohort_subgroup.csv")]:::output
-  05b_prediction_full_cohort_ipynb --> outputs_tables_prediction_full_cohort_subgroup_csv
-  outputs_tables_rf_importance_full_cohort_csv[("rf_importance_full_cohort.csv")]:::output
-  05b_prediction_full_cohort_ipynb --> outputs_tables_rf_importance_full_cohort_csv
-  outputs_figures_Fig11b_prediction_roc_full_cohort_png[("Fig11b_prediction_roc_full_cohort.png")]:::output
-  05b_prediction_full_cohort_ipynb --> outputs_figures_Fig11b_prediction_roc_full_cohort_png
-  outputs_figures_Fig12b_rf_importance_full_cohort_png[("Fig12b_rf_importance_full_cohort.png")]:::output
-  05b_prediction_full_cohort_ipynb --> outputs_figures_Fig12b_rf_importance_full_cohort_png
-  helpers_pain_helpers_R --> 05c_prediction_patient_anchor_ipynb
-  outputs_objects_patient_anchor_features_rds[("patient_anchor_features.rds")]:::output
-  05c_prediction_patient_anchor_ipynb --> outputs_objects_patient_anchor_features_rds
-  outputs_tables_prediction_patient_anchor_metrics_csv[("prediction_patient_anchor_metrics.csv")]:::output
-  05c_prediction_patient_anchor_ipynb --> outputs_tables_prediction_patient_anchor_metrics_csv
-  outputs_tables_prediction_patient_anchor_subgroup_csv[("prediction_patient_anchor_subgroup.csv")]:::output
-  05c_prediction_patient_anchor_ipynb --> outputs_tables_prediction_patient_anchor_subgroup_csv
-  outputs_tables_rf_importance_patient_anchor_csv[("rf_importance_patient_anchor.csv")]:::output
-  05c_prediction_patient_anchor_ipynb --> outputs_tables_rf_importance_patient_anchor_csv
-  outputs_figures_Fig11c_roc_patient_anchor_png[("Fig11c_roc_patient_anchor.png")]:::output
-  05c_prediction_patient_anchor_ipynb --> outputs_figures_Fig11c_roc_patient_anchor_png
-  outputs_figures_Fig12c_rf_importance_patient_anchor_png[("Fig12c_rf_importance_patient_anchor.png")]:::output
-  05c_prediction_patient_anchor_ipynb --> outputs_figures_Fig12c_rf_importance_patient_anchor_png
-  helpers_pain_helpers_R --> 06_analgesic_use_ipynb
-  outputs_objects_analgesic_status_rds[("analgesic_status.rds")]:::output
-  06_analgesic_use_ipynb --> outputs_objects_analgesic_status_rds
-  outputs_tables_analgesic_stop_rate_by_arm_csv[("analgesic_stop_rate_by_arm.csv")]:::output
-  06_analgesic_use_ipynb --> outputs_tables_analgesic_stop_rate_by_arm_csv
-  outputs_figures_Fig14_analgesic_status_png[("Fig14_analgesic_status.png")]:::output
-  06_analgesic_use_ipynb --> outputs_figures_Fig14_analgesic_status_png
-  helpers_pain_helpers_R --> 06b_analgesic_by_class_ipynb
-  outputs_tables_analgesic_class_by_arm_csv[("analgesic_class_by_arm.csv")]:::output
-  06b_analgesic_by_class_ipynb --> outputs_tables_analgesic_class_by_arm_csv
-  outputs_tables_analgesic_class_fisher_csv[("analgesic_class_fisher.csv")]:::output
-  06b_analgesic_by_class_ipynb --> outputs_tables_analgesic_class_fisher_csv
-  outputs_figures_Fig21_analgesic_by_class_png[("Fig21_analgesic_by_class.png")]:::output
-  06b_analgesic_by_class_ipynb --> outputs_figures_Fig21_analgesic_by_class_png
-  helpers_pain_helpers_R --> 07_pain_phenotypes_ipynb
-  outputs_objects_pain_phenotype_flags_rds[("pain_phenotype_flags.rds")]:::output
-  07_pain_phenotypes_ipynb --> outputs_objects_pain_phenotype_flags_rds
-  outputs_tables_pain_phenotype_counts_csv[("pain_phenotype_counts.csv")]:::output
-  07_pain_phenotypes_ipynb --> outputs_tables_pain_phenotype_counts_csv
-  outputs_tables_pain_phenotype_by_arm_delta_csv[("pain_phenotype_by_arm_delta.csv")]:::output
-  07_pain_phenotypes_ipynb --> outputs_tables_pain_phenotype_by_arm_delta_csv
-  outputs_tables_pain_phenotype_fisher_csv[("pain_phenotype_fisher.csv")]:::output
-  07_pain_phenotypes_ipynb --> outputs_tables_pain_phenotype_fisher_csv
-  outputs_figures_Fig15_pain_phenotype_no_worse_png[("Fig15_pain_phenotype_no_worse.png")]:::output
-  07_pain_phenotypes_ipynb --> outputs_figures_Fig15_pain_phenotype_no_worse_png
-  helpers_pain_helpers_R --> 07b_phenotypes_full_cohort_ipynb
-  outputs_tables_pain_phenotype_full_cohort_summary_csv[("pain_phenotype_full_cohort_summary.csv")]:::output
-  07b_phenotypes_full_cohort_ipynb --> outputs_tables_pain_phenotype_full_cohort_summary_csv
-  outputs_tables_pain_phenotype_dbs_interactions_csv[("pain_phenotype_dbs_interactions.csv")]:::output
-  07b_phenotypes_full_cohort_ipynb --> outputs_tables_pain_phenotype_dbs_interactions_csv
-  outputs_figures_Fig15b_pain_phenotype_full_cohort_png[("Fig15b_pain_phenotype_full_cohort.png")]:::output
-  07b_phenotypes_full_cohort_ipynb --> outputs_figures_Fig15b_pain_phenotype_full_cohort_png
-  helpers_pain_helpers_R --> 08_tost_evalue_ipynb
-  outputs_objects_tost_delta_pain_rds[("tost_delta_pain.rds")]:::output
-  08_tost_evalue_ipynb --> outputs_objects_tost_delta_pain_rds
-  outputs_tables_evalue_slope_contrast_csv[("evalue_slope_contrast.csv")]:::output
-  08_tost_evalue_ipynb --> outputs_tables_evalue_slope_contrast_csv
-  outputs_tables_evalue_worsener_rr_csv[("evalue_worsener_rr.csv")]:::output
-  08_tost_evalue_ipynb --> outputs_tables_evalue_worsener_rr_csv
-  helpers_pain_helpers_R --> 09_symptom_network_glasso_ipynb
-  outputs_tables_pain_partial_correlations_all_csv[("pain_partial_correlations_all.csv")]:::output
-  09_symptom_network_glasso_ipynb --> outputs_tables_pain_partial_correlations_all_csv
-  outputs_tables_network_centrality_csv[("network_centrality.csv")]:::output
-  09_symptom_network_glasso_ipynb --> outputs_tables_network_centrality_csv
-  helpers_pain_helpers_R --> 09b_longitudinal_glasso_ipynb
-  outputs_objects_longitudinal_glasso_fits_rds[("longitudinal_glasso_fits.rds")]:::output
-  09b_longitudinal_glasso_ipynb --> outputs_objects_longitudinal_glasso_fits_rds
-  outputs_objects_longitudinal_glasso_grid_rds[("longitudinal_glasso_grid.rds")]:::output
-  09b_longitudinal_glasso_ipynb --> outputs_objects_longitudinal_glasso_grid_rds
-  outputs_tables_longitudinal_pain_pcor_csv[("longitudinal_pain_pcor.csv")]:::output
-  09b_longitudinal_glasso_ipynb --> outputs_tables_longitudinal_pain_pcor_csv
-  outputs_tables_longitudinal_centrality_csv[("longitudinal_centrality.csv")]:::output
-  09b_longitudinal_glasso_ipynb --> outputs_tables_longitudinal_centrality_csv
-  outputs_figures_Fig22_longitudinal_glasso_png[("Fig22_longitudinal_glasso.png")]:::output
-  09b_longitudinal_glasso_ipynb --> outputs_figures_Fig22_longitudinal_glasso_png
-  helpers_pain_helpers_R --> 09c_longitudinal_glasso_full_ipynb
-  outputs_tables_longitudinal_pain_pcor_full_csv[("longitudinal_pain_pcor_full.csv")]:::output
-  09c_longitudinal_glasso_full_ipynb --> outputs_tables_longitudinal_pain_pcor_full_csv
-  outputs_tables_longitudinal_centrality_full_csv[("longitudinal_centrality_full.csv")]:::output
-  09c_longitudinal_glasso_full_ipynb --> outputs_tables_longitudinal_centrality_full_csv
-  outputs_figures_Fig22b_longitudinal_glasso_full_png[("Fig22b_longitudinal_glasso_full.png")]:::output
-  09c_longitudinal_glasso_full_ipynb --> outputs_figures_Fig22b_longitudinal_glasso_full_png
-  outputs_figures_Fig22c_pain_centrality_over_time_png[("Fig22c_pain_centrality_over_time.png")]:::output
-  09c_longitudinal_glasso_full_ipynb --> outputs_figures_Fig22c_pain_centrality_over_time_png
-  helpers_pain_helpers_R --> 10_nm_phenotypes_pca_kmeans_ipynb
-  outputs_objects_nm_cluster_membership_rds[("nm_cluster_membership.rds")]:::output
-  10_nm_phenotypes_pca_kmeans_ipynb --> outputs_objects_nm_cluster_membership_rds
-  outputs_tables_kmeans_K_selection_csv[("kmeans_K_selection.csv")]:::output
-  10_nm_phenotypes_pca_kmeans_ipynb --> outputs_tables_kmeans_K_selection_csv
-  outputs_tables_kmeans_cluster_profile_csv[("kmeans_cluster_profile.csv")]:::output
-  10_nm_phenotypes_pca_kmeans_ipynb --> outputs_tables_kmeans_cluster_profile_csv
-  outputs_figures_Fig19_nm_cluster_heatmap_png[("Fig19_nm_cluster_heatmap.png")]:::output
-  10_nm_phenotypes_pca_kmeans_ipynb --> outputs_figures_Fig19_nm_cluster_heatmap_png
-  helpers_pain_helpers_R --> 11_multistate_msm_ipynb
-  outputs_objects_msm_fit_rds[("msm_fit.rds")]:::output
-  11_multistate_msm_ipynb --> outputs_objects_msm_fit_rds
-  outputs_tables_msm_hr_dbs_csv[("msm_hr_dbs.csv")]:::output
-  11_multistate_msm_ipynb --> outputs_tables_msm_hr_dbs_csv
-  outputs_figures_Fig23_msm_HR_DBS_png[("Fig23_msm_HR_DBS.png")]:::output
-  11_multistate_msm_ipynb --> outputs_figures_Fig23_msm_HR_DBS_png
-  helpers_pain_helpers_R --> 12_kaplan_meier_pain_worsening_ipynb
-  outputs_objects_km_event_table_rds[("km_event_table.rds")]:::output
-  12_kaplan_meier_pain_worsening_ipynb --> outputs_objects_km_event_table_rds
-  outputs_tables_cox_pain_worsening_csv[("cox_pain_worsening.csv")]:::output
-  12_kaplan_meier_pain_worsening_ipynb --> outputs_tables_cox_pain_worsening_csv
-  Fig20_km_pain_worsening_png[("Fig20_km_pain_worsening.png")]:::output
-  12_kaplan_meier_pain_worsening_ipynb --> Fig20_km_pain_worsening_png
-  helpers_pain_helpers_R --> 12b_km_threshold_2_ipynb
-  outputs_objects_km_event_table_thr2_rds[("km_event_table_thr2.rds")]:::output
-  12b_km_threshold_2_ipynb --> outputs_objects_km_event_table_thr2_rds
-  outputs_tables_cox_pain_thr2_csv[("cox_pain_thr2.csv")]:::output
-  12b_km_threshold_2_ipynb --> outputs_tables_cox_pain_thr2_csv
-  Fig20b_km_threshold_2_png[("Fig20b_km_threshold_2.png")]:::output
-  12b_km_threshold_2_ipynb --> Fig20b_km_threshold_2_png
-  helpers_pain_helpers_R --> 13_landmark_reconciliation_ipynb
-  outputs_tables_landmark_summary_csv[("landmark_summary.csv")]:::output
-  13_landmark_reconciliation_ipynb --> outputs_tables_landmark_summary_csv
-  outputs_tables_landmark_delta_welch_csv[("landmark_delta_welch.csv")]:::output
-  13_landmark_reconciliation_ipynb --> outputs_tables_landmark_delta_welch_csv
-  outputs_tables_landmark_cox_hr_csv[("landmark_cox_hr.csv")]:::output
-  13_landmark_reconciliation_ipynb --> outputs_tables_landmark_cox_hr_csv
-  outputs_tables_lmm_landmark_predictions_csv[("lmm_landmark_predictions.csv")]:::output
-  13_landmark_reconciliation_ipynb --> outputs_tables_lmm_landmark_predictions_csv
-  outputs_figures_Figure8_landmark_png[("Figure8_landmark.png")]:::output
-  13_landmark_reconciliation_ipynb --> outputs_figures_Figure8_landmark_png
-  outputs_figures_Figure9_landmark_cox_png[("Figure9_landmark_cox.png")]:::output
-  13_landmark_reconciliation_ipynb --> outputs_figures_Figure9_landmark_cox_png
-  helpers_pain_helpers_R --> 14_positive_control_motor_ipynb
-  outputs_tables_landmark_updrs3_csv[("landmark_updrs3.csv")]:::output
-  14_positive_control_motor_ipynb --> outputs_tables_landmark_updrs3_csv
-  outputs_tables_landmark_updrs3_welch_csv[("landmark_updrs3_welch.csv")]:::output
-  14_positive_control_motor_ipynb --> outputs_tables_landmark_updrs3_welch_csv
-  outputs_tables_lmm_updrs3_slope_contrasts_csv[("lmm_updrs3_slope_contrasts.csv")]:::output
-  14_positive_control_motor_ipynb --> outputs_tables_lmm_updrs3_slope_contrasts_csv
-  outputs_figures_Fig24_positive_control_motor_png[("Fig24_positive_control_motor.png")]:::output
-  14_positive_control_motor_ipynb --> outputs_figures_Fig24_positive_control_motor_png
-  helpers_pain_helpers_R --> 15_table1_baseline_ipynb
-  outputs_objects_table1_matched_data_rds[("table1_matched_data.rds")]:::output
-  15_table1_baseline_ipynb --> outputs_objects_table1_matched_data_rds
-  outputs_objects_table1_full_data_rds[("table1_full_data.rds")]:::output
-  15_table1_baseline_ipynb --> outputs_objects_table1_full_data_rds
-  helpers_pain_helpers_R --> 16_clinical_nomogram_ipynb
-  outputs_objects_nomogram_model_rds[("nomogram_model.rds")]:::output
-  16_clinical_nomogram_ipynb --> outputs_objects_nomogram_model_rds
-  outputs_tables_nomogram_example_predictions_csv[("nomogram_example_predictions.csv")]:::output
-  16_clinical_nomogram_ipynb --> outputs_tables_nomogram_example_predictions_csv
-  helpers_pain_helpers_R --> 17_sex_dbs_interaction_ipynb
-  outputs_tables_landmark_delta_by_sex_csv[("landmark_delta_by_sex.csv")]:::output
-  17_sex_dbs_interaction_ipynb --> outputs_tables_landmark_delta_by_sex_csv
-  outputs_figures_Figure12_sex_interaction_png[("Figure12_sex_interaction.png")]:::output
-  17_sex_dbs_interaction_ipynb --> outputs_figures_Figure12_sex_interaction_png
-  helpers_pain_helpers_R --> 18_network_panel_grid_ipynb
-  outputs_figures_FigureS1_network_panel_grid_png[("FigureS1_network_panel_grid.png")]:::output
-  18_network_panel_grid_ipynb --> outputs_figures_FigureS1_network_panel_grid_png
-  outputs_figures_FigureS2_pain_partner_lines_png[("FigureS2_pain_partner_lines.png")]:::output
-  18_network_panel_grid_ipynb --> outputs_figures_FigureS2_pain_partner_lines_png
-  helpers_pain_helpers_R --> 19_biomarker_genetic_merge_ipynb
-  outputs_objects_patient_anchor_features_enriched_rds[("patient_anchor_features_enriched.rds")]:::output
-  19_biomarker_genetic_merge_ipynb --> outputs_objects_patient_anchor_features_enriched_rds
-  outputs_tables_biomarker_coverage_by_arm_csv[("biomarker_coverage_by_arm.csv")]:::output
-  19_biomarker_genetic_merge_ipynb --> outputs_tables_biomarker_coverage_by_arm_csv
-  outputs_tables_biomarker_univariate_or_csv[("biomarker_univariate_or.csv")]:::output
-  19_biomarker_genetic_merge_ipynb --> outputs_tables_biomarker_univariate_or_csv
-  outputs_tables_pain_by_subgroup_arm_csv[("pain_by_subgroup_arm.csv")]:::output
-  19_biomarker_genetic_merge_ipynb --> outputs_tables_pain_by_subgroup_arm_csv
-  helpers_pain_helpers_R --> 20_causal_uplift_who_benefits_ipynb
-  outputs_objects_cate_per_patient_rds[("cate_per_patient.rds")]:::output
-  20_causal_uplift_who_benefits_ipynb --> outputs_objects_cate_per_patient_rds
-  outputs_objects_causal_forest_fit_rds[("causal_forest_fit.rds")]:::output
-  20_causal_uplift_who_benefits_ipynb --> outputs_objects_causal_forest_fit_rds
-  outputs_tables_causal_forest_importance_csv[("causal_forest_importance.csv")]:::output
-  20_causal_uplift_who_benefits_ipynb --> outputs_tables_causal_forest_importance_csv
-  outputs_tables_cate_responder_groups_csv[("cate_responder_groups.csv")]:::output
-  20_causal_uplift_who_benefits_ipynb --> outputs_tables_cate_responder_groups_csv
-  outputs_figures_Figure13_cate_distribution_png[("Figure13_cate_distribution.png")]:::output
-  20_causal_uplift_who_benefits_ipynb --> outputs_figures_Figure13_cate_distribution_png
-  outputs_figures_Figure14_cate_decile_validation_png[("Figure14_cate_decile_validation.png")]:::output
-  20_causal_uplift_who_benefits_ipynb --> outputs_figures_Figure14_cate_decile_validation_png
-  outputs_figures_Figure15_cate_feature_importance_png[("Figure15_cate_feature_importance.png")]:::output
-  20_causal_uplift_who_benefits_ipynb --> outputs_figures_Figure15_cate_feature_importance_png
-  helpers_pain_helpers_R --> 21_analgesic_escalation_ipynb
-  outputs_objects_analgesic_level_per_patient_rds[("analgesic_level_per_patient.rds")]:::output
-  21_analgesic_escalation_ipynb --> outputs_objects_analgesic_level_per_patient_rds
-  outputs_tables_worsened_vs_med_status_csv[("worsened_vs_med_status.csv")]:::output
-  21_analgesic_escalation_ipynb --> outputs_tables_worsened_vs_med_status_csv
-  outputs_figures_Figure16_analgesic_escalation_png[("Figure16_analgesic_escalation.png")]:::output
-  21_analgesic_escalation_ipynb --> outputs_figures_Figure16_analgesic_escalation_png
-  helpers_pain_helpers_R --> 22_unsupervised_pain_phenotypes_ipynb
-  outputs_objects_patient_anchor_features_clustered_rds[("patient_anchor_features_clustered.rds")]:::output
-  22_unsupervised_pain_phenotypes_ipynb --> outputs_objects_patient_anchor_features_clustered_rds
-  outputs_objects_trajectory_cluster_membership_rds[("trajectory_cluster_membership.rds")]:::output
-  22_unsupervised_pain_phenotypes_ipynb --> outputs_objects_trajectory_cluster_membership_rds
-  outputs_tables_kmeans_baseline_K_selection_csv[("kmeans_baseline_K_selection.csv")]:::output
-  22_unsupervised_pain_phenotypes_ipynb --> outputs_tables_kmeans_baseline_K_selection_csv
-  outputs_tables_kmeans_baseline_profiles_csv[("kmeans_baseline_profiles.csv")]:::output
-  22_unsupervised_pain_phenotypes_ipynb --> outputs_tables_kmeans_baseline_profiles_csv
-  outputs_tables_kmeans_baseline_pain_by_cluster_arm_csv[("kmeans_baseline_pain_by_cluster_arm.csv")]:::output
-  22_unsupervised_pain_phenotypes_ipynb --> outputs_tables_kmeans_baseline_pain_by_cluster_arm_csv
-  outputs_tables_kmeans_traj_K_selection_csv[("kmeans_traj_K_selection.csv")]:::output
-  22_unsupervised_pain_phenotypes_ipynb --> outputs_tables_kmeans_traj_K_selection_csv
-  outputs_tables_kmeans_traj_pain_by_cluster_arm_csv[("kmeans_traj_pain_by_cluster_arm.csv")]:::output
-  22_unsupervised_pain_phenotypes_ipynb --> outputs_tables_kmeans_traj_pain_by_cluster_arm_csv
-  outputs_figures_Figure17_traj_cluster_centroids_png[("Figure17_traj_cluster_centroids.png")]:::output
-  22_unsupervised_pain_phenotypes_ipynb --> outputs_figures_Figure17_traj_cluster_centroids_png
-  helpers_pain_helpers_R --> 23_psm_validation_ipynb
-  outputs_objects_psm_matchit_fit_rds[("psm_matchit_fit.rds")]:::output
-  23_psm_validation_ipynb --> outputs_objects_psm_matchit_fit_rds
-  outputs_objects_psm_matched_data_rds[("psm_matched_data.rds")]:::output
-  23_psm_validation_ipynb --> outputs_objects_psm_matched_data_rds
-  outputs_tables_psm_balance_table_csv[("psm_balance_table.csv")]:::output
-  23_psm_validation_ipynb --> outputs_tables_psm_balance_table_csv
-  outputs_tables_psm_pre_post_summary_csv[("psm_pre_post_summary.csv")]:::output
-  23_psm_validation_ipynb --> outputs_tables_psm_pre_post_summary_csv
-  Figure18_love_plot_png[("Figure18_love_plot.png")]:::output
-  23_psm_validation_ipynb --> Figure18_love_plot_png
-  Figure18_love_plot_tiff[("Figure18_love_plot.tiff")]:::output
-  23_psm_validation_ipynb --> Figure18_love_plot_tiff
-  helpers_pain_helpers_R --> 25_genetics_arm_pain_R
+  R_25_genetics_arm_pain_R["25_genetics_arm_pain.R"]:::build
+  R_26_pain_motor_coupling_R["26_pain_motor_coupling.R"]:::build
+  R_26b_pain_motor_coupling_matched_R["26b_pain_motor_coupling_matched.R"]:::build
+  R_26c_pain_as_outcome_R["26c_pain_as_outcome.R"]:::build
+  R_build_alluvial_pain_R["build_alluvial_pain.R"]:::build
+  R_build_alluvial_pain_matched_R["build_alluvial_pain_matched.R"]:::build
+  R_build_causal_dag_R["build_causal_dag.R"]:::build
+  R_build_delta_24m_landmark_R["build_delta_24m_landmark.R"]:::build
+  R_build_delta_matched_6_12mo_R["build_delta_matched_6_12mo.R"]:::build
+  R_build_fig5_and_tables_R["build_fig5_and_tables.R"]:::build
+  R_build_gee_table3_R["build_gee_table3.R"]:::build
+  R_build_original_figures_hires_R["build_original_figures_hires.R"]:::build
+  R_build_replication_figs_R["build_replication_figs.R"]:::build
+  R_build_stratified_delta_by_window_R["build_stratified_delta_by_window.R"]:::build
+  R_helpers_make_synthetic_cohort_R["make_synthetic_cohort.R"]:::build
+  R_helpers_pain_helpers_R["pain_helpers.R"]:::build
+  R_make_radar_figs_R["make_radar_figs.R"]:::build
+  notebooks_00_data_setup_ipynb["00_data_setup.ipynb"]:::notebook
+  notebooks_01_lmm_predicted_and_waterfall_ipynb["01_lmm_predicted_and_waterfall.ipynb"]:::notebook
+  notebooks_01b_time_scale_sensitivity_ipynb["01b_time_scale_sensitivity.ipynb"]:::notebook
+  notebooks_02_latent_class_trajectories_ipynb["02_latent_class_trajectories.ipynb"]:::notebook
+  notebooks_02b_latent_class_high_pain_ipynb["02b_latent_class_high_pain.ipynb"]:::notebook
+  notebooks_03_baseline_predictors_ipynb["03_baseline_predictors.ipynb"]:::notebook
+  notebooks_03b_baseline_predictors_firth_ipynb["03b_baseline_predictors_firth.ipynb"]:::notebook
+  notebooks_04_ledd_mediation_ipynb["04_ledd_mediation.ipynb"]:::notebook
+  notebooks_05_prediction_model_ipynb["05_prediction_model.ipynb"]:::notebook
+  notebooks_05b_prediction_full_cohort_ipynb["05b_prediction_full_cohort.ipynb"]:::notebook
+  notebooks_05c_prediction_patient_anchor_ipynb["05c_prediction_patient_anchor.ipynb"]:::notebook
+  notebooks_06_analgesic_use_ipynb["06_analgesic_use.ipynb"]:::notebook
+  notebooks_06b_analgesic_by_class_ipynb["06b_analgesic_by_class.ipynb"]:::notebook
+  notebooks_07_pain_phenotypes_ipynb["07_pain_phenotypes.ipynb"]:::notebook
+  notebooks_07b_phenotypes_full_cohort_ipynb["07b_phenotypes_full_cohort.ipynb"]:::notebook
+  notebooks_08_tost_evalue_ipynb["08_tost_evalue.ipynb"]:::notebook
+  notebooks_09_symptom_network_glasso_ipynb["09_symptom_network_glasso.ipynb"]:::notebook
+  notebooks_09b_longitudinal_glasso_ipynb["09b_longitudinal_glasso.ipynb"]:::notebook
+  notebooks_09c_longitudinal_glasso_full_ipynb["09c_longitudinal_glasso_full.ipynb"]:::notebook
+  notebooks_10_nm_phenotypes_pca_kmeans_ipynb["10_nm_phenotypes_pca_kmeans.ipynb"]:::notebook
+  notebooks_11_multistate_msm_ipynb["11_multistate_msm.ipynb"]:::notebook
+  notebooks_12_kaplan_meier_pain_worsening_ipynb["12_kaplan_meier_pain_worsening.ipynb"]:::notebook
+  notebooks_12b_km_threshold_2_ipynb["12b_km_threshold_2.ipynb"]:::notebook
+  notebooks_13_landmark_reconciliation_ipynb["13_landmark_reconciliation.ipynb"]:::notebook
+  notebooks_14_positive_control_motor_ipynb["14_positive_control_motor.ipynb"]:::notebook
+  notebooks_15_table1_baseline_ipynb["15_table1_baseline.ipynb"]:::notebook
+  notebooks_16_clinical_nomogram_ipynb["16_clinical_nomogram.ipynb"]:::notebook
+  notebooks_17_sex_dbs_interaction_ipynb["17_sex_dbs_interaction.ipynb"]:::notebook
+  notebooks_18_network_panel_grid_ipynb["18_network_panel_grid.ipynb"]:::notebook
+  notebooks_19_biomarker_genetic_merge_ipynb["19_biomarker_genetic_merge.ipynb"]:::notebook
+  notebooks_20_causal_uplift_who_benefits_ipynb["20_causal_uplift_who_benefits.ipynb"]:::notebook
+  notebooks_21_analgesic_escalation_ipynb["21_analgesic_escalation.ipynb"]:::notebook
+  notebooks_22_unsupervised_pain_phenotypes_ipynb["22_unsupervised_pain_phenotypes.ipynb"]:::notebook
+  notebooks_23_psm_validation_ipynb["23_psm_validation.ipynb"]:::notebook
+  notebooks_99_publication_figures_ipynb["99_publication_figures.ipynb"]:::notebook
+  notebooks_99b_figures_final_ipynb["99b_figures_final.ipynb"]:::notebook
+  scripts__build_docx_v7_py["_build_docx_v7.py"]:::build
+  scripts__build_docx_v9_py["_build_docx_v9.py"]:::build
+  scripts__build_docx_v9_add_methods_py["_build_docx_v9_add_methods.py"]:::build
+  scripts__build_methods_figure_py["_build_methods_figure.py"]:::build
+  scripts_ai_peer_review_py["ai_peer_review.py"]:::build
+  scripts_build_callgraph_py["build_callgraph.py"]:::build
+  scripts_build_dashboard_py["build_dashboard.py"]:::build
+  scripts_build_sankey_py["build_sankey.py"]:::build
+  sprints_sprint01_negative_controls_R["sprint01_negative_controls.R"]:::sprint
+  sprints_sprint02_anchor_sensitivity_R["sprint02_anchor_sensitivity.R"]:::sprint
+  sprints_sprint03_evalue_mnar_R["sprint03_evalue_mnar.R"]:::sprint
+  sprints_sprint04_nct_bootnet_R["sprint04_nct_bootnet.R"]:::sprint
+  sprints_sprint05_bootstrap_brant_firth_R["sprint05_bootstrap_brant_firth.R"]:::sprint
+  sprints_sprint06_robust_ses_R["sprint06_robust_ses.R"]:::sprint
+  sprints_sprint07_psm_diagnostics_R["sprint07_psm_diagnostics.R"]:::sprint
+  sprints_sprint08_competing_risk_R["sprint08_competing_risk.R"]:::sprint
+  sprints_sprint09_ledd_mediation_R["sprint09_ledd_mediation.R"]:::sprint
+  sprints_sprint10_ipcw_dropout_R["sprint10_ipcw_dropout.R"]:::sprint
+  sprints_sprint11_bayesian_genetics_R["sprint11_bayesian_genetics.R"]:::sprint
+  helpers_pain_helpers_R --> R_25_genetics_arm_pain_R
   outputs_objects_genetics_forest_data_rds[("genetics_forest_data.rds")]:::output
-  25_genetics_arm_pain_R --> outputs_objects_genetics_forest_data_rds
+  R_25_genetics_arm_pain_R --> outputs_objects_genetics_forest_data_rds
   outputs_tables_genetics_interaction_summary_csv[("genetics_interaction_summary.csv")]:::output
-  25_genetics_arm_pain_R --> outputs_tables_genetics_interaction_summary_csv
+  R_25_genetics_arm_pain_R --> outputs_tables_genetics_interaction_summary_csv
   Figure25_genetics_forest_png[("Figure25_genetics_forest.png")]:::output
-  25_genetics_arm_pain_R --> Figure25_genetics_forest_png
-  helpers_pain_helpers_R --> 26_pain_motor_coupling_R
+  R_25_genetics_arm_pain_R --> Figure25_genetics_forest_png
+  helpers_pain_helpers_R --> R_26_pain_motor_coupling_R
   outputs_tables_pain_motor_full_logit_table_csv[("pain_motor_full_logit_table.csv")]:::output
-  26_pain_motor_coupling_R --> outputs_tables_pain_motor_full_logit_table_csv
+  R_26_pain_motor_coupling_R --> outputs_tables_pain_motor_full_logit_table_csv
   outputs_tables_pain_motor_delta_delta_spearman_csv[("pain_motor_delta_delta_spearman.csv")]:::output
-  26_pain_motor_coupling_R --> outputs_tables_pain_motor_delta_delta_spearman_csv
+  R_26_pain_motor_coupling_R --> outputs_tables_pain_motor_delta_delta_spearman_csv
   outputs_tables_pain_motor_window_spearman_csv[("pain_motor_window_spearman.csv")]:::output
-  26_pain_motor_coupling_R --> outputs_tables_pain_motor_window_spearman_csv
+  R_26_pain_motor_coupling_R --> outputs_tables_pain_motor_window_spearman_csv
   Figure26_pain_motor_coupling_png[("Figure26_pain_motor_coupling.png")]:::output
-  26_pain_motor_coupling_R --> Figure26_pain_motor_coupling_png
-  helpers_pain_helpers_R --> 26b_pain_motor_coupling_matched_R
+  R_26_pain_motor_coupling_R --> Figure26_pain_motor_coupling_png
+  helpers_pain_helpers_R --> R_26b_pain_motor_coupling_matched_R
   outputs_tables_pain_motor_matched_logit_table_csv[("pain_motor_matched_logit_table.csv")]:::output
-  26b_pain_motor_coupling_matched_R --> outputs_tables_pain_motor_matched_logit_table_csv
+  R_26b_pain_motor_coupling_matched_R --> outputs_tables_pain_motor_matched_logit_table_csv
   outputs_tables_pain_motor_matched_delta_delta_spearman_csv[("pain_motor_matched_delta_delta_spearman.csv")]:::output
-  26b_pain_motor_coupling_matched_R --> outputs_tables_pain_motor_matched_delta_delta_spearman_csv
+  R_26b_pain_motor_coupling_matched_R --> outputs_tables_pain_motor_matched_delta_delta_spearman_csv
   outputs_tables_pain_motor_matched_window_spearman_csv[("pain_motor_matched_window_spearman.csv")]:::output
-  26b_pain_motor_coupling_matched_R --> outputs_tables_pain_motor_matched_window_spearman_csv
+  R_26b_pain_motor_coupling_matched_R --> outputs_tables_pain_motor_matched_window_spearman_csv
   Figure26b_pain_motor_coupling_matched_png[("Figure26b_pain_motor_coupling_matched.png")]:::output
-  26b_pain_motor_coupling_matched_R --> Figure26b_pain_motor_coupling_matched_png
-  helpers_pain_helpers_R --> 26c_pain_as_outcome_R
-  helpers_pain_helpers_R --> 99_publication_figures_ipynb
-  Figure4_network_png[("Figure4_network.png")]:::output
-  99_publication_figures_ipynb --> Figure4_network_png
-  helpers_pain_helpers_R --> 99b_figures_final_ipynb
-  99b_figures_final_ipynb --> Figure4_network_png
-  helpers_pain_helpers_R --> build_alluvial_pain_R
-  helpers_pain_helpers_R --> build_alluvial_pain_matched_R
-  helpers_pain_helpers_R --> build_callgraph_py
-  helpers_pain_helpers_R --> build_causal_dag_R
+  R_26b_pain_motor_coupling_matched_R --> Figure26b_pain_motor_coupling_matched_png
+  helpers_pain_helpers_R --> R_26c_pain_as_outcome_R
+  helpers_pain_helpers_R --> R_build_alluvial_pain_R
+  helpers_pain_helpers_R --> R_build_alluvial_pain_matched_R
+  helpers_pain_helpers_R --> R_build_causal_dag_R
   outputs_figures_Figure_causal_DAG_png[("Figure_causal_DAG.png")]:::output
-  build_causal_dag_R --> outputs_figures_Figure_causal_DAG_png
-  helpers_pain_helpers_R --> build_delta_24m_landmark_R
+  R_build_causal_dag_R --> outputs_figures_Figure_causal_DAG_png
+  helpers_pain_helpers_R --> R_build_delta_24m_landmark_R
   delta_24m_landmark_summary_csv[("delta_24m_landmark_summary.csv")]:::output
-  build_delta_24m_landmark_R --> delta_24m_landmark_summary_csv
+  R_build_delta_24m_landmark_R --> delta_24m_landmark_summary_csv
   delta_24m_landmark_welch_csv[("delta_24m_landmark_welch.csv")]:::output
-  build_delta_24m_landmark_R --> delta_24m_landmark_welch_csv
-  helpers_pain_helpers_R --> build_delta_matched_6_12mo_R
+  R_build_delta_24m_landmark_R --> delta_24m_landmark_welch_csv
+  helpers_pain_helpers_R --> R_build_delta_matched_6_12mo_R
   delta_matched_6_12mo_summary_csv[("delta_matched_6_12mo_summary.csv")]:::output
-  build_delta_matched_6_12mo_R --> delta_matched_6_12mo_summary_csv
-  helpers_pain_helpers_R --> build_fig5_and_tables_R
+  R_build_delta_matched_6_12mo_R --> delta_matched_6_12mo_summary_csv
+  helpers_pain_helpers_R --> R_build_fig5_and_tables_R
   outputs_tables_lmm_A_pre_post_fixed_effects_csv[("lmm_A_pre_post_fixed_effects.csv")]:::output
-  build_fig5_and_tables_R --> outputs_tables_lmm_A_pre_post_fixed_effects_csv
+  R_build_fig5_and_tables_R --> outputs_tables_lmm_A_pre_post_fixed_effects_csv
   outputs_tables_lmm_B_post_vs_never_fixed_effects_csv[("lmm_B_post_vs_never_fixed_effects.csv")]:::output
-  build_fig5_and_tables_R --> outputs_tables_lmm_B_post_vs_never_fixed_effects_csv
+  R_build_fig5_and_tables_R --> outputs_tables_lmm_B_post_vs_never_fixed_effects_csv
   outputs_tables_lmm_A_slopes_csv[("lmm_A_slopes.csv")]:::output
-  build_fig5_and_tables_R --> outputs_tables_lmm_A_slopes_csv
+  R_build_fig5_and_tables_R --> outputs_tables_lmm_A_slopes_csv
   outputs_tables_lmm_B_slopes_csv[("lmm_B_slopes.csv")]:::output
-  build_fig5_and_tables_R --> outputs_tables_lmm_B_slopes_csv
+  R_build_fig5_and_tables_R --> outputs_tables_lmm_B_slopes_csv
   outputs_tables_lmm_A_slope_contrast_csv[("lmm_A_slope_contrast.csv")]:::output
-  build_fig5_and_tables_R --> outputs_tables_lmm_A_slope_contrast_csv
+  R_build_fig5_and_tables_R --> outputs_tables_lmm_A_slope_contrast_csv
   outputs_tables_lmm_B_slope_contrast_csv[("lmm_B_slope_contrast.csv")]:::output
-  build_fig5_and_tables_R --> outputs_tables_lmm_B_slope_contrast_csv
+  R_build_fig5_and_tables_R --> outputs_tables_lmm_B_slope_contrast_csv
   Figure5_lmm_pre_post_and_post_vs_never_png[("Figure5_lmm_pre_post_and_post_vs_never.png")]:::output
-  build_fig5_and_tables_R --> Figure5_lmm_pre_post_and_post_vs_never_png
-  helpers_pain_helpers_R --> build_gee_table3_R
+  R_build_fig5_and_tables_R --> Figure5_lmm_pre_post_and_post_vs_never_png
+  helpers_pain_helpers_R --> R_build_gee_table3_R
   gee_base_coef_csv[("gee_base_coef.csv")]:::output
-  build_gee_table3_R --> gee_base_coef_csv
+  R_build_gee_table3_R --> gee_base_coef_csv
   gee_adjusted_coef_csv[("gee_adjusted_coef.csv")]:::output
-  build_gee_table3_R --> gee_adjusted_coef_csv
+  R_build_gee_table3_R --> gee_adjusted_coef_csv
   gee_table3_base_vs_adjusted_csv[("gee_table3_base_vs_adjusted.csv")]:::output
-  build_gee_table3_R --> gee_table3_base_vs_adjusted_csv
-  helpers_pain_helpers_R --> build_original_figures_hires_R
+  R_build_gee_table3_R --> gee_table3_base_vs_adjusted_csv
+  helpers_pain_helpers_R --> R_build_original_figures_hires_R
   Fig3_pain_distribution_hires_png[("Fig3_pain_distribution_hires.png")]:::output
-  build_original_figures_hires_R --> Fig3_pain_distribution_hires_png
+  R_build_original_figures_hires_R --> Fig3_pain_distribution_hires_png
   Fig4A_spaghetti_DBS_dec_flat_inc_hires_png[("Fig4A_spaghetti_DBS_dec_flat_inc_hires.png")]:::output
-  build_original_figures_hires_R --> Fig4A_spaghetti_DBS_dec_flat_inc_hires_png
+  R_build_original_figures_hires_R --> Fig4A_spaghetti_DBS_dec_flat_inc_hires_png
   Fig4B_spaghetti_NeverDBS_dec_flat_inc_hires_png[("Fig4B_spaghetti_NeverDBS_dec_flat_inc_hires.png")]:::output
-  build_original_figures_hires_R --> Fig4B_spaghetti_NeverDBS_dec_flat_inc_hires_png
+  R_build_original_figures_hires_R --> Fig4B_spaghetti_NeverDBS_dec_flat_inc_hires_png
   Fig5_mean_trajectory_hires_png[("Fig5_mean_trajectory_hires.png")]:::output
-  build_original_figures_hires_R --> Fig5_mean_trajectory_hires_png
-  helpers_pain_helpers_R --> build_paper_docx_R
-  helpers_pain_helpers_R --> build_paper_standalone_R
-  helpers_pain_helpers_R --> build_replication_figs_R
+  R_build_original_figures_hires_R --> Fig5_mean_trajectory_hires_png
+  helpers_pain_helpers_R --> R_build_replication_figs_R
   Figure1_STROBE_png[("Figure1_STROBE.png")]:::output
-  build_replication_figs_R --> Figure1_STROBE_png
+  R_build_replication_figs_R --> Figure1_STROBE_png
   Figure3_pain_level_distribution_png[("Figure3_pain_level_distribution.png")]:::output
-  build_replication_figs_R --> Figure3_pain_level_distribution_png
+  R_build_replication_figs_R --> Figure3_pain_level_distribution_png
   Figure4_mean_trajectory_by_arm_png[("Figure4_mean_trajectory_by_arm.png")]:::output
-  build_replication_figs_R --> Figure4_mean_trajectory_by_arm_png
+  R_build_replication_figs_R --> Figure4_mean_trajectory_by_arm_png
   Figure3A_spaghetti_DBS_png[("Figure3A_spaghetti_DBS.png")]:::output
-  build_replication_figs_R --> Figure3A_spaghetti_DBS_png
+  R_build_replication_figs_R --> Figure3A_spaghetti_DBS_png
   Figure3B_spaghetti_Never_DBS_png[("Figure3B_spaghetti_Never-DBS.png")]:::output
-  build_replication_figs_R --> Figure3B_spaghetti_Never_DBS_png
+  R_build_replication_figs_R --> Figure3B_spaghetti_Never_DBS_png
   Figure8_xsec_DBS_forest_png[("Figure8_xsec_DBS_forest.png")]:::output
-  build_replication_figs_R --> Figure8_xsec_DBS_forest_png
+  R_build_replication_figs_R --> Figure8_xsec_DBS_forest_png
   Figure9_sex_bmi_interaction_png[("Figure9_sex_bmi_interaction.png")]:::output
-  build_replication_figs_R --> Figure9_sex_bmi_interaction_png
+  R_build_replication_figs_R --> Figure9_sex_bmi_interaction_png
   FigureS5_lmm_wide_window_png[("FigureS5_lmm_wide_window.png")]:::output
-  build_replication_figs_R --> FigureS5_lmm_wide_window_png
-  helpers_pain_helpers_R --> build_stratified_delta_by_window_R
+  R_build_replication_figs_R --> FigureS5_lmm_wide_window_png
+  helpers_pain_helpers_R --> R_build_stratified_delta_by_window_R
   Figure8_stratified_delta_by_window_png[("Figure8_stratified_delta_by_window.png")]:::output
-  build_stratified_delta_by_window_R --> Figure8_stratified_delta_by_window_png
+  R_build_stratified_delta_by_window_R --> Figure8_stratified_delta_by_window_png
   delta_stratified_all_windows_csv[("delta_stratified_all_windows.csv")]:::output
-  build_stratified_delta_by_window_R --> delta_stratified_all_windows_csv
+  R_build_stratified_delta_by_window_R --> delta_stratified_all_windows_csv
   delta_stratified_welch_all_windows_csv[("delta_stratified_welch_all_windows.csv")]:::output
-  build_stratified_delta_by_window_R --> delta_stratified_welch_all_windows_csv
-  helpers_pain_helpers_R --> final_fixes_R
-  outputs_tables_love_plot_smds_csv[("love_plot_smds.csv")]:::output
-  final_fixes_R --> outputs_tables_love_plot_smds_csv
-  outputs_tables_delta_by_baseline_pain_stratum_csv[("delta_by_baseline_pain_stratum.csv")]:::output
-  final_fixes_R --> outputs_tables_delta_by_baseline_pain_stratum_csv
-  outputs_tables_delta_stratum_welch_csv[("delta_stratum_welch.csv")]:::output
-  final_fixes_R --> outputs_tables_delta_stratum_welch_csv
-  final_fixes_R --> Figure18_love_plot_png
-  Figure6_prediction_png[("Figure6_prediction.png")]:::output
-  final_fixes_R --> Figure6_prediction_png
-  Figure17b_traj_cluster_delta_png[("Figure17b_traj_cluster_delta.png")]:::output
-  final_fixes_R --> Figure17b_traj_cluster_delta_png
-  helpers_pain_helpers_R --> fix_labels_v3_R
-  outputs_tables_variable_label_map_csv[("variable_label_map.csv")]:::output
-  fix_labels_v3_R --> outputs_tables_variable_label_map_csv
-  Figure15_cate_feature_importance_png[("Figure15_cate_feature_importance.png")]:::output
-  fix_labels_v3_R --> Figure15_cate_feature_importance_png
-  Figure15_cate_feature_importance_tiff[("Figure15_cate_feature_importance.tiff")]:::output
-  fix_labels_v3_R --> Figure15_cate_feature_importance_tiff
-  Figure_RF_importance_labeled_png[("Figure_RF_importance_labeled.png")]:::output
-  fix_labels_v3_R --> Figure_RF_importance_labeled_png
-  Figure_RF_importance_labeled_tiff[("Figure_RF_importance_labeled.tiff")]:::output
-  fix_labels_v3_R --> Figure_RF_importance_labeled_tiff
-  helpers_pain_helpers_R --> fix_network_figure_R
-  Figure6b_network_heatmap_png[("Figure6b_network_heatmap.png")]:::output
-  fix_network_figure_R --> Figure6b_network_heatmap_png
-  Figure6b_network_heatmap_tiff[("Figure6b_network_heatmap.tiff")]:::output
-  fix_network_figure_R --> Figure6b_network_heatmap_tiff
-  figure6_network_label_sources_csv[("figure6_network_label_sources.csv")]:::output
-  fix_network_figure_R --> figure6_network_label_sources_csv
-  helpers_pain_helpers_R --> make_radar_figs_R
+  R_build_stratified_delta_by_window_R --> delta_stratified_welch_all_windows_csv
+  ppmi_synth_matched_long_csv[("ppmi_synth_matched_long.csv")]:::output
+  R_helpers_make_synthetic_cohort_R --> ppmi_synth_matched_long_csv
+  helpers_pain_helpers_R --> R_make_radar_figs_R
   Figure19b_baseline_cluster_heatmap_png[("Figure19b_baseline_cluster_heatmap.png")]:::output
-  make_radar_figs_R --> Figure19b_baseline_cluster_heatmap_png
-  helpers_pain_helpers_R --> polish_figs_R
-  outputs_tables_delta_by_pre_dbs_pain_stratum_csv[("delta_by_pre_dbs_pain_stratum.csv")]:::output
-  polish_figs_R --> outputs_tables_delta_by_pre_dbs_pain_stratum_csv
-  polish_figs_R --> outputs_tables_delta_stratum_welch_csv
-  polish_figs_R --> Figure17b_traj_cluster_delta_png
-  polish_figs_R --> Figure6_prediction_png
-  helpers_pain_helpers_R --> rebuild_figures_v2_R
-  outputs_tables_pain_connectivity_index_csv[("pain_connectivity_index.csv")]:::output
-  rebuild_figures_v2_R --> outputs_tables_pain_connectivity_index_csv
-  Figure6_network_labeled_png[("Figure6_network_labeled.png")]:::output
-  rebuild_figures_v2_R --> Figure6_network_labeled_png
-  helpers_pain_helpers_R --> sprint01_negative_controls_R
+  R_make_radar_figs_R --> Figure19b_baseline_cluster_heatmap_png
+  helpers_pain_helpers_R --> notebooks_00_data_setup_ipynb
+  outputs_objects_pain_long_rds[("pain_long.rds")]:::output
+  notebooks_00_data_setup_ipynb --> outputs_objects_pain_long_rds
+  outputs_objects_pain_dedup_rds[("pain_dedup.rds")]:::output
+  notebooks_00_data_setup_ipynb --> outputs_objects_pain_dedup_rds
+  helpers_pain_helpers_R --> notebooks_01_lmm_predicted_and_waterfall_ipynb
+  outputs_objects_pain_delta_responder_rds[("pain_delta_responder.rds")]:::output
+  notebooks_01_lmm_predicted_and_waterfall_ipynb --> outputs_objects_pain_delta_responder_rds
+  outputs_tables_lmm_slope_contrasts_csv[("lmm_slope_contrasts.csv")]:::output
+  notebooks_01_lmm_predicted_and_waterfall_ipynb --> outputs_tables_lmm_slope_contrasts_csv
+  outputs_tables_delta_summary_csv[("delta_summary.csv")]:::output
+  notebooks_01_lmm_predicted_and_waterfall_ipynb --> outputs_tables_delta_summary_csv
+  outputs_figures_Fig06_LMM_predicted_traj_png[("Fig06_LMM_predicted_traj.png")]:::output
+  notebooks_01_lmm_predicted_and_waterfall_ipynb --> outputs_figures_Fig06_LMM_predicted_traj_png
+  outputs_figures_Fig07_waterfall_dbs_png[("Fig07_waterfall_dbs.png")]:::output
+  notebooks_01_lmm_predicted_and_waterfall_ipynb --> outputs_figures_Fig07_waterfall_dbs_png
+  outputs_figures_Fig08_delta_violin_png[("Fig08_delta_violin.png")]:::output
+  notebooks_01_lmm_predicted_and_waterfall_ipynb --> outputs_figures_Fig08_delta_violin_png
+  helpers_pain_helpers_R --> notebooks_01b_time_scale_sensitivity_ipynb
+  outputs_tables_lmm_slopes_per_year_csv[("lmm_slopes_per_year.csv")]:::output
+  notebooks_01b_time_scale_sensitivity_ipynb --> outputs_tables_lmm_slopes_per_year_csv
+  outputs_tables_lmm_slope_contrasts_per_year_csv[("lmm_slope_contrasts_per_year.csv")]:::output
+  notebooks_01b_time_scale_sensitivity_ipynb --> outputs_tables_lmm_slope_contrasts_per_year_csv
+  helpers_pain_helpers_R --> notebooks_02_latent_class_trajectories_ipynb
+  outputs_objects_lcmm_class_membership_rds[("lcmm_class_membership.rds")]:::output
+  notebooks_02_latent_class_trajectories_ipynb --> outputs_objects_lcmm_class_membership_rds
+  outputs_objects_lcmm_best_model_rds[("lcmm_best_model.rds")]:::output
+  notebooks_02_latent_class_trajectories_ipynb --> outputs_objects_lcmm_best_model_rds
+  outputs_tables_lcmm_model_selection_csv[("lcmm_model_selection.csv")]:::output
+  notebooks_02_latent_class_trajectories_ipynb --> outputs_tables_lcmm_model_selection_csv
+  outputs_tables_lcmm_class_by_arm_csv[("lcmm_class_by_arm.csv")]:::output
+  notebooks_02_latent_class_trajectories_ipynb --> outputs_tables_lcmm_class_by_arm_csv
+  outputs_figures_Fig09_latent_class_traj_png[("Fig09_latent_class_traj.png")]:::output
+  notebooks_02_latent_class_trajectories_ipynb --> outputs_figures_Fig09_latent_class_traj_png
+  helpers_pain_helpers_R --> notebooks_02b_latent_class_high_pain_ipynb
+  outputs_objects_lcmm_hi_class_membership_rds[("lcmm_hi_class_membership.rds")]:::output
+  notebooks_02b_latent_class_high_pain_ipynb --> outputs_objects_lcmm_hi_class_membership_rds
+  outputs_objects_lcmm_hi_best_model_rds[("lcmm_hi_best_model.rds")]:::output
+  notebooks_02b_latent_class_high_pain_ipynb --> outputs_objects_lcmm_hi_best_model_rds
+  outputs_tables_lcmm_hi_model_selection_csv[("lcmm_hi_model_selection.csv")]:::output
+  notebooks_02b_latent_class_high_pain_ipynb --> outputs_tables_lcmm_hi_model_selection_csv
+  outputs_tables_lcmm_hi_class_by_arm_csv[("lcmm_hi_class_by_arm.csv")]:::output
+  notebooks_02b_latent_class_high_pain_ipynb --> outputs_tables_lcmm_hi_class_by_arm_csv
+  outputs_figures_Fig09b_latent_class_traj_hi_pain_png[("Fig09b_latent_class_traj_hi_pain.png")]:::output
+  notebooks_02b_latent_class_high_pain_ipynb --> outputs_figures_Fig09b_latent_class_traj_hi_pain_png
+  helpers_pain_helpers_R --> notebooks_03_baseline_predictors_ipynb
+  outputs_objects_baseline_and_delta_rds[("baseline_and_delta.rds")]:::output
+  notebooks_03_baseline_predictors_ipynb --> outputs_objects_baseline_and_delta_rds
+  outputs_tables_baseline_univariate_or_csv[("baseline_univariate_or.csv")]:::output
+  notebooks_03_baseline_predictors_ipynb --> outputs_tables_baseline_univariate_or_csv
+  outputs_figures_Fig10_baseline_predictors_forest_DBS_png[("Fig10_baseline_predictors_forest_DBS.png")]:::output
+  notebooks_03_baseline_predictors_ipynb --> outputs_figures_Fig10_baseline_predictors_forest_DBS_png
+  helpers_pain_helpers_R --> notebooks_03b_baseline_predictors_firth_ipynb
+  outputs_tables_baseline_univariate_or_firth_csv[("baseline_univariate_or_firth.csv")]:::output
+  notebooks_03b_baseline_predictors_firth_ipynb --> outputs_tables_baseline_univariate_or_firth_csv
+  outputs_tables_mv_main_firth_csv[("mv_main_firth.csv")]:::output
+  notebooks_03b_baseline_predictors_firth_ipynb --> outputs_tables_mv_main_firth_csv
+  outputs_tables_mv_interactions_firth_csv[("mv_interactions_firth.csv")]:::output
+  notebooks_03b_baseline_predictors_firth_ipynb --> outputs_tables_mv_interactions_firth_csv
+  outputs_figures_Fig10b_baseline_predictors_forest_DBS_firth_png[("Fig10b_baseline_predictors_forest_DBS_firth.png")]:::output
+  notebooks_03b_baseline_predictors_firth_ipynb --> outputs_figures_Fig10b_baseline_predictors_forest_DBS_firth_png
+  helpers_pain_helpers_R --> notebooks_04_ledd_mediation_ipynb
+  outputs_objects_mediation_fit_rds[("mediation_fit.rds")]:::output
+  notebooks_04_ledd_mediation_ipynb --> outputs_objects_mediation_fit_rds
+  outputs_objects_mediation_sensitivity_rds[("mediation_sensitivity.rds")]:::output
+  notebooks_04_ledd_mediation_ipynb --> outputs_objects_mediation_sensitivity_rds
+  outputs_tables_mediation_effects_csv[("mediation_effects.csv")]:::output
+  notebooks_04_ledd_mediation_ipynb --> outputs_tables_mediation_effects_csv
+  outputs_figures_Fig13_mediation_effects_png[("Fig13_mediation_effects.png")]:::output
+  notebooks_04_ledd_mediation_ipynb --> outputs_figures_Fig13_mediation_effects_png
+  helpers_pain_helpers_R --> notebooks_05_prediction_model_ipynb
+  outputs_tables_prediction_model_metrics_csv[("prediction_model_metrics.csv")]:::output
+  notebooks_05_prediction_model_ipynb --> outputs_tables_prediction_model_metrics_csv
+  outputs_tables_rf_importance_csv[("rf_importance.csv")]:::output
+  notebooks_05_prediction_model_ipynb --> outputs_tables_rf_importance_csv
+  outputs_figures_Fig11_prediction_roc_png[("Fig11_prediction_roc.png")]:::output
+  notebooks_05_prediction_model_ipynb --> outputs_figures_Fig11_prediction_roc_png
+  outputs_figures_Fig12_rf_importance_png[("Fig12_rf_importance.png")]:::output
+  notebooks_05_prediction_model_ipynb --> outputs_figures_Fig12_rf_importance_png
+  helpers_pain_helpers_R --> notebooks_05b_prediction_full_cohort_ipynb
+  outputs_objects_full_cohort_features_rds[("full_cohort_features.rds")]:::output
+  notebooks_05b_prediction_full_cohort_ipynb --> outputs_objects_full_cohort_features_rds
+  outputs_tables_prediction_full_cohort_metrics_csv[("prediction_full_cohort_metrics.csv")]:::output
+  notebooks_05b_prediction_full_cohort_ipynb --> outputs_tables_prediction_full_cohort_metrics_csv
+  outputs_tables_prediction_full_cohort_subgroup_csv[("prediction_full_cohort_subgroup.csv")]:::output
+  notebooks_05b_prediction_full_cohort_ipynb --> outputs_tables_prediction_full_cohort_subgroup_csv
+  outputs_tables_rf_importance_full_cohort_csv[("rf_importance_full_cohort.csv")]:::output
+  notebooks_05b_prediction_full_cohort_ipynb --> outputs_tables_rf_importance_full_cohort_csv
+  outputs_figures_Fig11b_prediction_roc_full_cohort_png[("Fig11b_prediction_roc_full_cohort.png")]:::output
+  notebooks_05b_prediction_full_cohort_ipynb --> outputs_figures_Fig11b_prediction_roc_full_cohort_png
+  outputs_figures_Fig12b_rf_importance_full_cohort_png[("Fig12b_rf_importance_full_cohort.png")]:::output
+  notebooks_05b_prediction_full_cohort_ipynb --> outputs_figures_Fig12b_rf_importance_full_cohort_png
+  helpers_pain_helpers_R --> notebooks_05c_prediction_patient_anchor_ipynb
+  outputs_objects_patient_anchor_features_rds[("patient_anchor_features.rds")]:::output
+  notebooks_05c_prediction_patient_anchor_ipynb --> outputs_objects_patient_anchor_features_rds
+  outputs_tables_prediction_patient_anchor_metrics_csv[("prediction_patient_anchor_metrics.csv")]:::output
+  notebooks_05c_prediction_patient_anchor_ipynb --> outputs_tables_prediction_patient_anchor_metrics_csv
+  outputs_tables_prediction_patient_anchor_subgroup_csv[("prediction_patient_anchor_subgroup.csv")]:::output
+  notebooks_05c_prediction_patient_anchor_ipynb --> outputs_tables_prediction_patient_anchor_subgroup_csv
+  outputs_tables_rf_importance_patient_anchor_csv[("rf_importance_patient_anchor.csv")]:::output
+  notebooks_05c_prediction_patient_anchor_ipynb --> outputs_tables_rf_importance_patient_anchor_csv
+  outputs_figures_Fig11c_roc_patient_anchor_png[("Fig11c_roc_patient_anchor.png")]:::output
+  notebooks_05c_prediction_patient_anchor_ipynb --> outputs_figures_Fig11c_roc_patient_anchor_png
+  outputs_figures_Fig12c_rf_importance_patient_anchor_png[("Fig12c_rf_importance_patient_anchor.png")]:::output
+  notebooks_05c_prediction_patient_anchor_ipynb --> outputs_figures_Fig12c_rf_importance_patient_anchor_png
+  helpers_pain_helpers_R --> notebooks_06_analgesic_use_ipynb
+  outputs_objects_analgesic_status_rds[("analgesic_status.rds")]:::output
+  notebooks_06_analgesic_use_ipynb --> outputs_objects_analgesic_status_rds
+  outputs_tables_analgesic_stop_rate_by_arm_csv[("analgesic_stop_rate_by_arm.csv")]:::output
+  notebooks_06_analgesic_use_ipynb --> outputs_tables_analgesic_stop_rate_by_arm_csv
+  outputs_figures_Fig14_analgesic_status_png[("Fig14_analgesic_status.png")]:::output
+  notebooks_06_analgesic_use_ipynb --> outputs_figures_Fig14_analgesic_status_png
+  helpers_pain_helpers_R --> notebooks_06b_analgesic_by_class_ipynb
+  outputs_tables_analgesic_class_by_arm_csv[("analgesic_class_by_arm.csv")]:::output
+  notebooks_06b_analgesic_by_class_ipynb --> outputs_tables_analgesic_class_by_arm_csv
+  outputs_tables_analgesic_class_fisher_csv[("analgesic_class_fisher.csv")]:::output
+  notebooks_06b_analgesic_by_class_ipynb --> outputs_tables_analgesic_class_fisher_csv
+  outputs_figures_Fig21_analgesic_by_class_png[("Fig21_analgesic_by_class.png")]:::output
+  notebooks_06b_analgesic_by_class_ipynb --> outputs_figures_Fig21_analgesic_by_class_png
+  helpers_pain_helpers_R --> notebooks_07_pain_phenotypes_ipynb
+  outputs_objects_pain_phenotype_flags_rds[("pain_phenotype_flags.rds")]:::output
+  notebooks_07_pain_phenotypes_ipynb --> outputs_objects_pain_phenotype_flags_rds
+  outputs_tables_pain_phenotype_counts_csv[("pain_phenotype_counts.csv")]:::output
+  notebooks_07_pain_phenotypes_ipynb --> outputs_tables_pain_phenotype_counts_csv
+  outputs_tables_pain_phenotype_by_arm_delta_csv[("pain_phenotype_by_arm_delta.csv")]:::output
+  notebooks_07_pain_phenotypes_ipynb --> outputs_tables_pain_phenotype_by_arm_delta_csv
+  outputs_tables_pain_phenotype_fisher_csv[("pain_phenotype_fisher.csv")]:::output
+  notebooks_07_pain_phenotypes_ipynb --> outputs_tables_pain_phenotype_fisher_csv
+  outputs_figures_Fig15_pain_phenotype_no_worse_png[("Fig15_pain_phenotype_no_worse.png")]:::output
+  notebooks_07_pain_phenotypes_ipynb --> outputs_figures_Fig15_pain_phenotype_no_worse_png
+  helpers_pain_helpers_R --> notebooks_07b_phenotypes_full_cohort_ipynb
+  outputs_tables_pain_phenotype_full_cohort_summary_csv[("pain_phenotype_full_cohort_summary.csv")]:::output
+  notebooks_07b_phenotypes_full_cohort_ipynb --> outputs_tables_pain_phenotype_full_cohort_summary_csv
+  outputs_tables_pain_phenotype_dbs_interactions_csv[("pain_phenotype_dbs_interactions.csv")]:::output
+  notebooks_07b_phenotypes_full_cohort_ipynb --> outputs_tables_pain_phenotype_dbs_interactions_csv
+  outputs_figures_Fig15b_pain_phenotype_full_cohort_png[("Fig15b_pain_phenotype_full_cohort.png")]:::output
+  notebooks_07b_phenotypes_full_cohort_ipynb --> outputs_figures_Fig15b_pain_phenotype_full_cohort_png
+  helpers_pain_helpers_R --> notebooks_08_tost_evalue_ipynb
+  outputs_objects_tost_delta_pain_rds[("tost_delta_pain.rds")]:::output
+  notebooks_08_tost_evalue_ipynb --> outputs_objects_tost_delta_pain_rds
+  outputs_tables_evalue_slope_contrast_csv[("evalue_slope_contrast.csv")]:::output
+  notebooks_08_tost_evalue_ipynb --> outputs_tables_evalue_slope_contrast_csv
+  outputs_tables_evalue_worsener_rr_csv[("evalue_worsener_rr.csv")]:::output
+  notebooks_08_tost_evalue_ipynb --> outputs_tables_evalue_worsener_rr_csv
+  helpers_pain_helpers_R --> notebooks_09_symptom_network_glasso_ipynb
+  outputs_tables_pain_partial_correlations_all_csv[("pain_partial_correlations_all.csv")]:::output
+  notebooks_09_symptom_network_glasso_ipynb --> outputs_tables_pain_partial_correlations_all_csv
+  outputs_tables_network_centrality_csv[("network_centrality.csv")]:::output
+  notebooks_09_symptom_network_glasso_ipynb --> outputs_tables_network_centrality_csv
+  helpers_pain_helpers_R --> notebooks_09b_longitudinal_glasso_ipynb
+  outputs_objects_longitudinal_glasso_fits_rds[("longitudinal_glasso_fits.rds")]:::output
+  notebooks_09b_longitudinal_glasso_ipynb --> outputs_objects_longitudinal_glasso_fits_rds
+  outputs_objects_longitudinal_glasso_grid_rds[("longitudinal_glasso_grid.rds")]:::output
+  notebooks_09b_longitudinal_glasso_ipynb --> outputs_objects_longitudinal_glasso_grid_rds
+  outputs_tables_longitudinal_pain_pcor_csv[("longitudinal_pain_pcor.csv")]:::output
+  notebooks_09b_longitudinal_glasso_ipynb --> outputs_tables_longitudinal_pain_pcor_csv
+  outputs_tables_longitudinal_centrality_csv[("longitudinal_centrality.csv")]:::output
+  notebooks_09b_longitudinal_glasso_ipynb --> outputs_tables_longitudinal_centrality_csv
+  outputs_figures_Fig22_longitudinal_glasso_png[("Fig22_longitudinal_glasso.png")]:::output
+  notebooks_09b_longitudinal_glasso_ipynb --> outputs_figures_Fig22_longitudinal_glasso_png
+  helpers_pain_helpers_R --> notebooks_09c_longitudinal_glasso_full_ipynb
+  outputs_tables_longitudinal_pain_pcor_full_csv[("longitudinal_pain_pcor_full.csv")]:::output
+  notebooks_09c_longitudinal_glasso_full_ipynb --> outputs_tables_longitudinal_pain_pcor_full_csv
+  outputs_tables_longitudinal_centrality_full_csv[("longitudinal_centrality_full.csv")]:::output
+  notebooks_09c_longitudinal_glasso_full_ipynb --> outputs_tables_longitudinal_centrality_full_csv
+  outputs_figures_Fig22b_longitudinal_glasso_full_png[("Fig22b_longitudinal_glasso_full.png")]:::output
+  notebooks_09c_longitudinal_glasso_full_ipynb --> outputs_figures_Fig22b_longitudinal_glasso_full_png
+  outputs_figures_Fig22c_pain_centrality_over_time_png[("Fig22c_pain_centrality_over_time.png")]:::output
+  notebooks_09c_longitudinal_glasso_full_ipynb --> outputs_figures_Fig22c_pain_centrality_over_time_png
+  helpers_pain_helpers_R --> notebooks_10_nm_phenotypes_pca_kmeans_ipynb
+  outputs_objects_nm_cluster_membership_rds[("nm_cluster_membership.rds")]:::output
+  notebooks_10_nm_phenotypes_pca_kmeans_ipynb --> outputs_objects_nm_cluster_membership_rds
+  outputs_tables_kmeans_K_selection_csv[("kmeans_K_selection.csv")]:::output
+  notebooks_10_nm_phenotypes_pca_kmeans_ipynb --> outputs_tables_kmeans_K_selection_csv
+  outputs_tables_kmeans_cluster_profile_csv[("kmeans_cluster_profile.csv")]:::output
+  notebooks_10_nm_phenotypes_pca_kmeans_ipynb --> outputs_tables_kmeans_cluster_profile_csv
+  outputs_figures_Fig19_nm_cluster_heatmap_png[("Fig19_nm_cluster_heatmap.png")]:::output
+  notebooks_10_nm_phenotypes_pca_kmeans_ipynb --> outputs_figures_Fig19_nm_cluster_heatmap_png
+  helpers_pain_helpers_R --> notebooks_11_multistate_msm_ipynb
+  outputs_objects_msm_fit_rds[("msm_fit.rds")]:::output
+  notebooks_11_multistate_msm_ipynb --> outputs_objects_msm_fit_rds
+  outputs_tables_msm_hr_dbs_csv[("msm_hr_dbs.csv")]:::output
+  notebooks_11_multistate_msm_ipynb --> outputs_tables_msm_hr_dbs_csv
+  outputs_figures_Fig23_msm_HR_DBS_png[("Fig23_msm_HR_DBS.png")]:::output
+  notebooks_11_multistate_msm_ipynb --> outputs_figures_Fig23_msm_HR_DBS_png
+  helpers_pain_helpers_R --> notebooks_12_kaplan_meier_pain_worsening_ipynb
+  outputs_objects_km_event_table_rds[("km_event_table.rds")]:::output
+  notebooks_12_kaplan_meier_pain_worsening_ipynb --> outputs_objects_km_event_table_rds
+  outputs_tables_cox_pain_worsening_csv[("cox_pain_worsening.csv")]:::output
+  notebooks_12_kaplan_meier_pain_worsening_ipynb --> outputs_tables_cox_pain_worsening_csv
+  Fig20_km_pain_worsening_png[("Fig20_km_pain_worsening.png")]:::output
+  notebooks_12_kaplan_meier_pain_worsening_ipynb --> Fig20_km_pain_worsening_png
+  helpers_pain_helpers_R --> notebooks_12b_km_threshold_2_ipynb
+  outputs_objects_km_event_table_thr2_rds[("km_event_table_thr2.rds")]:::output
+  notebooks_12b_km_threshold_2_ipynb --> outputs_objects_km_event_table_thr2_rds
+  outputs_tables_cox_pain_thr2_csv[("cox_pain_thr2.csv")]:::output
+  notebooks_12b_km_threshold_2_ipynb --> outputs_tables_cox_pain_thr2_csv
+  Fig20b_km_threshold_2_png[("Fig20b_km_threshold_2.png")]:::output
+  notebooks_12b_km_threshold_2_ipynb --> Fig20b_km_threshold_2_png
+  helpers_pain_helpers_R --> notebooks_13_landmark_reconciliation_ipynb
+  outputs_tables_landmark_summary_csv[("landmark_summary.csv")]:::output
+  notebooks_13_landmark_reconciliation_ipynb --> outputs_tables_landmark_summary_csv
+  outputs_tables_landmark_delta_welch_csv[("landmark_delta_welch.csv")]:::output
+  notebooks_13_landmark_reconciliation_ipynb --> outputs_tables_landmark_delta_welch_csv
+  outputs_tables_landmark_cox_hr_csv[("landmark_cox_hr.csv")]:::output
+  notebooks_13_landmark_reconciliation_ipynb --> outputs_tables_landmark_cox_hr_csv
+  outputs_tables_lmm_landmark_predictions_csv[("lmm_landmark_predictions.csv")]:::output
+  notebooks_13_landmark_reconciliation_ipynb --> outputs_tables_lmm_landmark_predictions_csv
+  outputs_figures_Figure8_landmark_png[("Figure8_landmark.png")]:::output
+  notebooks_13_landmark_reconciliation_ipynb --> outputs_figures_Figure8_landmark_png
+  outputs_figures_Figure9_landmark_cox_png[("Figure9_landmark_cox.png")]:::output
+  notebooks_13_landmark_reconciliation_ipynb --> outputs_figures_Figure9_landmark_cox_png
+  helpers_pain_helpers_R --> notebooks_14_positive_control_motor_ipynb
+  outputs_tables_landmark_updrs3_csv[("landmark_updrs3.csv")]:::output
+  notebooks_14_positive_control_motor_ipynb --> outputs_tables_landmark_updrs3_csv
+  outputs_tables_landmark_updrs3_welch_csv[("landmark_updrs3_welch.csv")]:::output
+  notebooks_14_positive_control_motor_ipynb --> outputs_tables_landmark_updrs3_welch_csv
+  outputs_tables_lmm_updrs3_slope_contrasts_csv[("lmm_updrs3_slope_contrasts.csv")]:::output
+  notebooks_14_positive_control_motor_ipynb --> outputs_tables_lmm_updrs3_slope_contrasts_csv
+  outputs_figures_Fig24_positive_control_motor_png[("Fig24_positive_control_motor.png")]:::output
+  notebooks_14_positive_control_motor_ipynb --> outputs_figures_Fig24_positive_control_motor_png
+  helpers_pain_helpers_R --> notebooks_15_table1_baseline_ipynb
+  outputs_objects_table1_matched_data_rds[("table1_matched_data.rds")]:::output
+  notebooks_15_table1_baseline_ipynb --> outputs_objects_table1_matched_data_rds
+  outputs_objects_table1_full_data_rds[("table1_full_data.rds")]:::output
+  notebooks_15_table1_baseline_ipynb --> outputs_objects_table1_full_data_rds
+  helpers_pain_helpers_R --> notebooks_16_clinical_nomogram_ipynb
+  outputs_objects_nomogram_model_rds[("nomogram_model.rds")]:::output
+  notebooks_16_clinical_nomogram_ipynb --> outputs_objects_nomogram_model_rds
+  outputs_tables_nomogram_example_predictions_csv[("nomogram_example_predictions.csv")]:::output
+  notebooks_16_clinical_nomogram_ipynb --> outputs_tables_nomogram_example_predictions_csv
+  helpers_pain_helpers_R --> notebooks_17_sex_dbs_interaction_ipynb
+  outputs_tables_landmark_delta_by_sex_csv[("landmark_delta_by_sex.csv")]:::output
+  notebooks_17_sex_dbs_interaction_ipynb --> outputs_tables_landmark_delta_by_sex_csv
+  outputs_figures_Figure12_sex_interaction_png[("Figure12_sex_interaction.png")]:::output
+  notebooks_17_sex_dbs_interaction_ipynb --> outputs_figures_Figure12_sex_interaction_png
+  helpers_pain_helpers_R --> notebooks_18_network_panel_grid_ipynb
+  outputs_figures_FigureS1_network_panel_grid_png[("FigureS1_network_panel_grid.png")]:::output
+  notebooks_18_network_panel_grid_ipynb --> outputs_figures_FigureS1_network_panel_grid_png
+  outputs_figures_FigureS2_pain_partner_lines_png[("FigureS2_pain_partner_lines.png")]:::output
+  notebooks_18_network_panel_grid_ipynb --> outputs_figures_FigureS2_pain_partner_lines_png
+  helpers_pain_helpers_R --> notebooks_19_biomarker_genetic_merge_ipynb
+  outputs_objects_patient_anchor_features_enriched_rds[("patient_anchor_features_enriched.rds")]:::output
+  notebooks_19_biomarker_genetic_merge_ipynb --> outputs_objects_patient_anchor_features_enriched_rds
+  outputs_tables_biomarker_coverage_by_arm_csv[("biomarker_coverage_by_arm.csv")]:::output
+  notebooks_19_biomarker_genetic_merge_ipynb --> outputs_tables_biomarker_coverage_by_arm_csv
+  outputs_tables_biomarker_univariate_or_csv[("biomarker_univariate_or.csv")]:::output
+  notebooks_19_biomarker_genetic_merge_ipynb --> outputs_tables_biomarker_univariate_or_csv
+  outputs_tables_pain_by_subgroup_arm_csv[("pain_by_subgroup_arm.csv")]:::output
+  notebooks_19_biomarker_genetic_merge_ipynb --> outputs_tables_pain_by_subgroup_arm_csv
+  helpers_pain_helpers_R --> notebooks_20_causal_uplift_who_benefits_ipynb
+  outputs_objects_cate_per_patient_rds[("cate_per_patient.rds")]:::output
+  notebooks_20_causal_uplift_who_benefits_ipynb --> outputs_objects_cate_per_patient_rds
+  outputs_objects_causal_forest_fit_rds[("causal_forest_fit.rds")]:::output
+  notebooks_20_causal_uplift_who_benefits_ipynb --> outputs_objects_causal_forest_fit_rds
+  outputs_tables_causal_forest_importance_csv[("causal_forest_importance.csv")]:::output
+  notebooks_20_causal_uplift_who_benefits_ipynb --> outputs_tables_causal_forest_importance_csv
+  outputs_tables_cate_responder_groups_csv[("cate_responder_groups.csv")]:::output
+  notebooks_20_causal_uplift_who_benefits_ipynb --> outputs_tables_cate_responder_groups_csv
+  outputs_figures_Figure13_cate_distribution_png[("Figure13_cate_distribution.png")]:::output
+  notebooks_20_causal_uplift_who_benefits_ipynb --> outputs_figures_Figure13_cate_distribution_png
+  outputs_figures_Figure14_cate_decile_validation_png[("Figure14_cate_decile_validation.png")]:::output
+  notebooks_20_causal_uplift_who_benefits_ipynb --> outputs_figures_Figure14_cate_decile_validation_png
+  outputs_figures_Figure15_cate_feature_importance_png[("Figure15_cate_feature_importance.png")]:::output
+  notebooks_20_causal_uplift_who_benefits_ipynb --> outputs_figures_Figure15_cate_feature_importance_png
+  helpers_pain_helpers_R --> notebooks_21_analgesic_escalation_ipynb
+  outputs_objects_analgesic_level_per_patient_rds[("analgesic_level_per_patient.rds")]:::output
+  notebooks_21_analgesic_escalation_ipynb --> outputs_objects_analgesic_level_per_patient_rds
+  outputs_tables_worsened_vs_med_status_csv[("worsened_vs_med_status.csv")]:::output
+  notebooks_21_analgesic_escalation_ipynb --> outputs_tables_worsened_vs_med_status_csv
+  outputs_figures_Figure16_analgesic_escalation_png[("Figure16_analgesic_escalation.png")]:::output
+  notebooks_21_analgesic_escalation_ipynb --> outputs_figures_Figure16_analgesic_escalation_png
+  helpers_pain_helpers_R --> notebooks_22_unsupervised_pain_phenotypes_ipynb
+  outputs_objects_patient_anchor_features_clustered_rds[("patient_anchor_features_clustered.rds")]:::output
+  notebooks_22_unsupervised_pain_phenotypes_ipynb --> outputs_objects_patient_anchor_features_clustered_rds
+  outputs_objects_trajectory_cluster_membership_rds[("trajectory_cluster_membership.rds")]:::output
+  notebooks_22_unsupervised_pain_phenotypes_ipynb --> outputs_objects_trajectory_cluster_membership_rds
+  outputs_tables_kmeans_baseline_K_selection_csv[("kmeans_baseline_K_selection.csv")]:::output
+  notebooks_22_unsupervised_pain_phenotypes_ipynb --> outputs_tables_kmeans_baseline_K_selection_csv
+  outputs_tables_kmeans_baseline_profiles_csv[("kmeans_baseline_profiles.csv")]:::output
+  notebooks_22_unsupervised_pain_phenotypes_ipynb --> outputs_tables_kmeans_baseline_profiles_csv
+  outputs_tables_kmeans_baseline_pain_by_cluster_arm_csv[("kmeans_baseline_pain_by_cluster_arm.csv")]:::output
+  notebooks_22_unsupervised_pain_phenotypes_ipynb --> outputs_tables_kmeans_baseline_pain_by_cluster_arm_csv
+  outputs_tables_kmeans_traj_K_selection_csv[("kmeans_traj_K_selection.csv")]:::output
+  notebooks_22_unsupervised_pain_phenotypes_ipynb --> outputs_tables_kmeans_traj_K_selection_csv
+  outputs_tables_kmeans_traj_pain_by_cluster_arm_csv[("kmeans_traj_pain_by_cluster_arm.csv")]:::output
+  notebooks_22_unsupervised_pain_phenotypes_ipynb --> outputs_tables_kmeans_traj_pain_by_cluster_arm_csv
+  outputs_figures_Figure17_traj_cluster_centroids_png[("Figure17_traj_cluster_centroids.png")]:::output
+  notebooks_22_unsupervised_pain_phenotypes_ipynb --> outputs_figures_Figure17_traj_cluster_centroids_png
+  helpers_pain_helpers_R --> notebooks_23_psm_validation_ipynb
+  outputs_objects_psm_matchit_fit_rds[("psm_matchit_fit.rds")]:::output
+  notebooks_23_psm_validation_ipynb --> outputs_objects_psm_matchit_fit_rds
+  outputs_objects_psm_matched_data_rds[("psm_matched_data.rds")]:::output
+  notebooks_23_psm_validation_ipynb --> outputs_objects_psm_matched_data_rds
+  outputs_tables_psm_balance_table_csv[("psm_balance_table.csv")]:::output
+  notebooks_23_psm_validation_ipynb --> outputs_tables_psm_balance_table_csv
+  outputs_tables_psm_pre_post_summary_csv[("psm_pre_post_summary.csv")]:::output
+  notebooks_23_psm_validation_ipynb --> outputs_tables_psm_pre_post_summary_csv
+  Figure18_love_plot_png[("Figure18_love_plot.png")]:::output
+  notebooks_23_psm_validation_ipynb --> Figure18_love_plot_png
+  Figure18_love_plot_tiff[("Figure18_love_plot.tiff")]:::output
+  notebooks_23_psm_validation_ipynb --> Figure18_love_plot_tiff
+  helpers_pain_helpers_R --> notebooks_99_publication_figures_ipynb
+  Figure4_network_png[("Figure4_network.png")]:::output
+  notebooks_99_publication_figures_ipynb --> Figure4_network_png
+  helpers_pain_helpers_R --> notebooks_99b_figures_final_ipynb
+  notebooks_99b_figures_final_ipynb --> Figure4_network_png
+  helpers_pain_helpers_R --> scripts_build_callgraph_py
+  helpers_pain_helpers_R --> sprints_sprint01_negative_controls_R
   outputs_tables_sprint01_negative_controls_csv[("sprint01_negative_controls.csv")]:::output
-  sprint01_negative_controls_R --> outputs_tables_sprint01_negative_controls_csv
+  sprints_sprint01_negative_controls_R --> outputs_tables_sprint01_negative_controls_csv
   outputs_figures_sprint01_negative_controls_png[("sprint01_negative_controls.png")]:::output
-  sprint01_negative_controls_R --> outputs_figures_sprint01_negative_controls_png
-  helpers_pain_helpers_R --> sprint02_anchor_sensitivity_R
+  sprints_sprint01_negative_controls_R --> outputs_figures_sprint01_negative_controls_png
+  helpers_pain_helpers_R --> sprints_sprint02_anchor_sensitivity_R
   outputs_tables_sprint02_anchor_sensitivity_csv[("sprint02_anchor_sensitivity.csv")]:::output
-  sprint02_anchor_sensitivity_R --> outputs_tables_sprint02_anchor_sensitivity_csv
+  sprints_sprint02_anchor_sensitivity_R --> outputs_tables_sprint02_anchor_sensitivity_csv
   outputs_figures_sprint02_anchor_sensitivity_png[("sprint02_anchor_sensitivity.png")]:::output
-  sprint02_anchor_sensitivity_R --> outputs_figures_sprint02_anchor_sensitivity_png
-  helpers_pain_helpers_R --> sprint03_evalue_mnar_R
+  sprints_sprint02_anchor_sensitivity_R --> outputs_figures_sprint02_anchor_sensitivity_png
+  helpers_pain_helpers_R --> sprints_sprint03_evalue_mnar_R
   outputs_tables_sprint03_evalue_table_E1_csv[("sprint03_evalue_table_E1.csv")]:::output
-  sprint03_evalue_mnar_R --> outputs_tables_sprint03_evalue_table_E1_csv
+  sprints_sprint03_evalue_mnar_R --> outputs_tables_sprint03_evalue_table_E1_csv
   outputs_tables_sprint03_dropout_by_arm_csv[("sprint03_dropout_by_arm.csv")]:::output
-  sprint03_evalue_mnar_R --> outputs_tables_sprint03_dropout_by_arm_csv
+  sprints_sprint03_evalue_mnar_R --> outputs_tables_sprint03_dropout_by_arm_csv
   outputs_tables_sprint03_mnar_tipping_csv[("sprint03_mnar_tipping.csv")]:::output
-  sprint03_evalue_mnar_R --> outputs_tables_sprint03_mnar_tipping_csv
+  sprints_sprint03_evalue_mnar_R --> outputs_tables_sprint03_mnar_tipping_csv
   outputs_figures_sprint03_mnar_tipping_png[("sprint03_mnar_tipping.png")]:::output
-  sprint03_evalue_mnar_R --> outputs_figures_sprint03_mnar_tipping_png
-  helpers_pain_helpers_R --> sprint04_nct_bootnet_R
+  sprints_sprint03_evalue_mnar_R --> outputs_figures_sprint03_mnar_tipping_png
+  helpers_pain_helpers_R --> sprints_sprint04_nct_bootnet_R
   outputs_objects_sprint04_nct_objects_rds[("sprint04_nct_objects.rds")]:::output
-  sprint04_nct_bootnet_R --> outputs_objects_sprint04_nct_objects_rds
+  sprints_sprint04_nct_bootnet_R --> outputs_objects_sprint04_nct_objects_rds
   outputs_objects_sprint04_edge_ci_objects_rds[("sprint04_edge_ci_objects.rds")]:::output
-  sprint04_nct_bootnet_R --> outputs_objects_sprint04_edge_ci_objects_rds
+  sprints_sprint04_nct_bootnet_R --> outputs_objects_sprint04_edge_ci_objects_rds
   outputs_tables_sprint04_nct_global_csv[("sprint04_nct_global.csv")]:::output
-  sprint04_nct_bootnet_R --> outputs_tables_sprint04_nct_global_csv
+  sprints_sprint04_nct_bootnet_R --> outputs_tables_sprint04_nct_global_csv
   outputs_tables_sprint04_pain_edge_ci_csv[("sprint04_pain_edge_ci.csv")]:::output
-  sprint04_nct_bootnet_R --> outputs_tables_sprint04_pain_edge_ci_csv
+  sprints_sprint04_nct_bootnet_R --> outputs_tables_sprint04_pain_edge_ci_csv
   outputs_figures_sprint04_pain_neighbours_png[("sprint04_pain_neighbours.png")]:::output
-  sprint04_nct_bootnet_R --> outputs_figures_sprint04_pain_neighbours_png
-  helpers_pain_helpers_R --> sprint05_bootstrap_brant_firth_R
+  sprints_sprint04_nct_bootnet_R --> outputs_figures_sprint04_pain_neighbours_png
+  helpers_pain_helpers_R --> sprints_sprint05_bootstrap_brant_firth_R
   outputs_tables_sprint05_bootstrap_drho_csv[("sprint05_bootstrap_drho.csv")]:::output
-  sprint05_bootstrap_brant_firth_R --> outputs_tables_sprint05_bootstrap_drho_csv
+  sprints_sprint05_bootstrap_brant_firth_R --> outputs_tables_sprint05_bootstrap_drho_csv
   outputs_tables_sprint05_brant_polr_csv[("sprint05_brant_polr.csv")]:::output
-  sprint05_bootstrap_brant_firth_R --> outputs_tables_sprint05_brant_polr_csv
+  sprints_sprint05_bootstrap_brant_firth_R --> outputs_tables_sprint05_brant_polr_csv
   outputs_tables_sprint05_profile_firth_ci_csv[("sprint05_profile_firth_ci.csv")]:::output
-  sprint05_bootstrap_brant_firth_R --> outputs_tables_sprint05_profile_firth_ci_csv
-  helpers_pain_helpers_R --> sprint06_robust_ses_R
+  sprints_sprint05_bootstrap_brant_firth_R --> outputs_tables_sprint05_profile_firth_ci_csv
+  helpers_pain_helpers_R --> sprints_sprint06_robust_ses_R
   outputs_tables_sprint06_lmm_robust_se_csv[("sprint06_lmm_robust_se.csv")]:::output
-  sprint06_robust_ses_R --> outputs_tables_sprint06_lmm_robust_se_csv
+  sprints_sprint06_robust_ses_R --> outputs_tables_sprint06_lmm_robust_se_csv
   outputs_tables_sprint06_gee_corstr_sens_csv[("sprint06_gee_corstr_sens.csv")]:::output
-  sprint06_robust_ses_R --> outputs_tables_sprint06_gee_corstr_sens_csv
-  helpers_pain_helpers_R --> sprint07_psm_diagnostics_R
+  sprints_sprint06_robust_ses_R --> outputs_tables_sprint06_gee_corstr_sens_csv
+  helpers_pain_helpers_R --> sprints_sprint07_psm_diagnostics_R
   outputs_tables_sprint07_weight_distribution_csv[("sprint07_weight_distribution.csv")]:::output
-  sprint07_psm_diagnostics_R --> outputs_tables_sprint07_weight_distribution_csv
+  sprints_sprint07_psm_diagnostics_R --> outputs_tables_sprint07_weight_distribution_csv
   outputs_tables_sprint07_caliper_sensitivity_csv[("sprint07_caliper_sensitivity.csv")]:::output
-  sprint07_psm_diagnostics_R --> outputs_tables_sprint07_caliper_sensitivity_csv
+  sprints_sprint07_psm_diagnostics_R --> outputs_tables_sprint07_caliper_sensitivity_csv
   outputs_figures_sprint07_psm_overlap_png[("sprint07_psm_overlap.png")]:::output
-  sprint07_psm_diagnostics_R --> outputs_figures_sprint07_psm_overlap_png
+  sprints_sprint07_psm_diagnostics_R --> outputs_figures_sprint07_psm_overlap_png
   outputs_figures_sprint07_love_plot_png[("sprint07_love_plot.png")]:::output
-  sprint07_psm_diagnostics_R --> outputs_figures_sprint07_love_plot_png
-  helpers_pain_helpers_R --> sprint08_competing_risk_R
+  sprints_sprint07_psm_diagnostics_R --> outputs_figures_sprint07_love_plot_png
+  helpers_pain_helpers_R --> sprints_sprint08_competing_risk_R
   outputs_objects_sprint08_cuminc_rds[("sprint08_cuminc.rds")]:::output
-  sprint08_competing_risk_R --> outputs_objects_sprint08_cuminc_rds
+  sprints_sprint08_competing_risk_R --> outputs_objects_sprint08_cuminc_rds
   outputs_tables_sprint08_event_data_csv[("sprint08_event_data.csv")]:::output
-  sprint08_competing_risk_R --> outputs_tables_sprint08_event_data_csv
+  sprints_sprint08_competing_risk_R --> outputs_tables_sprint08_event_data_csv
   outputs_tables_sprint08_finegray_csv[("sprint08_finegray.csv")]:::output
-  sprint08_competing_risk_R --> outputs_tables_sprint08_finegray_csv
+  sprints_sprint08_competing_risk_R --> outputs_tables_sprint08_finegray_csv
   outputs_tables_sprint08_cs_cox_csv[("sprint08_cs_cox.csv")]:::output
-  sprint08_competing_risk_R --> outputs_tables_sprint08_cs_cox_csv
+  sprints_sprint08_competing_risk_R --> outputs_tables_sprint08_cs_cox_csv
   outputs_figures_sprint08_cif_pain_worsening_png[("sprint08_cif_pain_worsening.png")]:::output
-  sprint08_competing_risk_R --> outputs_figures_sprint08_cif_pain_worsening_png
-  helpers_pain_helpers_R --> sprint09_ledd_mediation_R
+  sprints_sprint08_competing_risk_R --> outputs_figures_sprint08_cif_pain_worsening_png
+  helpers_pain_helpers_R --> sprints_sprint09_ledd_mediation_R
   outputs_tables_sprint09_mediation_results_csv[("sprint09_mediation_results.csv")]:::output
-  sprint09_ledd_mediation_R --> outputs_tables_sprint09_mediation_results_csv
-  helpers_pain_helpers_R --> sweep_delta_high_stratum_R
-  sweep_delta_high_stratum_csv[("sweep_delta_high_stratum.csv")]:::output
-  sweep_delta_high_stratum_R --> sweep_delta_high_stratum_csv
+  sprints_sprint09_ledd_mediation_R --> outputs_tables_sprint09_mediation_results_csv
+  outputs_tables_sprint10_dropout_rates_csv[("sprint10_dropout_rates.csv")]:::output
+  sprints_sprint10_ipcw_dropout_R --> outputs_tables_sprint10_dropout_rates_csv
+  outputs_tables_sprint10_ipcw_results_csv[("sprint10_ipcw_results.csv")]:::output
+  sprints_sprint10_ipcw_dropout_R --> outputs_tables_sprint10_ipcw_results_csv
+  outputs_figures_sprint10_dropout_model_png[("sprint10_dropout_model.png")]:::output
+  sprints_sprint10_ipcw_dropout_R --> outputs_figures_sprint10_dropout_model_png
+  outputs_tables_sprint11_bayesian_genetics_csv[("sprint11_bayesian_genetics.csv")]:::output
+  sprints_sprint11_bayesian_genetics_R --> outputs_tables_sprint11_bayesian_genetics_csv
+  outputs_figures_sprint11_bayesian_genetics_png[("sprint11_bayesian_genetics.png")]:::output
+  sprints_sprint11_bayesian_genetics_R --> outputs_figures_sprint11_bayesian_genetics_png
 ```

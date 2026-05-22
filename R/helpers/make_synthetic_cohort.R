@@ -111,9 +111,15 @@ cat("  Synthetic long rows:", nrow(long_rows), "\n")
 long_rows <- long_rows %>%
   dplyr::group_by(PATNO, will_receive_dbs) %>%
   dplyr::mutate(
-    .anchor = dplyr::if_else(any(will_receive_dbs),
-                             as.Date(min(INFODT_orig[!is.na(INFODT_orig)])),
-                             as.Date(min(INFODT_orig)))
+    # CRITICAL: for DBS patients, anchor MUST be the dbs_date so
+    # pre-surgery visits get time_days < 0 (Pre-DBS) and post-surgery
+    # visits get time_days >= 0 (Post-DBS). The old logic used the first
+    # visit for both arms, which produced zero Pre-DBS rows.
+    .anchor = dplyr::if_else(
+      any(will_receive_dbs) & any(!is.na(dbs_date)),
+      as.Date(min(dbs_date, na.rm = TRUE)),
+      as.Date(min(INFODT_orig, na.rm = TRUE))
+    )
   ) %>%
   dplyr::ungroup() %>%
   dplyr::mutate(

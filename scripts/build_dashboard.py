@@ -345,11 +345,21 @@ if s10 is not None:
                     "for informative dropout — primary conclusion robust.",
                     f))
 
-# === Sprint 11 — Bayesian-flavoured genetic interactions ===
+# === Sprint 11 — Bootstrap distribution for genetic interactions ===
 if s11 is not None:
+    # New schema has per-term rows; combine stratifier + term into y label
+    if "term" in s11.columns:
+        s11 = s11.dropna(subset=["post_mean"]).copy()
+        s11["y_label"] = (
+            s11["stratifier"].astype(str) + " · "
+            + s11["term"].str.replace("armDBS:strat_f", "", regex=False)
+        )
+        y_vals = s11["y_label"]
+    else:
+        y_vals = s11["stratifier"]
     f = go.Figure()
     f.add_trace(go.Scatter(
-        x=s11["post_mean"], y=s11["stratifier"], mode="markers",
+        x=s11["post_mean"], y=y_vals, mode="markers",
         marker=dict(size=14, color=OK["o"],
                     line=dict(color="#111827", width=1)),
         error_x=dict(type="data",
@@ -544,7 +554,7 @@ html = f"""<!DOCTYPE html>
 </html>
 """
 
-OUT.write_text(html)
+OUT.write_text(html, encoding="utf-8")
 print(f"[OK] dashboard: {OUT}")
 print(f"     {len(figures)} sprint panels rendered.")
 print(f"     {OUT.stat().st_size // 1024} KB.")

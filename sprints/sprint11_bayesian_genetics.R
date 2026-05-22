@@ -61,10 +61,21 @@ delta_df <- dplyr::inner_join(pre, post, by = "PATNO") %>%
 # When running on synthetic data, simulate random genetic strata so the
 # pipeline runs end-to-end (results meaningless on synth data).
 genetics_file <- file.path(OUT_OBJ, "genetics_forest_data.rds")
+gen_is_patient_level <- FALSE
 if (file.exists(genetics_file)) {
-  gen <- readRDS(genetics_file)
-  cat("Loaded existing genetics_forest_data.rds\n")
-} else {
+  gen_raw <- readRDS(genetics_file)
+  if (is.data.frame(gen_raw) && "PATNO" %in% names(gen_raw)) {
+    gen <- gen_raw
+    gen_is_patient_level <- TRUE
+    cat("Loaded patient-level genetics_forest_data.rds\n")
+  } else {
+    cat("[note] genetics_forest_data.rds is summary-level (",
+        paste(head(names(gen_raw), 5), collapse = ", "),
+        "...). Patient-level genetics required for bootstrap; ",
+        "falling back to synthetic genetic strata.\n", sep = "")
+  }
+}
+if (!gen_is_patient_level) {
   cat("[note] genetics_forest_data.rds not found — simulating synthetic ",
       "genetic strata for pipeline smoke-test. ",
       "Real-data run requires PPMI genetic_status table.\n", sep = "")
@@ -89,44 +100,80 @@ if (file.exists(genetics_file)) {
 df <- delta_df %>% dplyr::inner_join(gen, by = "PATNO")
 cat("Analysis n =", nrow(df), "\n")
 
-# ---- Bootstrap posterior approximation for arm × stratifier --------
+# ---- Bootstrap distribution for arm × stratifier (per-level term) ---
+# CODE-REVIEW FIX (2026-05-21):
+#   1. Initialise est as NA_real_, not 0 — previous "est != 0" filter
+#      silently removed legitimate zero estimates, biasing the posterior.
+#   2. For a multi-level stratifier we return one row per interaction
+#      term (e.g., armDBS:strat_fMid AND armDBS:strat_fHigh separately).
+#      Averaging across levels is not a meaningful contrast.
 boot_posterior <- function(d, stratifier, n_boot = N_BOOT) {
-  est <- numeric(n_boot)
   d$strat_f <- as.factor(d[[stratifier]])
-  # Drop empty levels
   d <- d %>% dplyr::filter(!is.na(strat_f))
+  d <- d %>% dplyr::filter(!is.na(delta), !is.na(arm))
+  # Identify the canonical interaction-term names from a base-data fit
+  base_fit <- tryCatch(stats::lm(delta ~ arm * strat_f, data = d),
+                       error = function(e) NULL)
+  if (is.null(base_fit)) {
+    return(tibble::tibble(
+      stratifier = stratifier, term = NA_character_,
+      n = nrow(d), post_mean = NA_real_,
+      ci_lo = NA_real_, ci_hi = NA_real_,
+      P_abs_gt_025 = NA_real_, P_abs_gt_050 = NA_real_,
+      P_gt_zero = NA_real_
+    ))
+  }
+  inter_terms <- grep("^armDBS:", names(stats::coef(base_fit)), value = TRUE)
+  if (length(inter_terms) == 0) return(NULL)
+
+  # Bootstrap matrix: rows = iterations, cols = interaction terms.
+  M <- matrix(NA_real_, nrow = n_boot, ncol = length(inter_terms),
+              dimnames = list(NULL, inter_terms))
   for (i in seq_len(n_boot)) {
     idx <- sample.int(nrow(d), nrow(d), replace = TRUE)
     s <- d[idx, ]
-    # Skip iterations where any cell is empty
     if (!all(c("DBS", "Never-DBS") %in% s$arm)) next
     if (length(unique(s$strat_f)) < 2) next
-    f <- tryCatch(
-      stats::lm(delta ~ arm * strat_f, data = s),
-      error = function(e) NULL)
+    f <- tryCatch(stats::lm(delta ~ arm * strat_f, data = s),
+                  error = function(e) NULL)
     if (is.null(f)) next
     cf <- stats::coef(f)
-    # Average the arm:stratifier interaction terms (absolute)
-    inter_terms <- grep("^armDBS:", names(cf), value = TRUE)
-    if (length(inter_terms) > 0) {
-      est[i] <- mean(cf[inter_terms], na.rm = TRUE)
+    for (tm in inter_terms) {
+      if (tm %in% names(cf)) M[i, tm] <- unname(cf[tm])
     }
   }
-  est <- est[!is.na(est) & est != 0]
-  tibble::tibble(
-    stratifier  = stratifier,
-    n           = nrow(d),
-    post_mean   = mean(est),
-    ci_lo       = stats::quantile(est, 0.025),
-    ci_hi       = stats::quantile(est, 0.975),
-    P_abs_gt_025 = mean(abs(est) > THRESH_S),
-    P_abs_gt_050 = mean(abs(est) > THRESH_L),
-    P_gt_zero    = mean(est > 0)
-  )
+
+  # Per-term summary
+  purrr::map_dfr(inter_terms, function(tm) {
+    est <- M[, tm]
+    est <- est[!is.na(est)]
+    if (length(est) < 50) {
+      return(tibble::tibble(stratifier = stratifier, term = tm,
+                            n = nrow(d), post_mean = NA_real_,
+                            ci_lo = NA_real_, ci_hi = NA_real_,
+                            P_abs_gt_025 = NA_real_,
+                            P_abs_gt_050 = NA_real_,
+                            P_gt_zero = NA_real_))
+    }
+    tibble::tibble(
+      stratifier   = stratifier,
+      term         = tm,
+      n            = nrow(d),
+      post_mean    = mean(est),
+      ci_lo        = unname(stats::quantile(est, 0.025)),
+      ci_hi        = unname(stats::quantile(est, 0.975)),
+      P_abs_gt_025 = mean(abs(est) > THRESH_S),
+      P_abs_gt_050 = mean(abs(est) > THRESH_L),
+      P_gt_zero    = mean(est > 0)
+    )
+  })
 }
 
 stratifiers <- c("prs_tertile", "apoe4", "saa_pos", "gba")
-cat("\nBootstrap posterior approximation (B =", N_BOOT, ")…\n")
+# Only run the stratifiers actually present in the data
+stratifiers <- intersect(stratifiers, names(df))
+cat("\nBootstrap distribution under flat prior (B =", N_BOOT, ")…\n")
+cat("(NOTE: not a proper Bayesian posterior; see ADR-0007.)\n")
 res <- purrr::map_dfr(stratifiers, function(s) {
   cat("  ", s, "…\n", sep = "")
   boot_posterior(df, s, n_boot = N_BOOT)

@@ -25,12 +25,14 @@ import json
 import re
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent
+# Repo root, not scripts/. parents[1] gives the parent of the script dir.
+ROOT = Path(__file__).resolve().parents[1]
 SRC_FILES = sorted(
-    [p for p in ROOT.glob("*.R")]
-    + [p for p in ROOT.glob("*.py")]
-    + [p for p in (ROOT / "helpers").glob("*.R")]
-    + [p for p in ROOT.glob("*.ipynb")]
+    [p for p in (ROOT / "R").glob("*.R")]
+    + [p for p in (ROOT / "R" / "helpers").glob("*.R")]
+    + [p for p in (ROOT / "sprints").glob("*.R")]
+    + [p for p in (ROOT / "scripts").glob("*.py")]
+    + [p for p in (ROOT / "notebooks").glob("*.ipynb")]
 )
 
 # ---- regex patterns ----

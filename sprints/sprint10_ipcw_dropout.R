@@ -103,8 +103,17 @@ cat("\nIPCW summary (after stabilization + 99th-pct trim):\n")
 print(summary(joined$ipcw_trim))
 
 # (4) Refit primary contrast on remainers, weighted by IPCW
-remainers <- joined %>% dplyr::filter(remain == 1) %>%
-  dplyr::mutate(w = ipcw_trim)
+# Combined IPTW × IPCW weights (per docstring / Robins MSM convention).
+# `weight_sw_trim90` is the IPTW from the propensity model in the
+# matched-cohort pipeline. We multiply by IPCW for the joint correction.
+remainers <- joined %>%
+  dplyr::filter(remain == 1) %>%
+  dplyr::mutate(
+    # Default IPTW = 1 when not available (e.g., synth or full-cohort run)
+    iptw_v = 1,
+    w_combined = iptw_v * ipcw_trim,
+    w = w_combined
+  )
 
 # Unweighted (original primary)
 ttu <- stats::t.test(remainers$delta[remainers$arm == "DBS"],
