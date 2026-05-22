@@ -23,7 +23,7 @@ jobs:
       - name: Install pak + system deps
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          packages: any::testthat, any::dplyr, any::tidyr, any::lme4, any::geepack, any::MatchIt, any::mediation, any::cmprsk, any::bootnet, any::NetworkComparisonTest, any::clubSandwich, any::brant, any::logistf, any::here, any::yaml, any::ggplot2, any::dagitty, any::ggdag, any::lintr, any::styler
+          packages: any::testthat, any::dplyr, any::tidyr, any::lme4, any::geepack, any::MatchIt, any::mediation, any::cmprsk, any::bootnet, any::NetworkComparisonTest, any::clubSandwich, any::brant, any::logistf, any::here, any::yaml, any::ggplot2, any::dagitty, any::ggdag, any::lintr, any::styler, any::readr, any::readxl, any::writexl, any::lubridate, any::purrr, any::tibble, any::forcats, any::scales, any::png, any::withr
 
       - name: Run unit tests
         run: Rscript -e 'testthat::test_dir("tests/testthat", reporter = "summary")'
