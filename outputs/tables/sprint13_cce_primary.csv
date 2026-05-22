@@ -1,0 +1,2 @@
+estimator,n_dbs,n_ctrl,diff,ci_lo,ci_hi,welch_p
+Sequential-trial-emulation (duration-matched),67,42,-0.037433993895083395,-0.3734953492788747,0.2986273614887079,0.8254166189318637

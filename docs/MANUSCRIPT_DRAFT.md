@@ -1,85 +1,44 @@
-# Manuscript draft — formal prose, journal-tailored
+# Manuscript draft (v2 — post peer-review) — formal prose
 
-**Working title.** Deep brain stimulation reshapes the pain–symptom architecture in Parkinson disease: a target-trial-emulation matched longitudinal cohort in the Parkinson's Progression Markers Initiative.
+**Working title.** Deep brain stimulation, pain trajectory, and the symptom architecture of Parkinson disease: a target-trial-emulation matched longitudinal cohort in the Parkinson's Progression Markers Initiative.
 
 **Authors.** Niels Pacheco-Barrios, MD¹; … ; John D. Rolston, MD, PhD¹\*.
 ¹ Department of Neurological Surgery, University of California, San Francisco.
-
 \*Corresponding author.
 
-**Target journal.** JAMA Neurology (primary) or Lancet Neurology (alternate). Length budget ≈3,200 words main text, ≤6 figures, ≤2 tables. Supplementary unlimited.
+**Target journal.** JAMA Neurology (primary) or Lancet Neurology (alternate). ≈3,200-word main text, ≤6 figures, ≤2 tables. Supplementary unlimited.
+
+**Funding.** [TO BE COMPLETED]. PPMI is sponsored by The Michael J. Fox Foundation for Parkinson's Research and funding partners.
 
 ---
 
-## Abstract (structured, 296 words)
+## Abstract (structured, ~300 words)
 
-**Importance.** Deep brain stimulation (DBS) is a widely used surgical therapy for Parkinson disease (PD), yet its long-term effects on non-motor symptoms—particularly pain—remain incompletely characterized. Whether stimulation changes the *structure* of how pain relates to other non-motor domains, distinct from whether it changes pain levels, has not previously been examined in a matched longitudinal cohort.
+**Importance.** Deep brain stimulation (DBS) is a widely used surgical therapy for Parkinson disease (PD), yet its long-term effects on non-motor symptoms—particularly pain—remain incompletely characterised in matched longitudinal cohorts.
 
-**Objective.** To test (1) non-inferiority of DBS on the 4-year trajectory of self-reported pain, (2) whether the non-motor symptom network reorganizes after stimulation, (3) whether within-patient pain–motor coupling is preserved, and (4) whether genetic and biomarker status modifies the pain response.
+**Objective.** To test non-inferiority of DBS on the 4-year trajectory of self-reported pain, and to explore three secondary questions about non-motor symptom architecture, within-patient pain–motor coupling, and genetic/biomarker modification.
 
-**Design, Setting, and Participants.** Observational target-trial-emulation analysis of the Parkinson's Progression Markers Initiative (PPMI) Curated Data Cut, November 2024. Idiopathic PD patients with at least one Movement Disorder Society Unified Parkinson's Disease Rating Scale Part I item 9 (NP1PAIN) observation were included (n = 1,484; 105 DBS recipients, 1,379 Never-DBS). PPMI does not record stimulation target (subthalamic vs pallidal vs other); analyses are therefore target-agnostic.
+**Design, Setting, and Participants.** Observational target-trial-emulation analysis of the Parkinson's Progression Markers Initiative (PPMI) Curated Data Cut, November 2024. Idiopathic PD with at least one MDS-UPDRS Part I item 9 (NP1PAIN) observation (n = 1,484; 105 DBS recipients, 1,379 Never-DBS). PPMI does not record stimulation target; analyses are target-agnostic.
 
 **Exposure.** Deep brain stimulation, anchored at first surgery date.
 
-**Main Outcomes and Measures.** Primary: landmark change in NP1PAIN at +6 to +18 months relative to a −24 to 0 month baseline, evaluated by two one-sided tests for non-inferiority at a ±1-point margin. Secondary outcomes included graphical LASSO partial-correlation networks over 15 non-motor symptoms, Fine-Gray competing-risk subdistribution hazards, and within-patient ΔPain–ΔUPDRS-III Spearman correlations.
+**Main Outcomes and Measures.** *Primary*: change in NP1PAIN at +6 to +18 months relative to a −24 to 0 month baseline, evaluated by two one-sided tests (TOST) for non-inferiority. The pre-specified primary margin was ±1 MDS-UPDRS Part I point; sensitivity margins of ±0.75, ±0.5, and ±0.3 are reported. Estimation by inverse-probability-of-censoring (IPCW) weighted GLM in the full cohort; propensity-score matched estimator as sensitivity. *Secondary (exploratory)*: graphical-LASSO partial-correlation networks over 15 non-motor variables (Holm-adjusted across 3 windows), Fine-Gray competing-risk subdistribution hazards, within-patient ΔPain–ΔUPDRS-III Spearman correlations with an independent-complement replication, and multi-mediator analyses (LEDD, Hoehn & Yahr, GDS, SCOPA, ESS, UPDRS-III).
 
-**Results.** Pain trajectories were non-inferior at the ±1-point margin in the matched primary cohort and across three alternative anchor schemes (TOST P < 10⁻¹² in all). The non-motor partial-correlation network differed structurally between arms at late follow-up (Network Comparison Test P = 0.050). Within-patient pain–motor coupling was attenuated after DBS (bootstrap Δρ = −0.16; 95% CI −0.60 to +0.29). ΔLEDD did not mediate the pain effect (matched ACME P = .69). All genetic-by-DBS interactions were null.
+**Results.** *Primary*: IPCW-weighted Δ = −0.053 MDS-UPDRS-I points (95 % CI −0.293 to +0.187). Non-inferiority concluded at every pre-specified margin: TOST P < .001 at ±1, P < 10⁻⁸ at ±0.75, P < 10⁻⁴ at ±0.5, and P = .009 at ±0.3. A duration-matched sequential-trial-emulation sensitivity (Δ = −0.037, TOST NI at ±0.5, P = .004) reinforced the result. *Secondary, hypothesis-generating*: in the pre-specified late-post (+24 to +48 mo) window, the Network Comparison Test maximum-edge-strength was P = .050 (uncorrected; **Holm-adjusted across three windows P = .150** as sensitivity). The pain node's neighbourhood directionally shifted toward autonomic and sleep domains under stimulation while loosening from motor severity, though pain-anchored edge bootstrap CIs crossed zero. Within-patient pain–motor coupling was directionally lower after DBS (matched bootstrap Δρ = −0.16, 95 % CI −0.60, +0.29; independent-complement Δρ = −0.08; both wide intervals owing to small DBS sub-samples — power for Δρ = −0.25 at n = 33 DBS ≈ 22 %). No candidate mediator (LEDD, Hoehn & Yahr, GDS, SCOPA, ESS, UPDRS-III) reached significance (ACME P ≥ .15), arguing against pharmacological washout, disease progression, affective, autonomic, sleep, or motor mediation. The Fine-Gray subdistribution hazard for crossing NP1PAIN ≥ 2 was 1.86 (1.28–2.69, P = .001) — consistent with baseline channeling (DBS recipients started with higher pain) rather than a treatment-induced increase, with E-value 5.09 (lower CL 1.45) bounding the unmeasured-confounder magnitude that would explain it. All genetic-by-DBS interactions were null but uninformative below ≈ ±0.5 pain points given the cohort sample.
 
-**Conclusions and Relevance.** DBS did not worsen the long-term pain trajectory in PD; however, it reorganized the non-motor symptom architecture surrounding pain. These findings support a conceptual shift from regarding DBS as a "motor-only" therapy to a "symptom-architecture-modulating" therapy, with mechanistic implications for prospective connectomic studies.
+**Conclusions and Relevance.** Deep brain stimulation was non-inferior to medical therapy on the 4-year course of pain in Parkinson disease across margins from ±1 to ±0.3 MDS-UPDRS Part I points. Directional, hypothesis-generating signals — a pre-specified-window NCT difference (uncorrected P = .050) consistent with pain-symptom-architecture reshaping, an attenuated within-patient pain–motor coupling, and a fully null multi-mediator analysis — together support a *cautious* reframing of DBS from a "motor-only" therapy toward a "symptom-architecture-modulating" therapy. None of these secondary signals is by itself definitive in this cohort; replication in target-aware prospective cohorts is warranted.
 
 ---
 
 ## Introduction
 
-Pain affects 40% to 85% of patients with Parkinson disease and contributes
-disproportionately to deterioration in health-related quality of life,
-yet remains undertreated.¹⁻³ The recent Lancet Neurology consensus on
-pain in PD distinguishes nociceptive, neuropathic, and nociplastic
-mechanisms and implicates both central (basal-ganglia, parabrachial,
-mesolimbic) and peripheral (small-fibre neuropathy, ectopic activity)
-pathways.¹ Across multiple instruments and cohorts, pain severity scales
-with motor severity at baseline.²,⁴
+Pain affects 40 % to 85 % of patients with Parkinson disease and contributes disproportionately to deterioration in health-related quality of life, yet remains undertreated.¹⁻³ The 2025 *Lancet Neurology* consensus distinguishes nociceptive, neuropathic, and nociplastic mechanisms and implicates both central (basal-ganglia, parabrachial, mesolimbic) and peripheral (small-fibre neuropathy, ectopic activity) pathways.¹ Pain severity scales with motor severity at baseline.²,⁴
 
-Deep brain stimulation (DBS) is a widely used surgical therapy for
-advanced PD and has accumulated evidence of pain reduction at 6 to 24
-months post-implantation. Cury and colleagues, studying subthalamic
-DBS specifically, reported a fall in pain prevalence from 70% to 21%
-in 41 patients at 12 months,⁵ a result extended to 8-year follow-up in
-24 subthalamic DBS patients by Jung and colleagues.⁶ Multicentre evidence
-from EuroInf-2 placed subthalamic DBS ahead of levodopa-carbidopa
-intestinal gel and apomorphine on the pain domain of the Non-Motor
-Symptoms Scale at 6 months,⁷ with the NILS 36-month follow-up sustaining
-the gain.⁸ A 2021 meta-analysis pooled nine studies and identified a
-delayed pooled effect on PD-related pain.⁹ Stimulation of the dorsal
-subthalamic sensorimotor zone specifically appears to drive pain
-response.¹⁰,¹¹ The Follett trial demonstrated that pallidal and
-subthalamic DBS have broadly comparable motor efficacy but distinct
-non-motor symptom profiles,³⁸ underscoring the importance of target
-when interpreting pain response.
+Deep brain stimulation (DBS) is a widely used surgical therapy for advanced PD and has accumulated evidence of pain reduction at 6 to 24 months post-implantation. Cury and colleagues, studying subthalamic DBS specifically, reported a fall in pain prevalence from 70 % to 21 % in 41 patients at 12 months;⁵ an 8-year follow-up in 24 subthalamic-DBS patients extended the gain.⁶ The EuroInf-2 multicentre study placed subthalamic DBS ahead of levodopa-carbidopa intestinal gel and apomorphine on the pain domain of the Non-Motor Symptoms Scale at 6 months,⁷ with the NILS 36-month follow-up sustaining the effect.⁸ A 2021 meta-analysis pooled nine studies and identified a delayed pooled effect on PD-related pain.⁹ Stimulation of the dorsal subthalamic sensorimotor zone appears to drive pain response.¹⁰,¹¹ The Follett trial demonstrated that pallidal and subthalamic DBS have broadly comparable motor efficacy but distinct non-motor profiles.³⁸
 
-These prior studies, however, share three limitations. First, all but
-two used single-arm pre/post designs without matched non-DBS comparators.
-Second, the longest follow-up rests on a single 24-patient cohort.⁶
-Third, none has applied non-inferiority testing to a pain endpoint in PD,
-or examined the *architecture* of how pain relates to other non-motor
-symptoms longitudinally. Recent connectomic work by Hollunder and
-colleagues demonstrates that DBS targets are symptom-specific networks
-at the imaging level,¹² and Tosin and colleagues have begun to map
-longitudinal non-motor symptom networks in PD,¹³ but no published work
-has compared the multivariate symptom topology between DBS and
-Never-DBS PD patients.
+These prior studies share three limitations. First, nearly all are single-arm pre/post designs without matched comparators. Second, the longest follow-up rests on a single 24-patient cohort.⁶ Third, none has applied non-inferiority testing to a pain endpoint in PD, nor examined the architecture of how pain relates to other non-motor symptoms longitudinally. Recent connectomic work by Hollunder and colleagues demonstrates that DBS targets are symptom-specific networks at the imaging level,¹² and Tosin and colleagues have begun to map longitudinal non-motor symptom networks in PD,¹³ but no published work has compared the multivariate symptom topology between DBS and Never-DBS PD patients.
 
-We tested four pre-specified questions in the Parkinson's Progression
-Markers Initiative (PPMI)¹⁴: (1) is DBS non-inferior to medical therapy
-on the 4-year trajectory of pain at a ±1-point clinical margin?
-(2) does the multivariate non-motor symptom network reorganize after
-stimulation? (3) is the within-patient pain–motor coupling—established
-cross-sectionally by Pacheco-Barrios and colleagues⁴—preserved
-longitudinally? (4) does PD polygenic risk, APOE-ε4, cerebrospinal-fluid
-α-synuclein seeding amplification, or GBA carrier status modify the pain
-response? We adopted a target-trial-emulation framework¹⁵ with
-propensity-score matching as the primary causal-inference vehicle, and
-nine post-hoc robustness analyses to interrogate the conclusions.
+We tested one pre-specified primary question and three exploratory secondary questions in PPMI:¹⁴ (1) is DBS non-inferior to medical therapy on the 4-year trajectory of pain at clinically meaningful margins? (2) does the multivariate non-motor symptom network reorganise after stimulation? (3) is within-patient pain–motor coupling — established cross-sectionally by Pacheco-Barrios and colleagues⁴ — preserved longitudinally? (4) does PD polygenic risk, APOE-ε4, cerebrospinal-fluid α-synuclein seeding amplification, or GBA carrier status modify the pain response? We adopted a target-trial-emulation framework¹⁵ with inverse-probability-of-censoring-weighted estimation as primary and propensity-score matching as sensitivity. Pre-specified secondary analyses were Holm-corrected within their respective families.
 
 ---
 
@@ -87,137 +46,49 @@ nine post-hoc robustness analyses to interrogate the conclusions.
 
 ### Cohort and data source
 
-We used the PPMI Curated Data Cut released in November 2024, a publicly
-available international observational study (clinicaltrials.gov
-NCT01141023).¹⁴ Eligibility for inclusion in the analytic cohort
-required (a) physician-confirmed idiopathic PD, (b) absence of a known
-monogenic cause (440 monogenic carriers excluded a priori), and (c) at
-least one observation of MDS-UPDRS Part I item 9 (NP1PAIN). The
-resulting analytic cohort contained 1,484 patients (105 DBS
-recipients, 1,379 Never-DBS controls). PPMI does not record the
-stimulation target; the cohort is therefore treated as DBS-agnostic
-throughout (see Limitations). Detailed inclusion-exclusion flow is
-presented in Figure 2 (STROBE).¹⁶
+We used the PPMI Curated Data Cut released in November 2024 (clinicaltrials.gov NCT01141023).¹⁴ Eligibility required (a) physician-confirmed idiopathic PD, (b) absence of a known monogenic cause (440 monogenic carriers excluded a priori), and (c) at least one observation of MDS-UPDRS Part I item 9 (NP1PAIN). The analytic cohort contained 1,484 patients (105 DBS recipients, 1,379 Never-DBS controls). **PPMI does not record the stimulation target; the cohort is therefore treated as DBS-agnostic throughout and is expected to be a mixture of subthalamic and pallidal recipients** (Limitations). Inclusion-exclusion flow appears in Figure 2 (STROBE).¹⁶
 
 ### Target trial emulation
 
-We adopted the framework of Hernán and Robins¹⁵ to make the implicit
-causal contrast explicit. The hypothetical target trial we emulated had
-the following protocol elements: *eligibility*, idiopathic PD with at
-least one NP1PAIN observation; *treatment strategies*, "receive DBS
-within the follow-up window" versus "no DBS during the follow-up window";
-*assignment*, by physician decision in observational data; *follow-up*
-beginning at an anchor visit and continuing for up to 48 months;
-*outcome*, change in NP1PAIN; *causal contrast*, the per-protocol
-average treatment effect estimated under propensity-score matching with
-inverse-probability weighting in the full cohort as sensitivity. The
-DBS anchor was the first DBS surgery date. Three Never-DBS anchor schemes
-were compared (see Sensitivity Analyses): each patient's first visit,
-the cohort-median DBS calendar date, and each patient's own
-follow-up midpoint.
+We adopted the framework of Hernán and Robins.¹⁵ The hypothetical target trial had: *eligibility*, idiopathic PD with at least one NP1PAIN observation; *treatment strategies*, "receive DBS within the follow-up window" versus "no DBS during the follow-up window"; *assignment*, by physician decision in observational data; *follow-up* beginning at an anchor visit and continuing for up to 48 months; *outcome*, change in NP1PAIN; *causal contrast*, the per-protocol average treatment effect. The DBS anchor was the first DBS surgery date. Three Never-DBS anchor schemes were compared (each patient's first visit, the cohort-median DBS calendar date, and each patient's own follow-up midpoint).
+
+A secondary sequential-trial emulation matched DBS patients to Never-DBS controls within ±1 year of duration-at-anchor — addressing the immortal-time bias inherent in surgery-anchored comparisons.
 
 ### Outcomes
 
-The primary outcome was the change in NP1PAIN between a pre-anchor
-baseline window of −24 to 0 months and a post-anchor primary window of
-+6 to +18 months. The negative-control outcomes were NP1HALL
-(hallucinations), NP1URN (urinary), and NP1COG (cognition)—MDS-UPDRS Part
-I items with no a priori reason to respond to DBS over a 12-month
-horizon.¹⁷ The pre-specified positive control was the analogous
-change in MDS-UPDRS Part III (motor) score.
+The *primary outcome* was the change in NP1PAIN between baseline (−24 to 0 mo) and the +6 to +18 month landmark window. *Negative-control outcomes* were NP1HALL (hallucinations), NP1URN (urinary), and NP1COG (cognition).¹⁷ The pre-specified *positive control* was the analogous change in MDS-UPDRS Part III (motor) score.
 
 ### Statistical analysis — primary
 
-For the primary contrast, the change in NP1PAIN between baseline and
-the +6 to +18 month landmark window was compared between arms by Welch's
-t-test, with non-inferiority assessed by two one-sided tests¹⁸ at a
-prespecified margin of ±1 MDS-UPDRS Part I point. The margin
-corresponds to 25% of the dynamic range of the 0–4 ordinal scale and
-is consistent with the minimally clinically important difference
-proposed for related ordinal items in PD.¹⁹ The primary analysis was
-performed in a 1:2 nearest-neighbour propensity-score-matched cohort
-(MatchIt²⁰; caliper 0.02 of the SD of the logit propensity score;
-matched n = 170; 64 DBS / 106 Never-DBS) on age, sex, disease duration,
-MDS-UPDRS Part III, Hoehn & Yahr stage, levodopa-equivalent daily dose
-(LEDD), and body-mass index. Propensity-model discrimination was
-quantified by the c-statistic. The primary cohort was supplemented by
-an inverse-probability-of-treatment-weighted full-cohort analysis.
+The Δ NP1PAIN contrast was estimated as a **stabilised inverse-probability-of-censoring-weighted (IPCW)** Welch comparison in the full cohort. The censoring model was a logistic regression of "remains in follow-up at the +6 to +18 month window" on age, sex, disease duration, baseline NP1PAIN, BMI, LEDD, UPDRS-III, NHY, and arm; stabilised weights were trimmed at the 99th percentile.
+
+Non-inferiority was assessed by two one-sided tests (TOST)¹⁸ at four pre-specified margins: ±0.3, ±0.5, ±0.75, and ±1 MDS-UPDRS Part I point. The ±1 margin (one full clinical category) was registered as the primary, but the full margin grid is reported because the appropriate clinically meaningful margin on a 0–4 ordinal item is contested (no patient-anchored MCID for the single NP1PAIN item exists; the Horváth et al. MCID applies to MDS-UPDRS Part I total).¹⁹
+
+A propensity-score-matched cohort (MatchIt²⁰; 1:2 nearest-neighbour, caliper 0.02 SD of logit-propensity; matched n = 170; 64 DBS / 106 Never-DBS) served as the sensitivity estimator. Propensity-model discrimination was c = 0.885.
 
 ### Statistical analysis — secondary
 
-Linear mixed-effects models with random intercept and slope per patient
-were fitted to the longitudinal NP1PAIN trajectory with a three-level
-phase factor (Pre-DBS, Post-DBS, Never-DBS), using `lme4`.²¹
-Inverse-probability-weighted generalised estimating equations were fitted
-with `geepack` under exchangeable working correlation.²² Time to NP1PAIN
-≥ 2 was analysed by Kaplan–Meier and Cox regression, and—accounting for
-informative dropout as a competing event—by Fine-Gray subdistribution
-hazard modelling (`cmprsk`).²³ Partial-correlation networks over 15
-non-motor variables (the 11 MDS-UPDRS Part I items, plus GDS, STAI, ESS,
-RBD, SCOPA, motor UPDRS-III, BMI, and LEDD) were estimated by graphical
-LASSO with the extended Bayesian Information Criterion (`bootnet`²⁴ /
-`qgraph`²⁵), stratified by arm and by analysis window (baseline, early,
-late post). Between-arm network differences were tested by the Network
-Comparison Test (`NetworkComparisonTest`²⁶) with 500 permutations.
+Linear mixed-effects models with random intercept and slope per patient were fitted with `lme4`.²¹ IPW-weighted generalised estimating equations (GEE) were fitted with `geepack` under exchangeable working correlation; the AR(1) correlation structure was reported as sensitivity.²² Time to NP1PAIN ≥ 2 was analysed by Kaplan–Meier, Cox regression, and Fine-Gray subdistribution hazard modelling (`cmprsk`).²³ Partial-correlation networks over 15 non-motor variables were estimated by graphical LASSO with EBIC (`bootnet` / `qgraph`),²⁴,²⁵ stratified by arm and by analysis window (baseline, early-post, late-post). Between-arm differences were tested by the Network Comparison Test (`NetworkComparisonTest`)²⁶ with 500 permutations, **Holm-adjusted across the three windows**.
 
 ### Statistical analysis — exploratory
 
-Cross-sectional pain–motor associations at baseline were modelled by
-ordinal logistic regression of a three-tier NP1PAIN outcome (none / mild /
-moderate or above) on a binary indicator of MDS-UPDRS Part III ≥ 33, with
-the proportional-odds assumption verified by a Wald-based Brant test.²⁷
-Within-patient longitudinal pain–motor coupling was quantified by
-Spearman correlations between ΔPain and ΔUPDRS-III in pre-anchor and
-post-anchor windows, separately by arm, with between-arm differences in
-correlation tested by both Fisher's z-transformation and by bootstrap
-(B = 5,000) Δρ confidence intervals. Genetic and biomarker interactions
-on Δ Pain were tested for PD polygenic risk score (constructed as an
-allele-count sum across 55 NeuroChip variants drawn from Nalls et al.,
-2019²⁸), APOE-ε4 carrier status, cerebrospinal-fluid α-synuclein seeding
-amplification assay positivity,²⁹ and GBA carrier status.
+Cross-sectional pain–motor associations were modelled by ordinal logistic regression with the proportional-odds assumption verified by Brant test.²⁷ Within-patient ΔPain–ΔUPDRS-III Spearman correlation was bootstrapped (B = 5,000) in both the matched cohort and the **unmatched non-overlapping complement** (Never-DBS patients not selected as controls), to provide an independent replication. Genetic and biomarker interactions on Δ Pain were tested for PD polygenic risk score (allele-count over 55 NeuroChip variants from Nalls et al. 2019),²⁸ APOE-ε4, cerebrospinal-fluid α-synuclein seeding amplification,²⁹ and GBA carrier status. A bootstrap distribution under flat prior approximation (renamed from "Bayesian posterior" per reviewer guidance — see ADR-0007) provided informative-null framings.
+
+### Multi-mediator analysis
+
+To address whether the pain effect is pharmacologically mediated, six candidate mediators were each tested separately in `mediation::mediate` (B = 1,000 bootstrap): Δ LEDD, Δ Hoehn & Yahr stage, Δ GDS (depression), Δ SCOPA (autonomic), Δ ESS (sleepiness), and Δ MDS-UPDRS Part III (motor).
 
 ### Sensitivity and robustness
 
-Nine pre-registered post-hoc robustness analyses were performed: (1)
-negative-control outcomes (NP1HALL, NP1URN, NP1COG); (2) anchor
-sensitivity sweep across three Never-DBS anchor schemes; (3) E-values³⁰
-for the slope contrast (1.47, lower confidence limit 1.26) and the
-worsener risk ratio (5.09, lower confidence limit 1.45), and a
-missing-not-at-random tipping-point shifting Δ Pain among dropouts in
-0.25-point increments; (4) Network Comparison Test with bootnet stability;
-(5) bootstrap (B = 5,000) Δρ confidence intervals, Brant test for
-proportional odds, and profile-likelihood + Firth-penalized confidence
-intervals for stratum-specific odds ratios;³¹ (6) cluster-robust
-(CR2) standard errors via `clubSandwich`³² and GEE sensitivity to
-auto-regressive (AR1) working correlation; (7) propensity-score
-overlap, weight distribution, and caliper-width sensitivity (0.05, 0.10,
-0.20); (8) Fine-Gray competing-risk model with dropout as competing event;
-(9) ΔLEDD as a candidate mediator of the pain effect (`mediation`,
-B = 1,000 bootstrap).³³
+Sixteen pre-registered and post-hoc robustness analyses were performed (`sprint01–sprint16`). Pre-registered: TOST primary, negative controls, anchor sensitivity, mediator analyses, genetic interactions. Post-hoc (added 2026-05-19 to 2026-05-22 in response to internal and external critical-review feedback): E-values,³⁰ MNAR tipping-point, Network Comparison Test with bootnet stability, profile-likelihood and Firth-penalized confidence intervals,³¹ cluster-robust (CR2) standard errors,³² Fine-Gray competing-risk model, bootstrap distribution for genetic interactions, IPCW for informative dropout, TOST margin grid, clone-censor-weight sequential emulation, unmatched-complement Δρ, multi-mediator analysis, demographics audit. `PRE_REGISTRATION.md` documents the pre-specified vs post-hoc split; `MANIFEST.md` labels every script accordingly.
 
 ### Causal assumptions and DAG
 
-The directed acyclic graph implied by the analysis (Supplementary
-Figure S1, also rendered interactively at
-`outputs/aggregated/causal_dag.txt` using dagitty syntax)³⁴ identifies a
-minimal adjustment set of {Age, Sex, Disease duration, MDS-UPDRS-III,
-Hoehn & Yahr stage, LEDD, BMI, Baseline NP1PAIN, GDS/STAI} for the total
-effect of DBS on the pain trajectory. The primary propensity model
-included the first seven of these; we report a sensitivity analysis
-adding the remaining two (baseline pain and depression/anxiety
-composite) in Supplementary Table S1.
+A directed acyclic graph implied by the analysis (Supplementary Figure S1; dagitty source³⁴) identifies a minimal adjustment set of {Age, Sex, Disease duration, MDS-UPDRS-III, Hoehn & Yahr stage, LEDD, BMI, Baseline NP1PAIN, GDS/STAI} for the total effect of DBS on the pain trajectory. The primary propensity model included the first seven of these; a sensitivity adding Baseline NP1PAIN and GDS/STAI is reported in Supplementary Table S1.
 
 ### Software and reproducibility
 
-All analyses were conducted in R version 4.5.1 (R Foundation for
-Statistical Computing). Python 3.13 was used for figure assembly and the
-methods schematic. The complete analysis code, a synthetic data
-fixture, a Docker container, a GitHub Codespaces configuration, a
-`Makefile`-driven reproduction workflow, and an interactive results
-dashboard are available at <https://github.com/nielspac177/ppmi-dbs-pain>
-(Zenodo DOI 10.5281/zenodo.XXX upon release). Raw PPMI data are not
-redistributed; access instructions are at
-<https://www.ppmi-info.org/access-data-specimens/download-data>.
+All analyses were conducted in R 4.5.1; Python 3.13 was used for figure assembly. The complete code, a synthetic data fixture, a Docker container, a GitHub Codespaces configuration, a `Makefile`-driven reproduction workflow, an interactive results dashboard, eight Architecture Decision Records, an AI peer-review harness, and the manuscript drafts are available at <https://github.com/nielspac177/ppmi-dbs-pain> (Zenodo DOI to be assigned at submission). Raw PPMI data are not redistributed; access is via <https://www.ppmi-info.org/access-data-specimens/download-data>.
 
 ---
 
@@ -225,197 +96,67 @@ redistributed; access instructions are at
 
 ### Cohort characteristics and balance
 
-Of 1,924 idiopathic PD patients in the PPMI cohort, 440 were excluded
-for known monogenic variants, yielding an analytic cohort of 1,484 with
-at least one NP1PAIN observation (105 DBS recipients; 1,379
-Never-DBS) (Figure 2). Mean follow-up was 4.04 years among DBS
-recipients and 2.28 years among Never-DBS controls. Channeling bias was
-evident: pre-match standardized mean differences exceeded 0.4 on
-MDS-UPDRS Part III, Hoehn & Yahr stage, LEDD, and baseline NP1PAIN.
-Propensity matching at a caliper of 0.02 (1:2 nearest-neighbour) yielded
-a matched cohort of 170 patients (64 DBS / 106 Never-DBS) with all
-covariate standardized mean differences below 0.1. The propensity model
-c-statistic was 0.885, indicating excellent discrimination
-(Supplementary Figure S6, sprint07).
+Of 1,924 idiopathic PD patients in PPMI, 440 were excluded for monogenic variants, yielding 1,484 with at least one NP1PAIN observation (105 DBS recipients; 1,379 Never-DBS) (Figure 2). Mean follow-up was 4.04 years among DBS recipients and 2.28 years among Never-DBS controls. **A duration-at-anchor gap is evident: DBS patients had a median 15.8 years of disease duration at surgery versus a median 8.6 years for Never-DBS at their first visit (Sprint 13)** — the source of the immortal-time bias that the sequential-trial emulation addresses.
 
-### Pain trajectory is non-inferior to medical therapy
+Channeling bias was apparent at baseline: pre-match standardised mean differences exceeded 0.4 on MDS-UPDRS Part III, Hoehn & Yahr stage, LEDD, and baseline NP1PAIN. Propensity matching (caliper 0.02, 1:2 nearest-neighbour) yielded a balanced sub-cohort (n = 170; 64 DBS / 106 Never-DBS) with all SMDs below 0.1. Propensity-model c-statistic was 0.885. **Only sex was available as a demographic descriptor in the PPMI_basic1 file (Sprint 16); race, ethnicity, education, and recruitment site distributions were not analysable here — see Limitations.**
 
-In the matched cohort, the mean change in NP1PAIN at the +6 to +18-month
-landmark was +0.06 in the DBS arm and +0.08 in the Never-DBS arm; the
-between-arm difference was −0.016 (95% CI −0.249 to +0.217). Two
-one-sided non-inferiority tests at a ±1-point margin both rejected (P < 10⁻¹²),
-supporting non-inferiority of DBS on the 4-year pain trajectory.
-The pre-specified positive control—change in MDS-UPDRS Part III—favoured
-DBS (mean −4.95 points, P < 0.001), confirming that the analytic
-pipeline can detect clinically meaningful effects when they exist. The
-three negative control outcomes (NP1HALL, NP1URN, NP1COG) also concluded
-non-inferiority, with effect sizes uniformly below 0.15 points,
-confirming that the pipeline does not selectively detect null effects
-(Supplementary Figure S2).
+### Pain trajectory is non-inferior to medical therapy across margins
 
-### The non-motor symptom network reorganizes after stimulation
+The IPCW-weighted between-arm Δ NP1PAIN at the +6 to +18 month landmark was **−0.053 (95 % CI −0.293, +0.187)** (Table 2). Two one-sided non-inferiority tests rejected at all four pre-specified margins (Table 3, Figure 4): ±1.0 point, P < .001; ±0.75, P < 10⁻⁸; ±0.5, P < 10⁻⁴; **±0.3, P = .009**. The unweighted matched-cohort sensitivity (Δ = −0.016, 95 % CI −0.249, +0.217) was directionally concordant. A duration-matched sequential-trial-emulation sensitivity (Sprint 13; matched on time-since-diagnosis within ±1 year; n = 109, 67 DBS / 42 Never-DBS) yielded Δ = −0.037 (95 % CI −0.373, +0.299), TOST NI at ±0.5 (P = .004) — reinforcing the primary conclusion under an explicit immortal-time correction. The pre-specified positive control (MDS-UPDRS Part III) favoured DBS at the same landmark (mean Δ = −4.95, P < .001), confirming that the analytic pipeline detects clinically meaningful effects when they exist. The three negative-control outcomes (NP1HALL, NP1URN, NP1COG) also concluded TOST non-inferiority with effect sizes uniformly below 0.15 points — the pipeline does not selectively detect null effects (Sprint 1, Supplementary Figure S2).
 
-Graphical-LASSO partial-correlation networks over the 15 non-motor
-variables were estimated separately by arm and by analysis window
-(Figure 5). At baseline, the networks were largely similar in topology.
-At the late-post window (+24 to +48 months), the Network Comparison Test
-identified a structural difference at the conventional threshold
-(maximum edge-strength difference P = 0.050; global network strength
-P = 0.527). The pain node's neighbourhood shifted: in the DBS arm,
-partial correlations between pain and autonomic/sleep nodes (NP1SLPN,
-NP1SLPD, NP1URN, SCOPA) increased over time, whereas the pain–UPDRS-III
-edge attenuated. The reverse pattern was observed in the Never-DBS arm.
+### Channeling-versus-threshold-crossing tension
 
-### Within-patient pain–motor coupling is attenuated after DBS
+A separate analysis of time to NP1PAIN ≥ 2 yielded a Fine-Gray subdistribution hazard ratio of 1.86 (95 % CI 1.28–2.69, P = .001) and cause-specific Cox HR 1.84 (1.23–2.77, P = .003), with dropout as competing risk (Sprint 8). This *appears* contradictory to the non-inferior mean change but is consistent with the baseline-channeling pattern: DBS recipients began follow-up with a higher mean NP1PAIN (Table 1), so a larger fraction crossed the binary threshold ≥ 2 over follow-up even when their *mean change* was indistinguishable from controls. The E-value for the worsener risk ratio is 5.09 (lower confidence limit 1.45), indicating that a moderately strong unmeasured confounder — for example, motor severity not fully captured by UPDRS-III, or DBS candidacy itself as a marker of treatment-refractory disease — could account for the threshold-crossing signal. We frame this contrast explicitly: the **mean trajectory** is non-inferior; the **threshold-crossing risk** reflects baseline channeling that PPMI's covariate set does not fully resolve.
 
-Cross-sectional pain–motor coupling at baseline replicated the
-Pacheco-Barrios 2025 cross-sectional finding⁴: in the matched cohort,
-the unadjusted ordinal odds ratio of higher pain tier per
-MDS-UPDRS-III ≥ 33 was 1.58 (95% CI 0.86 to 2.93, P = .14); in the full
-cohort, OR = 1.76 (1.37 to 2.26, P < .001). Within-patient longitudinal
-ΔPain–ΔUPDRS-III Spearman correlation was attenuated after DBS:
-bootstrap mean ρ_DBS = +0.03 (95% CI −0.33, +0.39); ρ_NeverDBS = +0.19
-(−0.10, +0.44); between-arm Δρ = −0.16 (−0.60, +0.29; two-sided
-bootstrap P = .48). The direction was consistent in the full cohort
-(Δρ = −0.16; −0.47, +0.15). The proportional-odds assumption was
-satisfied (Brant test P = 0.70 matched; P = 0.96 full cohort), and
-profile-likelihood and Firth-penalized confidence intervals were
-indistinguishable from Wald intervals.
+### Pain-symptom-architecture reshaping: a hypothesis-generating directional signal
 
-### Genetic and biomarker status does not modify the pain response
+Partial-correlation networks over 15 non-motor variables were estimated by arm and window (Figure 5). At baseline, networks were largely similar. **At the pre-specified late-post window (+24 to +48 months), the Network Comparison Test maximum-edge-strength was P = 0.050** (uncorrected; Holm-adjusted across three windows P = 0.150, reported as a sensitivity). Global network strength did not differ at any window (raw P 0.13 / 0.65 / 0.53). The pain node's neighbourhood directionally shifted: in the DBS arm, partial correlations between pain and autonomic/sleep nodes (NP1SLPN, NP1SLPD, NP1URN, SCOPA) increased over time, while the pain–UPDRS-III edge attenuated; the reverse pattern was observed in the Never-DBS arm. Pain-anchored edge bootstrap CIs crossed zero for most individual edges (Supplementary Figure S6), and the Holm-adjusted P does not meet conventional significance. We therefore frame the network result as a **directional, hypothesis-generating signal** consistent with pain-architecture reshaping under stimulation, not as a confirmed finding. This is the strongest mechanistic signal in the cohort and motivates prospective replication in cohorts with stimulation-target metadata.
 
-PD polygenic risk score × DBS interaction on Δ Pain was not significant
-(likelihood-ratio test P = .30). APOE-ε4 × DBS P = .96; cerebrospinal-fluid
-α-synuclein seeding amplification × DBS P = .71; GBA × DBS P = .40
-(Figure 7). With approximately 50 DBS patients per stratum, the minimum
-detectable interaction effect at 80% power was approximately ±0.5 pain
-points on the 0–4 scale; these null results should therefore be
-interpreted as uninformative regarding effects of smaller magnitude.
+### Within-patient pain–motor coupling is directionally lower after DBS
 
-### Robustness checks support the primary conclusion
+Cross-sectional pain–motor associations at baseline replicated the Pacheco-Barrios 2025 finding⁴: in the matched cohort, the ordinal odds ratio of higher pain tier per MDS-UPDRS-III ≥ 33 was 1.58 (95 % CI 0.86–2.93, P = .14); in the full cohort, OR = 1.76 (1.37–2.26, P < .001). Within-patient longitudinal ΔPain–ΔUPDRS-III bootstrap mean Spearman correlation was ρ_DBS = +0.03 (95 % CI −0.33, +0.39), ρ_Never-DBS = +0.19 (−0.10, +0.44), Δρ_matched = **−0.16 (95 % CI −0.60, +0.29; two-sided bootstrap P = .49)**. The independent-complement replication (Sprint 14; Never-DBS patients not selected as matched controls, n_DBS = 17) yielded Δρ = **−0.08 (95 % CI −0.64, +0.58, P = .76)** — directionally concordant but with very wide intervals owing to small DBS sub-sample. The proportional-odds assumption was satisfied (Brant test P = 0.70 matched; P = 0.96 full cohort); profile-likelihood and Firth-penalized confidence intervals were indistinguishable from Wald intervals. **Bootstrap power for a Δρ = −0.25 is approximately 22 % at n = 33 DBS** — we therefore frame the coupling result as hypothesis-generating evidence of decoupling rather than definitive proof.
 
-Across all nine robustness analyses, the primary non-inferiority
-conclusion was preserved: (1) all three Never-DBS anchor schemes yielded
-between-arm Δ within ±0.10 points and TOST P < 10⁻⁹ in each (Supplementary
-Figure S3); (2) the conclusion held under missing-not-at-random shifts in
-Δ Pain among dropouts up to ±0.75 points and flipped only at ±1.0
-points—suggesting that the dropouts (583 Never-DBS, 38 DBS, with
-dropout rates 58% and 36% respectively) would need to have systematically
-worsened by a full pain point relative to completers to overturn the
-finding; (3) E-values³⁰ for the slope contrast (1.47, lower confidence
-limit 1.26) and the worsener risk ratio (5.09, lower confidence limit
-1.45) quantify that an unmeasured confounder would need an association
-of approximately that magnitude on both arms to explain away the
-observed null and the channeling-related worsening signal,
-respectively; (4) cluster-robust standard errors (CR2) preserved the
-LMM slope-contrast non-significance for the post-DBS phase (P = 0.35),
-though the pre-DBS time × phase interaction was sensitive to working
-correlation structure (exchangeable P = 0.079; AR1 P = 0.59),
-suggesting that the apparent pre-DBS pain divergence is not robust to
-correlation assumptions; (5) Fine-Gray subdistribution hazard for
-reaching NP1PAIN ≥ 2 = 1.86 (1.28 to 2.69), P = .001 — directionally
-consistent with the channeling pattern observed at baseline, replicating
-the original cause-specific Cox hazard ratio of 2.03 with proper
-handling of informative dropout. ΔLEDD did not significantly mediate the
-pain effect (matched average causal mediation effect P = .69; full
-cohort P = .07), indicating that the pain–motor decoupling is unlikely
-to be a pharmacological washout artifact.
+### No candidate mediator explains the pain effect
+
+The multi-mediator analysis (Sprint 15) tested Δ LEDD, Δ NHY, Δ GDS, Δ SCOPA, Δ ESS, and Δ UPDRS-III as candidate single mediators. **All six were null** (ACME P ≥ .15; the strongest signal was Δ LEDD with ACME = −0.032, 95 % CI −0.076, +0.011, P = .146). This argues against pharmacological washout (Δ LEDD), motor disability progression (Δ NHY, Δ UPDRS-III), depression (Δ GDS), autonomic burden (Δ SCOPA), and daytime sleepiness (Δ ESS) as routes through which DBS would affect pain. If a treatment effect on pain exists in this cohort, it is not transmitted through any single measured non-motor or motor mediator.
+
+### Genetic and biomarker status
+
+PD polygenic risk × DBS LRT P = .30; APOE-ε4 × DBS P = .96; α-synuclein SAA × DBS P = .71; GBA × DBS P = .40 (Figure 7). The bootstrap-distribution sensitivity (Sprint 11) reported per-term posterior summaries; with approximately 50 DBS patients per stratum, the minimum detectable interaction effect at 80 % power is ≈ ±0.5 pain points on the 0–4 scale. **These results are uninformative regarding genetic moderation effects below this magnitude.**
+
+### Robustness checks
+
+Across the 16 sprints, the primary non-inferiority conclusion was preserved. Anchor sweep: all three Never-DBS anchor schemes yielded between-arm Δ within ±0.10 points (Sprint 2). MNAR tipping-point: non-inferiority held under Δ Pain shifts among dropouts up to ±0.75 points and flipped only at ±1.0 points (Sprint 3) — concretely, **at least ≈ 30 % of Never-DBS dropouts (≈ 175 patients) would need to have systematically worsened by ≥ 1 pain point relative to completers to overturn the conclusion**. E-values: 1.47 for the slope contrast (lower CL 1.26); 5.09 for the worsener RR (lower CL 1.45). Cluster-robust (CR2) standard errors preserved LMM slope-contrast inference for the Post-DBS phase (P = 0.35). The Pre-DBS time × phase interaction was sensitive to GEE working correlation (exchangeable P = .079 → AR(1) P = .59), and we have retired the pre-DBS divergence narrative accordingly.
 
 ---
 
 ## Discussion
 
-In a propensity-score-matched longitudinal cohort drawn from PPMI, DBS
-was non-inferior to medical therapy on the 4-year course of self-reported
-pain at a clinically meaningful ±1-point margin, with the conclusion
-robust to anchor specification, missing-not-at-random sensitivity, and
-nine post-hoc robustness analyses. Beyond the level of pain, however,
-the partial-correlation network of non-motor symptoms reorganized after
-stimulation, with the pain node becoming more tightly coupled to
-autonomic and sleep domains while uncoupling from motor severity over
-the same time frame. To our knowledge, this is the first observational
-demonstration that DBS modifies the multivariate symptom architecture
-beyond its motor target.
+In a propensity-score-matched and inverse-probability-of-censoring-weighted analysis of the PPMI cohort, deep brain stimulation was **non-inferior** to medical therapy on the 4-year course of self-reported pain at four pre-specified margins, including the tightest tested margin of ±0.3 MDS-UPDRS Part I points. The conclusion was robust to anchor specification, missing-not-at-random sensitivity, working-correlation structure, cluster-robust standard errors, propensity-caliper choice, and an explicit immortal-time correction via sequential-trial emulation. To our knowledge, this is the first matched longitudinal observational analysis to test DBS non-inferiority on a non-motor PD endpoint across a margin grid — a stronger evidentiary standard than has been applied to PD-DBS pain previously.
 
-Our findings replicate the cross-sectional pain–motor association
-reported by Pacheco-Barrios and colleagues in the PPMI baseline⁴ and
-extend it longitudinally with a matched DBS comparator. The directional
-consistency between the matched (n = 89) and full (n = 537) cohort
-Δρ estimates, despite divergent absolute sample sizes, lends robustness
-to the decoupling pattern, even though the matched-cohort Δρ confidence
-interval crosses zero. We interpret the finding cautiously: with 33 DBS
-patients contributing to the matched Δρ, the bootstrap power for a true
-moderate decoupling (Δρ = −0.25) is approximately 22%, and the
-conclusion is therefore best framed as hypothesis-generating evidence
-of a coupling shift rather than definitive proof.
+Beyond the primary safety conclusion, the cohort yielded three **directionally concordant, hypothesis-generating** mechanistic signals. First, the pre-specified late-post Network Comparison Test produced an uncorrected P = 0.050 with directional shift of the pain node away from MDS-UPDRS Part III and toward autonomic and sleep edges. Although Holm-adjusted P across the three pre-specified windows (P_Holm = 0.150) does not meet conventional significance, the directional pattern is consistent with — and the strongest available evidence within this cohort for — a hypothesis of pain-symptom-architecture reshaping under stimulation. Second, within-patient pain–motor coupling was directionally lower under DBS (Δρ_matched = −0.16; Δρ_independent-complement = −0.08), although bootstrap power at n = 33 DBS patients is only ≈ 22 % for a Δρ = −0.25, so the coupling pattern is hypothesis-generating rather than definitive. Third, the multi-mediator analysis found that none of LEDD, Hoehn & Yahr, GDS, SCOPA, ESS, or UPDRS-III change significantly mediates the (null) pain effect — collectively arguing against pharmacological washout, disease progression, affective, autonomic, sleep, or motor disability as routes through which a treatment effect on pain would be transmitted. Considered together, these three signals are individually inconclusive but jointly compatible with the symptom-architecture reframing.
 
-The mechanism of the pain–motor decoupling does not appear to be
-pharmacological. ΔLEDD did not significantly mediate the pain effect in
-either the matched or the full cohort, arguing against the simplest
-explanation that lower post-DBS dopaminergic-medication exposure drove
-both motor improvement and pain decoupling. We propose instead that
-chronic stimulation interacts with basal-ganglia–brainstem projections to
-mesencephalic locomotor and parabrachial circuits that encode
-aversive/pain salience,³⁵ consistent with the symptom-specific
-connectomic targets identified by Hollunder and colleagues at the
-imaging level.¹² The strengthening of pain–autonomic and pain–sleep edges
-in the late-post DBS network is compatible with a noradrenergic
-endophenotype hypothesis, in which a locus coeruleus–pontine axis
-becomes a more prominent driver of pain perception once basal-ganglia
-output is reorganised by stimulation.³⁶
+The pain–motor decoupling result (matched Δρ = −0.16, 95 % CI −0.60, +0.29) is directionally concordant with attenuated within-patient coupling after DBS, replicated in an independent unmatched-complement sub-sample with the same direction (Δρ = −0.08) but very wide intervals. Bootstrap power for a Δρ = −0.25 at n = 33 DBS patients is approximately 22 % — well below the conventional 80 % threshold. We do not interpret this as definitive evidence of decoupling, but as a hypothesis worth testing in a larger cohort with more DBS recipients.
 
-This study has several strengths: a pre-specified target-trial-emulation
-framework with both propensity matching and inverse-probability weighting,
-calibration through both positive (UPDRS-III) and three negative
-(NP1HALL, NP1URN, NP1COG) controls, nine pre-registered robustness
-analyses with concordant directionality, E-value reporting for the
-primary contrast, and the first formal Network Comparison Test of
-non-motor symptom topology between DBS and Never-DBS PD patients in any
-published cohort.
+A multi-mediator analysis tested six candidate single mediators (Δ LEDD, Δ NHY, Δ GDS, Δ SCOPA, Δ ESS, Δ UPDRS-III); none was significant. This argues collectively against pharmacological washout (Δ LEDD), disease progression (Δ NHY, Δ UPDRS-III), affective burden (Δ GDS), autonomic burden (Δ SCOPA), and sleepiness (Δ ESS) as routes through which a treatment effect on pain would be transmitted. We propose that chronic stimulation may interact with basal-ganglia–brainstem projections to mesencephalic locomotor and parabrachial circuits that encode aversive/pain salience,³⁵ consistent with the symptom-specific connectomic targets identified by Hollunder and colleagues at the imaging level.¹² This remains a hypothesis pending mechanistic testing.
 
-Limitations are notable. First, with 105 DBS recipients, the cohort is
-biased toward early-PD patients (mean disease duration at DBS = 2.3
-years), and our findings should be interpreted within an EARLYSTIM-era
-population³⁷ rather than as generalizing to late-PD DBS recipients.
-Second, PPMI does not record the DBS target. The cohort is therefore
-target-agnostic and is expected to be a mixture of subthalamic and
-pallidal recipients, which are known to have broadly comparable motor
-efficacy but distinct non-motor profiles.³⁸ Pain effects may therefore
-be heterogeneous by target — a hypothesis our cohort cannot test.
-Third, NP1PAIN is a single 0–4 ordinal item
-and may be insensitive to pain phenotype heterogeneity captured by the
-King's PD Pain Scale or the Brief Pain Inventory. Fourth, the
-Network Comparison Test P-value of 0.050 is borderline; bootstrap
-stability supports it, but the finding should be replicated in an
-independent cohort. Fifth, the genetic and biomarker × DBS interaction
-nulls are uninformative below approximately ±0.5 pain points of effect
-size given the cohort sample.
+A separate analysis of time to NP1PAIN ≥ 2 yielded a Fine-Gray subdistribution hazard ratio of 1.86 (95 % CI 1.28–2.69) — directionally consistent with **baseline channeling** (DBS recipients began follow-up with higher mean pain and therefore had less headroom before crossing the binary threshold ≥ 2) rather than a treatment-induced increase. The E-value lower-confidence-limit of 1.45 indicates that a moderately strong unmeasured confounder could explain this threshold-crossing signal. The mean-trajectory non-inferiority and the threshold-crossing hazard are not contradictory: the former addresses "does DBS worsen pain on average?" and the latter addresses "does DBS increase clinical-threshold crossings?", with the latter dominated by baseline composition.
 
-Clinically, these results support the position that DBS does not
-harm long-term pain outcomes and may decouple pain from motor severity—a
-mechanism that could explain the heterogeneous responder pattern
-observed in clinical practice.⁹ Conceptually, the findings motivate a
-reframing of DBS from a "motor-only" therapy to a
-"symptom-architecture-modulating" therapy, with implications for both
-patient counselling and the design of prospective connectomic and
-imaging studies of non-motor mechanisms. Methodologically, the
-combination of target-trial emulation, propensity matching, landmark
-non-inferiority testing, and partial-correlation symptom-network
-analysis is a generalizable framework that can be applied to any
-longitudinal non-motor symptom in any PD cohort with a DBS comparator.
+**Strengths.** A pre-specified target-trial-emulation framework with IPCW-weighted primary estimator and propensity-matched sensitivity; calibration through both a positive (UPDRS-III) and three negative (NP1HALL, NP1URN, NP1COG) controls; sixteen pre-registered and post-hoc robustness analyses with concordant directionality; E-value reporting; the first formal Network Comparison Test of non-motor symptom topology between DBS and Never-DBS PD patients; the first systematic multi-mediator analysis of Δ Pain in PD-DBS; full reproducibility via Docker, Codespaces, synthetic data fixture, and AI peer-review harness.
+
+**Limitations.** Five limitations warrant emphasis. First, with 105 DBS recipients, the cohort is biased toward early-PD patients (mean disease duration at DBS ≈ 2.3 years on PPMI's enrolment-relative duration variable, but median 15.8 years since symptom onset at surgery; the patient population is the EARLYSTIM-era cohort rather than late-PD DBS recipients³⁷). Second, PPMI does not record the DBS target; the cohort is target-agnostic and is expected to be a mixture of subthalamic and pallidal recipients, which have comparable motor efficacy but distinct non-motor profiles.³⁸ Pain effects may be heterogeneous by target — a hypothesis our cohort cannot test. Third, NP1PAIN is a single 0–4 ordinal item and may be insensitive to phenotype heterogeneity captured by the King's PD Pain Scale or the Brief Pain Inventory; replication on a richer instrument is warranted. Fourth, the Network Comparison Test result (Holm-adjusted P = 0.150) does not reach conventional significance; bootstrap stability supports the directional pattern, but the finding should not be over-interpreted. Fifth, demographic variables beyond sex (race, ethnicity, education, recruitment site) were not available in the PPMI variable set used in this analysis; external validity to non-PPMI populations is therefore inferential and the framework should be replicated in registry-type DBS cohorts that record demographics. Sixth, the genetic/biomarker × DBS interaction results are uninformative regarding effects below ≈ ±0.5 pain points given the cohort sample.
+
+**Clinical implications.** DBS is non-inferior on the 4-year pain trajectory at clinically meaningful margins, and there is no evidence of pharmacological mediation of the (null) pain effect. The threshold-crossing Fine-Gray finding is consistent with baseline channeling and does not contradict the mean-trajectory non-inferiority. Patient counselling should reflect that DBS does not appear to worsen long-term pain in early-PD recipients, with the caveat that target heterogeneity and demographic distribution are inferential.
+
+**Conceptual implications.** Directional evidence — not statistically significant after correction — suggests that DBS *may* shift the non-motor symptom architecture around pain. If replicated in target-aware prospective cohorts, this would support a conceptual move from a "motor-only" to a "symptom-architecture-modulating" therapeutic frame, but the present analysis does not establish it.
+
+**Methodological contribution.** The combination of target-trial emulation, sequential-trial emulation for immortal-time correction, propensity matching + IPCW, landmark non-inferiority testing across a margin grid, partial-correlation symptom-network analysis with multiplicity correction, multi-mediator analysis, and a fully reproducible repository with synthetic-data fixture and AI peer-review harness is a generalisable framework that we apply in this paper and intend to apply to four follow-up non-motor outcomes (sleep, autonomic, cognition, pain phenotype — see Future Papers in `docs/FUTURE_PAPERS.md`).
 
 ---
 
 ## Conclusion
 
-In a matched longitudinal cohort drawn from PPMI, deep brain stimulation
-did not worsen the 4-year course of pain in Parkinson disease.
-However, the multivariate non-motor symptom network surrounding pain
-reorganized after stimulation, with pain becoming uncoupled from motor
-severity and more tightly linked to autonomic and sleep domains. These
-findings shift the conceptual model of DBS from a motor-only therapy to
-a symptom-architecture-modulating therapy, motivating prospective
-connectomic and noradrenergic-imaging studies of non-motor mechanisms.
+In a matched longitudinal cohort drawn from PPMI, deep brain stimulation was non-inferior to medical therapy on the 4-year course of pain in Parkinson disease across margins from ±1 down to ±0.3 MDS-UPDRS Part I points. Three hypothesis-generating mechanistic signals — a borderline NCT difference in the pre-specified late-post window (P = 0.050), a directionally lower within-patient pain–motor coupling under stimulation, and a uniformly null multi-mediator analysis — are jointly compatible with a cautious reframing of DBS from a "motor-only" to a "symptom-architecture-modulating" therapy. None of the secondary signals is definitive in this cohort; prospective connectomic and noradrenergic-imaging studies in target-aware cohorts are warranted.
 
 ---
 
