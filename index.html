@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deep brain stimulation and pain trajectory in Parkinson disease</title>
+  <meta name="description" content="Pacheco-Barrios &amp; Rolston, 2026 — target-trial-emulation matched longitudinal cohort in PPMI.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, -apple-system, sans-serif;
+           color: #1f2937; background: #ffffff; }
+    h1, h2, h3 { font-family: 'Source Serif 4', Georgia, serif;
+                 color: #0f172a; letter-spacing: -0.01em; }
+    .prose-narrow { max-width: 64ch; }
+    :focus-visible { outline: 3px solid #1e3a5f; outline-offset: 3px;
+                      border-radius: 3px; }
+    .skip-link { position: absolute; top: -48px; left: 0;
+                 background: #1e3a5f; color: #ffffff; padding: 10px 18px;
+                 z-index: 100; font-weight: 500; }
+    .skip-link:focus { top: 0; }
+    /* Subtle scholarly link underline */
+    a.scholar { color: #1e3a5f; text-decoration: underline;
+                text-underline-offset: 3px; text-decoration-thickness: 1px;
+                text-decoration-color: #94a3b8; }
+    a.scholar:hover { text-decoration-color: #1e3a5f; }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="border-b border-slate-200 bg-white" role="banner">
+    <div class="max-w-6xl mx-auto px-6 py-5 flex flex-wrap items-baseline gap-x-8 gap-y-2">
+      <a href="index.html" class="text-lg font-semibold tracking-tight text-slate-900 hover:text-slate-700">
+        Pacheco-Barrios &amp; Rolston · PPMI DBS-Pain
+      </a>
+      <span class="text-xs uppercase tracking-widest text-slate-500">
+        in preparation · 2026
+      </span>
+    </div>
+    <nav class="border-t border-slate-100 bg-white" role="navigation" aria-label="Primary">
+      <div class="max-w-6xl mx-auto px-6 flex flex-wrap gap-x-8 text-sm font-medium">
+        <a href="index.html" class="px-1 py-3 border-b-2 text-slate-900 border-slate-900 transition-colors">Overview</a>
+        <a href="results.html" class="px-1 py-3 border-b-2 text-slate-600 hover:text-slate-900 border-transparent hover:border-slate-300 transition-colors">Results</a>
+        <a href="methods.html" class="px-1 py-3 border-b-2 text-slate-600 hover:text-slate-900 border-transparent hover:border-slate-300 transition-colors">Methods</a>
+        <a href="data.html" class="px-1 py-3 border-b-2 text-slate-600 hover:text-slate-900 border-transparent hover:border-slate-300 transition-colors">Data &amp; Code</a>
+        <a href="manuscript.html" class="px-1 py-3 border-b-2 text-slate-600 hover:text-slate-900 border-transparent hover:border-slate-300 transition-colors">Manuscript</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="max-w-4xl mx-auto px-6 py-16" role="main">
+
+    <article class="prose-narrow">
+      <p class="text-xs uppercase tracking-widest text-slate-500 mb-3">Research summary</p>
+      <h1 class="text-4xl sm:text-5xl font-semibold leading-tight mb-6">
+        Deep brain stimulation, pain trajectory, and the symptom architecture of Parkinson disease.
+      </h1>
+      <p class="text-lg text-slate-700 leading-relaxed mb-3">
+        A target-trial-emulation matched longitudinal analysis of the
+        Parkinson&rsquo;s Progression Markers Initiative cohort
+        (n&nbsp;=&nbsp;1,484; 105 DBS, 1,379 Never-DBS).
+      </p>
+      <p class="text-sm text-slate-500">
+        Pacheco-Barrios&nbsp;N, &hellip;, Rolston&nbsp;JD. <em>In preparation, 2026.</em>
+        Target journal: <em>JAMA Neurology</em> / <em>Lancet Neurology</em>.
+      </p>
+    </article>
+
+    <section class="mt-16" aria-labelledby="abstract-heading">
+      <h2 id="abstract-heading" class="text-2xl font-semibold mb-5">Abstract</h2>
+      <div class="prose-narrow text-slate-700 leading-relaxed text-[15px] space-y-4">
+        <p><strong>Importance.</strong> Deep brain stimulation (DBS) is widely used for advanced Parkinson disease, but its long-term effects on non-motor symptoms&mdash;particularly pain&mdash;have not been formally evaluated in matched longitudinal cohorts.</p>
+        <p><strong>Objective.</strong> To test non-inferiority of DBS on the 4-year trajectory of self-reported pain, and to explore three secondary questions about symptom architecture, pain&ndash;motor coupling, and genetic/biomarker modification.</p>
+        <p><strong>Design.</strong> Target-trial-emulation matched longitudinal analysis of the PPMI Curated Data Cut (November 2024). Primary estimator: inverse-probability-of-censoring-weighted (IPCW) Welch contrast. Sensitivity: propensity-score-matched cohort. Causal contrast evaluated by two one-sided tests (TOST) across a margin grid.</p>
+        <p><strong>Results.</strong> IPCW-weighted &Delta; = &minus;0.053 MDS-UPDRS-I points (95% CI &minus;0.293, +0.187). Non-inferiority concluded at every pre-specified margin: TOST&nbsp;P&nbsp;&lt;&nbsp;.001 at &plusmn;1, P&nbsp;&lt;&nbsp;10&#8315;&#8312; at &plusmn;0.75, P&nbsp;&lt;&nbsp;10&#8315;&#8308; at &plusmn;0.5, and P&nbsp;=&nbsp;.009 at &plusmn;0.3. Sequential-trial-emulation sensitivity (duration-matched) reinforced the result. Hypothesis-generating secondary signals were directionally consistent with pain-symptom-architecture reshaping under stimulation (pre-specified late-post Network Comparison Test uncorrected P&nbsp;=&nbsp;.050; Holm P&nbsp;=&nbsp;.150 as sensitivity), with directionally attenuated within-patient pain&ndash;motor coupling and a uniformly null multi-mediator analysis arguing against pharmacological, disease-progression, affective, autonomic, sleep, or motor mediation.</p>
+        <p><strong>Conclusions.</strong> DBS was non-inferior on the 4-year pain trajectory in PD across margins down to &plusmn;0.3 MDS-UPDRS-I points. Directional, hypothesis-generating signals support a cautious reframing of DBS toward a symptom-architecture-modulating therapy, pending prospective replication.</p>
+      </div>
+    </section>
+
+    <section class="mt-16" aria-labelledby="key-numbers-heading">
+      <h2 id="key-numbers-heading" class="text-2xl font-semibold mb-6">Key numbers</h2>
+      <dl class="grid sm:grid-cols-2 gap-x-10 gap-y-6 text-[15px]">
+        <div class="border-l-2 border-slate-300 pl-5">
+          <dt class="text-slate-500 text-sm mb-1">IPCW-weighted &Delta; Pain</dt>
+          <dd class="text-2xl font-semibold text-slate-900 tabular-nums">&minus;0.053</dd>
+          <dd class="text-slate-600 text-sm">95% CI &minus;0.293, +0.187 (DBS &minus; Never-DBS, MDS-UPDRS-I points)</dd>
+        </div>
+        <div class="border-l-2 border-slate-300 pl-5">
+          <dt class="text-slate-500 text-sm mb-1">Tightest TOST non-inferiority</dt>
+          <dd class="text-2xl font-semibold text-slate-900 tabular-nums">&plusmn;0.3 pt</dd>
+          <dd class="text-slate-600 text-sm">P&nbsp;=&nbsp;.009 (concluded at every margin from &plusmn;1 down to &plusmn;0.3)</dd>
+        </div>
+        <div class="border-l-2 border-slate-300 pl-5">
+          <dt class="text-slate-500 text-sm mb-1">Pre-specified late-post NCT</dt>
+          <dd class="text-2xl font-semibold text-slate-900 tabular-nums">P&nbsp;=&nbsp;.050</dd>
+          <dd class="text-slate-600 text-sm">Uncorrected; Holm P&nbsp;=&nbsp;.150 across 3 windows (hypothesis-generating)</dd>
+        </div>
+        <div class="border-l-2 border-slate-300 pl-5">
+          <dt class="text-slate-500 text-sm mb-1">Pain&ndash;motor &Delta;&rho; (matched)</dt>
+          <dd class="text-2xl font-semibold text-slate-900 tabular-nums">&minus;0.16</dd>
+          <dd class="text-slate-600 text-sm">95% CI &minus;0.60, +0.29; bootstrap power for &Delta;&rho;&nbsp;=&nbsp;&minus;0.25 &asymp; 22%</dd>
+        </div>
+        <div class="border-l-2 border-slate-300 pl-5">
+          <dt class="text-slate-500 text-sm mb-1">Mediators tested (all null)</dt>
+          <dd class="text-2xl font-semibold text-slate-900 tabular-nums">6</dd>
+          <dd class="text-slate-600 text-sm">LEDD, NHY, GDS, SCOPA, ESS, UPDRS-III &mdash; all ACME P&nbsp;&ge;&nbsp;.15</dd>
+        </div>
+        <div class="border-l-2 border-slate-300 pl-5">
+          <dt class="text-slate-500 text-sm mb-1">Propensity-model c-statistic</dt>
+          <dd class="text-2xl font-semibold text-slate-900 tabular-nums">0.885</dd>
+          <dd class="text-slate-600 text-sm">Excellent discrimination on 7 covariates</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="mt-16" aria-labelledby="contribution-heading">
+      <h2 id="contribution-heading" class="text-2xl font-semibold mb-4">Contribution</h2>
+      <div class="prose-narrow text-slate-700 leading-relaxed text-[15px] space-y-3">
+        <p>To our knowledge this is the first matched longitudinal observational analysis to test deep brain stimulation non-inferiority on a non-motor Parkinson endpoint across a margin grid, with explicit immortal-time correction via sequential-trial emulation and inverse-probability-of-censoring weighting. The robustness layer comprises sixteen pre-specified and post-hoc analyses; all conclusions are concordant across them.</p>
+        <p>Beyond the safety conclusion, three directional, hypothesis-generating mechanistic signals &mdash; a borderline late-post Network Comparison Test, a directionally lower within-patient pain&ndash;motor coupling, and a uniformly null multi-mediator analysis &mdash; are jointly compatible with a cautious reframing of DBS toward a symptom-architecture-modulating therapy. None is individually conclusive in this cohort.</p>
+      </div>
+    </section>
+
+    <section class="mt-16 border-t border-slate-200 pt-10" aria-label="Next reading">
+      <ul class="grid sm:grid-cols-3 gap-6 text-[15px]">
+        <li>
+          <a href="results.html" class="scholar font-medium">Interactive results &rarr;</a>
+          <p class="text-slate-600 text-sm mt-1">Sixteen robustness analyses, each with effect estimate, 95% CI, and short interpretation.</p>
+        </li>
+        <li>
+          <a href="methods.html" class="scholar font-medium">Methods &rarr;</a>
+          <p class="text-slate-600 text-sm mt-1">Target trial emulation, IPCW, sequential-trial emulation, GLASSO, multi-mediator analysis.</p>
+        </li>
+        <li>
+          <a href="data.html" class="scholar font-medium">Data &amp; code &rarr;</a>
+          <p class="text-slate-600 text-sm mt-1">PPMI access, synthetic-data fixture, Docker, Codespaces, reproduction instructions.</p>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-200 mt-24 py-10 text-sm text-slate-600"
+          role="contentinfo">
+    <div class="max-w-6xl mx-auto px-6 grid sm:grid-cols-3 gap-6">
+      <div>
+        <div class="font-medium text-slate-900 mb-1">ppmi-dbs-pain</div>
+        Pacheco-Barrios &amp; Rolston, 2026. Manuscript in preparation.
+      </div>
+      <div>
+        <div class="font-medium text-slate-900 mb-1">Source</div>
+        Code: <a class="scholar" href="https://github.com/nielspac177/ppmi-dbs-pain">GitHub</a>
+        · DOI: <em>pending Zenodo</em>
+      </div>
+      <div>
+        <div class="font-medium text-slate-900 mb-1">License</div>
+        Code MIT · Figures CC-BY-4.0 · PPMI raw data not redistributed.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
